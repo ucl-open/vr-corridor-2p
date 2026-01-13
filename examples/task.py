@@ -3,10 +3,18 @@ import os
 from ucl_open_vr_corridor_2p.task import (
     UclOpenVrCorridor2pTaskLogic,
     UclOpenVrCorridor2pTaskParameters,
+    Trial,
+    Block
 )
 
 task_logic = UclOpenVrCorridor2pTaskLogic(
-    task_parameters=UclOpenVrCorridor2pTaskParameters(),
+    task_parameters=UclOpenVrCorridor2pTaskParameters(
+        blocks = [
+            Block(available_trials=[
+                
+            ])
+        ]
+    ),
 )
 
 def main(path_seed: str = "./local/{schema}.json"):

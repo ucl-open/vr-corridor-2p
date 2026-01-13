@@ -1,0 +1,166 @@
+{
+  "$defs": {
+    "Block": {
+      "properties": {
+        "availableTrials": {
+          "items": {
+            "$ref": "#/$defs/Trial"
+          },
+          "title": "AvailableTrials",
+          "type": "array"
+        },
+        "maxTrials": {
+          "default": 10,
+          "minimum": 1,
+          "title": "MaxTrials",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "availableTrials"
+      ],
+      "title": "Block",
+      "type": "object"
+    },
+    "Landmark": {
+      "properties": {
+        "size": {
+          "default": 1,
+          "description": "This landmark's size in VR space.",
+          "title": "Size",
+          "type": "number"
+        },
+        "texture": {
+          "title": "Texture",
+          "type": "string"
+        },
+        "rewardValence": {
+          "default": 0,
+          "description": "Flag describing this landmark's reward valence.",
+          "title": "RewardValence",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "texture"
+      ],
+      "title": "Landmark",
+      "type": "object"
+    },
+    "Trial": {
+      "properties": {
+        "landmarks": {
+          "items": {
+            "items": {
+              "$ref": "#/$defs/Landmark"
+            },
+            "type": "array"
+          },
+          "title": "Landmarks",
+          "type": "array"
+        }
+      },
+      "required": [
+        "landmarks"
+      ],
+      "title": "Trial",
+      "type": "object"
+    },
+    "UclOpenSession": {
+      "properties": {
+        "workflow": {
+          "description": "Path to the workflow running the experiment.",
+          "title": "Workflow",
+          "type": "string"
+        },
+        "commit": {
+          "description": "Commit hash of the experiment/rig repo.",
+          "title": "Commit",
+          "type": "string"
+        },
+        "repositoryUrl": {
+          "description": "The URL of the git repository used to version experiment source code.",
+          "title": "RepositoryUrl",
+          "type": "string"
+        },
+        "loggingRootPath": {
+          "title": "LoggingRootPath",
+          "type": "string"
+        },
+        "animalId": {
+          "title": "AnimalId",
+          "type": "string"
+        },
+        "sessionId": {
+          "title": "SessionId",
+          "type": "string"
+        }
+      },
+      "required": [
+        "workflow",
+        "commit",
+        "repositoryUrl",
+        "loggingRootPath",
+        "animalId",
+        "sessionId"
+      ],
+      "title": "UclOpenSession",
+      "type": "object"
+    },
+    "UclOpenVrCorridor2pRig": {
+      "properties": {
+        "version": {
+          "const": "0.0.0-rc1",
+          "default": "0.0.0-rc1",
+          "title": "Version",
+          "type": "string"
+        }
+      },
+      "title": "UclOpenVrCorridor2pRig",
+      "type": "object"
+    },
+    "UclOpenVrCorridor2pTaskLogic": {
+      "properties": {
+        "version": {
+          "const": "0.0.0-rc1",
+          "default": "0.0.0-rc1",
+          "title": "Version",
+          "type": "string"
+        },
+        "name": {
+          "const": "UclOpenVrCorridor2p",
+          "default": "UclOpenVrCorridor2p",
+          "description": "Name of the task logic",
+          "title": "Name",
+          "type": "string"
+        },
+        "taskParameters": {
+          "$ref": "#/$defs/UclOpenVrCorridor2pTaskParameters",
+          "description": "Parameters of the task logic",
+          "title": "TaskParameters"
+        }
+      },
+      "required": [
+        "taskParameters"
+      ],
+      "title": "UclOpenVrCorridor2pTaskLogic",
+      "type": "object"
+    },
+    "UclOpenVrCorridor2pTaskParameters": {
+      "properties": {
+        "blocks": {
+          "items": {
+            "$ref": "#/$defs/Block"
+          },
+          "title": "Blocks",
+          "type": "array"
+        }
+      },
+      "required": [
+        "blocks"
+      ],
+      "title": "UclOpenVrCorridor2pTaskParameters",
+      "type": "object"
+    }
+  }
+}

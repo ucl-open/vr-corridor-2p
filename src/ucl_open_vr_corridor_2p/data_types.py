@@ -1,0 +1,1 @@
+from ucl_open.rigs.base import BaseSchema
