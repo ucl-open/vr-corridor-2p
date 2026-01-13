@@ -10,11 +10,12 @@ from ucl_open_vr_corridor_2p.task import (
 
 task_logic = UclOpenVrCorridor2pTaskLogic(
     task_parameters=UclOpenVrCorridor2pTaskParameters(
+        corridor_width=2,
         blocks = [
             Block(available_trials=[
                 Trial(landmarks=[
                     [Landmark(size=2, texture="grating", reward_valence=0)],
-                    [Landmark(size=2, texture="dots", reward_valence=0)],
+                    [Landmark(size=2, texture="dots", reward_valence=0), Landmark(size=2, texture="waves", reward_valence=0)],
                     [Landmark(size=2, texture="leaves", reward_valence=0)],
                     [Landmark(size=2, texture="grey", reward_valence=0)]
                 ])

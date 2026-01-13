@@ -93,6 +93,318 @@ namespace UclOpenHfVisualDataSchema
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class DisplayCalibration
+    {
+    
+        private DisplayIntrinsics _intrinsics;
+    
+        private DisplayExtrinsics _extrinsics;
+    
+        public DisplayCalibration()
+        {
+            _intrinsics = new DisplayIntrinsics();
+            _extrinsics = new DisplayExtrinsics();
+        }
+    
+        protected DisplayCalibration(DisplayCalibration other)
+        {
+            _intrinsics = other._intrinsics;
+            _extrinsics = other._extrinsics;
+        }
+    
+        /// <summary>
+        /// Intrinsics
+        /// </summary>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [Newtonsoft.Json.JsonPropertyAttribute("intrinsics")]
+        [System.ComponentModel.DescriptionAttribute("Intrinsics")]
+        public DisplayIntrinsics Intrinsics
+        {
+            get
+            {
+                return _intrinsics;
+            }
+            set
+            {
+                _intrinsics = value;
+            }
+        }
+    
+        /// <summary>
+        /// Extrinsics
+        /// </summary>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [Newtonsoft.Json.JsonPropertyAttribute("extrinsics")]
+        [System.ComponentModel.DescriptionAttribute("Extrinsics")]
+        public DisplayExtrinsics Extrinsics
+        {
+            get
+            {
+                return _extrinsics;
+            }
+            set
+            {
+                _extrinsics = value;
+            }
+        }
+    
+        public System.IObservable<DisplayCalibration> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new DisplayCalibration(this)));
+        }
+    
+        public System.IObservable<DisplayCalibration> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new DisplayCalibration(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("Intrinsics = " + _intrinsics + ", ");
+            stringBuilder.Append("Extrinsics = " + _extrinsics);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class DisplayExtrinsics
+    {
+    
+        private Vector3 _rotation;
+    
+        private Vector3 _translation;
+    
+        public DisplayExtrinsics()
+        {
+            _rotation = new Vector3();
+            _translation = new Vector3();
+        }
+    
+        protected DisplayExtrinsics(DisplayExtrinsics other)
+        {
+            _rotation = other._rotation;
+            _translation = other._translation;
+        }
+    
+        /// <summary>
+        /// Rotation vector (radians)
+        /// </summary>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [Newtonsoft.Json.JsonPropertyAttribute("rotation")]
+        [System.ComponentModel.DescriptionAttribute("Rotation vector (radians)")]
+        public Vector3 Rotation
+        {
+            get
+            {
+                return _rotation;
+            }
+            set
+            {
+                _rotation = value;
+            }
+        }
+    
+        /// <summary>
+        /// Translation (in cm)
+        /// </summary>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [Newtonsoft.Json.JsonPropertyAttribute("translation")]
+        [System.ComponentModel.DescriptionAttribute("Translation (in cm)")]
+        public Vector3 Translation
+        {
+            get
+            {
+                return _translation;
+            }
+            set
+            {
+                _translation = value;
+            }
+        }
+    
+        public System.IObservable<DisplayExtrinsics> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new DisplayExtrinsics(this)));
+        }
+    
+        public System.IObservable<DisplayExtrinsics> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new DisplayExtrinsics(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("Rotation = " + _rotation + ", ");
+            stringBuilder.Append("Translation = " + _translation);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class DisplayIntrinsics
+    {
+    
+        private int _frameWidth;
+    
+        private int _frameHeight;
+    
+        private double _displayWidth;
+    
+        private double _displayHeight;
+    
+        public DisplayIntrinsics()
+        {
+            _frameWidth = 1920;
+            _frameHeight = 1080;
+            _displayWidth = 20D;
+            _displayHeight = 15D;
+        }
+    
+        protected DisplayIntrinsics(DisplayIntrinsics other)
+        {
+            _frameWidth = other._frameWidth;
+            _frameHeight = other._frameHeight;
+            _displayWidth = other._displayWidth;
+            _displayHeight = other._displayHeight;
+        }
+    
+        /// <summary>
+        /// Frame width (px)
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("frameWidth")]
+        [System.ComponentModel.DescriptionAttribute("Frame width (px)")]
+        public int FrameWidth
+        {
+            get
+            {
+                return _frameWidth;
+            }
+            set
+            {
+                _frameWidth = value;
+            }
+        }
+    
+        /// <summary>
+        /// Frame height (px)
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("frameHeight")]
+        [System.ComponentModel.DescriptionAttribute("Frame height (px)")]
+        public int FrameHeight
+        {
+            get
+            {
+                return _frameHeight;
+            }
+            set
+            {
+                _frameHeight = value;
+            }
+        }
+    
+        /// <summary>
+        /// Display width (cm)
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("displayWidth")]
+        [System.ComponentModel.DescriptionAttribute("Display width (cm)")]
+        public double DisplayWidth
+        {
+            get
+            {
+                return _displayWidth;
+            }
+            set
+            {
+                _displayWidth = value;
+            }
+        }
+    
+        /// <summary>
+        /// Display width (cm)
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("displayHeight")]
+        [System.ComponentModel.DescriptionAttribute("Display width (cm)")]
+        public double DisplayHeight
+        {
+            get
+            {
+                return _displayHeight;
+            }
+            set
+            {
+                _displayHeight = value;
+            }
+        }
+    
+        public System.IObservable<DisplayIntrinsics> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new DisplayIntrinsics(this)));
+        }
+    
+        public System.IObservable<DisplayIntrinsics> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new DisplayIntrinsics(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("FrameWidth = " + _frameWidth + ", ");
+            stringBuilder.Append("FrameHeight = " + _frameHeight + ", ");
+            stringBuilder.Append("DisplayWidth = " + _displayWidth + ", ");
+            stringBuilder.Append("DisplayHeight = " + _displayHeight);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
     public partial class Landmark
     {
     
@@ -177,6 +489,418 @@ namespace UclOpenHfVisualDataSchema
             stringBuilder.Append("Size = " + _size + ", ");
             stringBuilder.Append("Texture = " + _texture + ", ");
             stringBuilder.Append("RewardValence = " + _rewardValence);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class PositionedLandmark
+    {
+    
+        private Landmark _landmark;
+    
+        private double _position;
+    
+        public PositionedLandmark()
+        {
+            _landmark = new Landmark();
+        }
+    
+        protected PositionedLandmark(PositionedLandmark other)
+        {
+            _landmark = other._landmark;
+            _position = other._position;
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [Newtonsoft.Json.JsonPropertyAttribute("landmark", Required=Newtonsoft.Json.Required.Always)]
+        public Landmark Landmark
+        {
+            get
+            {
+                return _landmark;
+            }
+            set
+            {
+                _landmark = value;
+            }
+        }
+    
+        [Newtonsoft.Json.JsonPropertyAttribute("position", Required=Newtonsoft.Json.Required.Always)]
+        public double Position
+        {
+            get
+            {
+                return _position;
+            }
+            set
+            {
+                _position = value;
+            }
+        }
+    
+        public System.IObservable<PositionedLandmark> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new PositionedLandmark(this)));
+        }
+    
+        public System.IObservable<PositionedLandmark> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new PositionedLandmark(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("Landmark = " + _landmark + ", ");
+            stringBuilder.Append("Position = " + _position);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class Screen
+    {
+    
+        private string _deviceType;
+    
+        private int _displayIndex;
+    
+        private double _targetRenderFrequency;
+    
+        private double _targetUpdateFrequency;
+    
+        private string _textureAssetsDirectory;
+    
+        private System.Collections.Generic.Dictionary<string, DisplayCalibration> _calibration;
+    
+        private double _brightness;
+    
+        private double _contrast;
+    
+        public Screen()
+        {
+            _deviceType = "Screen";
+            _displayIndex = 1;
+            _targetRenderFrequency = 60D;
+            _targetUpdateFrequency = 120D;
+            _textureAssetsDirectory = "Textures";
+            _brightness = 0D;
+            _contrast = 1D;
+        }
+    
+        protected Screen(Screen other)
+        {
+            _deviceType = other._deviceType;
+            _displayIndex = other._displayIndex;
+            _targetRenderFrequency = other._targetRenderFrequency;
+            _targetUpdateFrequency = other._targetUpdateFrequency;
+            _textureAssetsDirectory = other._textureAssetsDirectory;
+            _calibration = other._calibration;
+            _brightness = other._brightness;
+            _contrast = other._contrast;
+        }
+    
+        /// <summary>
+        /// Device type
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("deviceType")]
+        [System.ComponentModel.DescriptionAttribute("Device type")]
+        public string DeviceType
+        {
+            get
+            {
+                return _deviceType;
+            }
+            set
+            {
+                _deviceType = value;
+            }
+        }
+    
+        /// <summary>
+        /// Display index
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("displayIndex")]
+        [System.ComponentModel.DescriptionAttribute("Display index")]
+        public int DisplayIndex
+        {
+            get
+            {
+                return _displayIndex;
+            }
+            set
+            {
+                _displayIndex = value;
+            }
+        }
+    
+        /// <summary>
+        /// Target render frequency
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("targetRenderFrequency")]
+        [System.ComponentModel.DescriptionAttribute("Target render frequency")]
+        public double TargetRenderFrequency
+        {
+            get
+            {
+                return _targetRenderFrequency;
+            }
+            set
+            {
+                _targetRenderFrequency = value;
+            }
+        }
+    
+        /// <summary>
+        /// Target update frequency
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("targetUpdateFrequency")]
+        [System.ComponentModel.DescriptionAttribute("Target update frequency")]
+        public double TargetUpdateFrequency
+        {
+            get
+            {
+                return _targetUpdateFrequency;
+            }
+            set
+            {
+                _targetUpdateFrequency = value;
+            }
+        }
+    
+        /// <summary>
+        /// Calibration directory
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("textureAssetsDirectory")]
+        [System.ComponentModel.DescriptionAttribute("Calibration directory")]
+        public string TextureAssetsDirectory
+        {
+            get
+            {
+                return _textureAssetsDirectory;
+            }
+            set
+            {
+                _textureAssetsDirectory = value;
+            }
+        }
+    
+        /// <summary>
+        /// Calibration parameters for a set of named display monitors for visual stimuli
+        /// </summary>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [Newtonsoft.Json.JsonPropertyAttribute("calibration")]
+        [System.ComponentModel.DescriptionAttribute("Calibration parameters for a set of named display monitors for visual stimuli")]
+        public System.Collections.Generic.Dictionary<string, DisplayCalibration> Calibration
+        {
+            get
+            {
+                return _calibration;
+            }
+            set
+            {
+                _calibration = value;
+            }
+        }
+    
+        /// <summary>
+        /// Brightness
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("brightness")]
+        [System.ComponentModel.DescriptionAttribute("Brightness")]
+        public double Brightness
+        {
+            get
+            {
+                return _brightness;
+            }
+            set
+            {
+                _brightness = value;
+            }
+        }
+    
+        /// <summary>
+        /// Contrast
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("contrast")]
+        [System.ComponentModel.DescriptionAttribute("Contrast")]
+        public double Contrast
+        {
+            get
+            {
+                return _contrast;
+            }
+            set
+            {
+                _contrast = value;
+            }
+        }
+    
+        public System.IObservable<Screen> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Screen(this)));
+        }
+    
+        public System.IObservable<Screen> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new Screen(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("DeviceType = " + _deviceType + ", ");
+            stringBuilder.Append("DisplayIndex = " + _displayIndex + ", ");
+            stringBuilder.Append("TargetRenderFrequency = " + _targetRenderFrequency + ", ");
+            stringBuilder.Append("TargetUpdateFrequency = " + _targetUpdateFrequency + ", ");
+            stringBuilder.Append("TextureAssetsDirectory = " + _textureAssetsDirectory + ", ");
+            stringBuilder.Append("Calibration = " + _calibration + ", ");
+            stringBuilder.Append("Brightness = " + _brightness + ", ");
+            stringBuilder.Append("Contrast = " + _contrast);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class SyncQuad
+    {
+    
+        private double _extentX;
+    
+        private double _extentY;
+    
+        private double _locationX;
+    
+        private double _locationY;
+    
+        public SyncQuad()
+        {
+        }
+    
+        protected SyncQuad(SyncQuad other)
+        {
+            _extentX = other._extentX;
+            _extentY = other._extentY;
+            _locationX = other._locationX;
+            _locationY = other._locationY;
+        }
+    
+        [Newtonsoft.Json.JsonPropertyAttribute("extentX", Required=Newtonsoft.Json.Required.Always)]
+        public double ExtentX
+        {
+            get
+            {
+                return _extentX;
+            }
+            set
+            {
+                _extentX = value;
+            }
+        }
+    
+        [Newtonsoft.Json.JsonPropertyAttribute("extentY", Required=Newtonsoft.Json.Required.Always)]
+        public double ExtentY
+        {
+            get
+            {
+                return _extentY;
+            }
+            set
+            {
+                _extentY = value;
+            }
+        }
+    
+        [Newtonsoft.Json.JsonPropertyAttribute("locationX", Required=Newtonsoft.Json.Required.Always)]
+        public double LocationX
+        {
+            get
+            {
+                return _locationX;
+            }
+            set
+            {
+                _locationX = value;
+            }
+        }
+    
+        [Newtonsoft.Json.JsonPropertyAttribute("locationY", Required=Newtonsoft.Json.Required.Always)]
+        public double LocationY
+        {
+            get
+            {
+                return _locationY;
+            }
+            set
+            {
+                _locationY = value;
+            }
+        }
+    
+        public System.IObservable<SyncQuad> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new SyncQuad(this)));
+        }
+    
+        public System.IObservable<SyncQuad> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new SyncQuad(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("ExtentX = " + _extentX + ", ");
+            stringBuilder.Append("ExtentY = " + _extentY + ", ");
+            stringBuilder.Append("LocationX = " + _locationX + ", ");
+            stringBuilder.Append("LocationY = " + _locationY);
             return true;
         }
     
@@ -424,14 +1148,22 @@ namespace UclOpenHfVisualDataSchema
     
         private string _version;
     
+        private Screen _screen;
+    
+        private SyncQuad _syncQuad;
+    
         public UclOpenVrCorridor2pRig()
         {
             _version = "0.0.0-rc1";
+            _screen = new Screen();
+            _syncQuad = new SyncQuad();
         }
     
         protected UclOpenVrCorridor2pRig(UclOpenVrCorridor2pRig other)
         {
             _version = other._version;
+            _screen = other._screen;
+            _syncQuad = other._syncQuad;
         }
     
         [Newtonsoft.Json.JsonPropertyAttribute("version")]
@@ -447,6 +1179,34 @@ namespace UclOpenHfVisualDataSchema
             }
         }
     
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [Newtonsoft.Json.JsonPropertyAttribute("screen", Required=Newtonsoft.Json.Required.Always)]
+        public Screen Screen
+        {
+            get
+            {
+                return _screen;
+            }
+            set
+            {
+                _screen = value;
+            }
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [Newtonsoft.Json.JsonPropertyAttribute("syncQuad", Required=Newtonsoft.Json.Required.Always)]
+        public SyncQuad SyncQuad
+        {
+            get
+            {
+                return _syncQuad;
+            }
+            set
+            {
+                _syncQuad = value;
+            }
+        }
+    
         public System.IObservable<UclOpenVrCorridor2pRig> Generate()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new UclOpenVrCorridor2pRig(this)));
@@ -459,7 +1219,9 @@ namespace UclOpenHfVisualDataSchema
     
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
-            stringBuilder.Append("Version = " + _version);
+            stringBuilder.Append("Version = " + _version + ", ");
+            stringBuilder.Append("Screen = " + _screen + ", ");
+            stringBuilder.Append("SyncQuad = " + _syncQuad);
             return true;
         }
     
@@ -591,16 +1353,33 @@ namespace UclOpenHfVisualDataSchema
     public partial class UclOpenVrCorridor2pTaskParameters
     {
     
+        private double _corridorWidth;
+    
         private System.Collections.Generic.List<Block> _blocks;
     
         public UclOpenVrCorridor2pTaskParameters()
         {
+            _corridorWidth = 2D;
             _blocks = new System.Collections.Generic.List<Block>();
         }
     
         protected UclOpenVrCorridor2pTaskParameters(UclOpenVrCorridor2pTaskParameters other)
         {
+            _corridorWidth = other._corridorWidth;
             _blocks = other._blocks;
+        }
+    
+        [Newtonsoft.Json.JsonPropertyAttribute("corridorWidth")]
+        public double CorridorWidth
+        {
+            get
+            {
+                return _corridorWidth;
+            }
+            set
+            {
+                _corridorWidth = value;
+            }
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
@@ -629,7 +1408,115 @@ namespace UclOpenHfVisualDataSchema
     
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
+            stringBuilder.Append("CorridorWidth = " + _corridorWidth + ", ");
             stringBuilder.Append("Blocks = " + _blocks);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class Vector3
+    {
+    
+        private double _x;
+    
+        private double _y;
+    
+        private double _z;
+    
+        public Vector3()
+        {
+        }
+    
+        protected Vector3(Vector3 other)
+        {
+            _x = other._x;
+            _y = other._y;
+            _z = other._z;
+        }
+    
+        /// <summary>
+        /// X coordinate of the point.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("x", Required=Newtonsoft.Json.Required.Always)]
+        [System.ComponentModel.DescriptionAttribute("X coordinate of the point.")]
+        public double X
+        {
+            get
+            {
+                return _x;
+            }
+            set
+            {
+                _x = value;
+            }
+        }
+    
+        /// <summary>
+        /// Y coordinate of the point.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("y", Required=Newtonsoft.Json.Required.Always)]
+        [System.ComponentModel.DescriptionAttribute("Y coordinate of the point.")]
+        public double Y
+        {
+            get
+            {
+                return _y;
+            }
+            set
+            {
+                _y = value;
+            }
+        }
+    
+        /// <summary>
+        /// Z coordinate of the point.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("z", Required=Newtonsoft.Json.Required.Always)]
+        [System.ComponentModel.DescriptionAttribute("Z coordinate of the point.")]
+        public double Z
+        {
+            get
+            {
+                return _z;
+            }
+            set
+            {
+                _z = value;
+            }
+        }
+    
+        public System.IObservable<Vector3> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Vector3(this)));
+        }
+    
+        public System.IObservable<Vector3> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new Vector3(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("X = " + _x + ", ");
+            stringBuilder.Append("Y = " + _y + ", ");
+            stringBuilder.Append("Z = " + _z);
             return true;
         }
     
@@ -671,9 +1558,39 @@ namespace UclOpenHfVisualDataSchema
             return Process<Block>(source);
         }
 
+        public System.IObservable<string> Process(System.IObservable<DisplayCalibration> source)
+        {
+            return Process<DisplayCalibration>(source);
+        }
+
+        public System.IObservable<string> Process(System.IObservable<DisplayExtrinsics> source)
+        {
+            return Process<DisplayExtrinsics>(source);
+        }
+
+        public System.IObservable<string> Process(System.IObservable<DisplayIntrinsics> source)
+        {
+            return Process<DisplayIntrinsics>(source);
+        }
+
         public System.IObservable<string> Process(System.IObservable<Landmark> source)
         {
             return Process<Landmark>(source);
+        }
+
+        public System.IObservable<string> Process(System.IObservable<PositionedLandmark> source)
+        {
+            return Process<PositionedLandmark>(source);
+        }
+
+        public System.IObservable<string> Process(System.IObservable<Screen> source)
+        {
+            return Process<Screen>(source);
+        }
+
+        public System.IObservable<string> Process(System.IObservable<SyncQuad> source)
+        {
+            return Process<SyncQuad>(source);
         }
 
         public System.IObservable<string> Process(System.IObservable<Trial> source)
@@ -700,6 +1617,11 @@ namespace UclOpenHfVisualDataSchema
         {
             return Process<UclOpenVrCorridor2pTaskParameters>(source);
         }
+
+        public System.IObservable<string> Process(System.IObservable<Vector3> source)
+        {
+            return Process<Vector3>(source);
+        }
     }
 
 
@@ -711,12 +1633,19 @@ namespace UclOpenHfVisualDataSchema
     [System.ComponentModel.DefaultPropertyAttribute("Type")]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Transform)]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Block>))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<DisplayCalibration>))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<DisplayExtrinsics>))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<DisplayIntrinsics>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Landmark>))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<PositionedLandmark>))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Screen>))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<SyncQuad>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Trial>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<UclOpenSession>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<UclOpenVrCorridor2pRig>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<UclOpenVrCorridor2pTaskLogic>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<UclOpenVrCorridor2pTaskParameters>))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Vector3>))]
     public partial class DeserializeFromJson : Bonsai.Expressions.SingleArgumentExpressionBuilder
     {
     
