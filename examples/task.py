@@ -17,7 +17,7 @@ task_logic = UclOpenVrCorridor2pTaskLogic(
                     [Landmark(size=2, texture="grating", reward_valence=0)],
                     [Landmark(size=2, texture="dots", reward_valence=0), Landmark(size=2, texture="waves", reward_valence=0)],
                     [Landmark(size=2, texture="leaves", reward_valence=0)],
-                    [Landmark(size=2, texture="grey", reward_valence=0)]
+                    # [Landmark(size=2, texture="grey", reward_valence=0)]
                 ])
             ])
         ]
