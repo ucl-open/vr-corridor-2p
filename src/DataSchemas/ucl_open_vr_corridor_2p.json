@@ -1,0 +1,415 @@
+{
+  "$defs": {
+    "Block": {
+      "properties": {
+        "availableTrials": {
+          "items": {
+            "$ref": "#/$defs/Trial"
+          },
+          "title": "AvailableTrials",
+          "type": "array"
+        },
+        "maxTrials": {
+          "default": 10,
+          "minimum": 1,
+          "title": "MaxTrials",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "availableTrials"
+      ],
+      "title": "Block",
+      "type": "object"
+    },
+    "DisplayCalibration": {
+      "properties": {
+        "intrinsics": {
+          "$ref": "#/$defs/DisplayIntrinsics",
+          "default": {
+            "frameWidth": 1920,
+            "frameHeight": 1080,
+            "displayWidth": 20.0,
+            "displayHeight": 15.0
+          },
+          "description": "Intrinsics",
+          "title": "Intrinsics"
+        },
+        "extrinsics": {
+          "$ref": "#/$defs/DisplayExtrinsics",
+          "default": {
+            "rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "translation": {
+              "x": 0.0,
+              "y": 1.309016,
+              "z": -13.27
+            }
+          },
+          "description": "Extrinsics",
+          "title": "Extrinsics"
+        }
+      },
+      "title": "DisplayCalibration",
+      "type": "object"
+    },
+    "DisplayExtrinsics": {
+      "properties": {
+        "rotation": {
+          "$ref": "#/$defs/Vector3",
+          "default": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "description": "Rotation vector (radians)",
+          "title": "Rotation"
+        },
+        "translation": {
+          "$ref": "#/$defs/Vector3",
+          "default": {
+            "x": 0.0,
+            "y": 1.309016,
+            "z": -13.27
+          },
+          "description": "Translation (in cm)",
+          "title": "Translation"
+        }
+      },
+      "title": "DisplayExtrinsics",
+      "type": "object"
+    },
+    "DisplayIntrinsics": {
+      "properties": {
+        "frameWidth": {
+          "default": 1920,
+          "description": "Frame width (px)",
+          "minimum": 0,
+          "title": "FrameWidth",
+          "type": "integer"
+        },
+        "frameHeight": {
+          "default": 1080,
+          "description": "Frame height (px)",
+          "minimum": 0,
+          "title": "FrameHeight",
+          "type": "integer"
+        },
+        "displayWidth": {
+          "default": 20,
+          "description": "Display width (cm)",
+          "minimum": 0,
+          "title": "DisplayWidth",
+          "type": "number"
+        },
+        "displayHeight": {
+          "default": 15,
+          "description": "Display width (cm)",
+          "minimum": 0,
+          "title": "DisplayHeight",
+          "type": "number"
+        }
+      },
+      "title": "DisplayIntrinsics",
+      "type": "object"
+    },
+    "Landmark": {
+      "properties": {
+        "size": {
+          "default": 1,
+          "description": "This landmark's size in VR space.",
+          "title": "Size",
+          "type": "number"
+        },
+        "texture": {
+          "title": "Texture",
+          "type": "string"
+        },
+        "rewardValence": {
+          "default": 0,
+          "description": "Flag describing this landmark's reward valence.",
+          "title": "RewardValence",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "texture"
+      ],
+      "title": "Landmark",
+      "type": "object"
+    },
+    "PositionedLandmark": {
+      "properties": {
+        "landmark": {
+          "$ref": "#/$defs/Landmark"
+        },
+        "position": {
+          "title": "Position",
+          "type": "number"
+        }
+      },
+      "required": [
+        "landmark",
+        "position"
+      ],
+      "title": "PositionedLandmark",
+      "type": "object"
+    },
+    "Screen": {
+      "properties": {
+        "deviceType": {
+          "const": "Screen",
+          "default": "Screen",
+          "description": "Device type",
+          "title": "DeviceType",
+          "type": "string"
+        },
+        "displayIndex": {
+          "default": 1,
+          "description": "Display index",
+          "title": "DisplayIndex",
+          "type": "integer"
+        },
+        "targetRenderFrequency": {
+          "default": 60,
+          "description": "Target render frequency",
+          "title": "TargetRenderFrequency",
+          "type": "number"
+        },
+        "targetUpdateFrequency": {
+          "default": 120,
+          "description": "Target update frequency",
+          "title": "TargetUpdateFrequency",
+          "type": "number"
+        },
+        "textureAssetsDirectory": {
+          "default": "Textures",
+          "description": "Calibration directory",
+          "title": "TextureAssetsDirectory",
+          "type": "string"
+        },
+        "calibration": {
+          "default": null,
+          "description": "Calibration parameters for a set of named display monitors for visual stimuli",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "$ref": "#/$defs/DisplayCalibration"
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Calibration"
+        },
+        "brightness": {
+          "default": 0,
+          "description": "Brightness",
+          "maximum": 1,
+          "minimum": -1,
+          "title": "Brightness",
+          "type": "number"
+        },
+        "contrast": {
+          "default": 1,
+          "description": "Contrast",
+          "maximum": 1,
+          "minimum": -1,
+          "title": "Contrast",
+          "type": "number"
+        }
+      },
+      "title": "Screen",
+      "type": "object"
+    },
+    "SyncQuad": {
+      "properties": {
+        "extentX": {
+          "title": "ExtentX",
+          "type": "number"
+        },
+        "extentY": {
+          "title": "ExtentY",
+          "type": "number"
+        },
+        "locationX": {
+          "title": "LocationX",
+          "type": "number"
+        },
+        "locationY": {
+          "title": "LocationY",
+          "type": "number"
+        }
+      },
+      "required": [
+        "extentX",
+        "extentY",
+        "locationX",
+        "locationY"
+      ],
+      "title": "SyncQuad",
+      "type": "object"
+    },
+    "Trial": {
+      "properties": {
+        "landmarks": {
+          "items": {
+            "items": {
+              "$ref": "#/$defs/Landmark"
+            },
+            "type": "array"
+          },
+          "title": "Landmarks",
+          "type": "array"
+        }
+      },
+      "required": [
+        "landmarks"
+      ],
+      "title": "Trial",
+      "type": "object"
+    },
+    "UclOpenSession": {
+      "properties": {
+        "workflow": {
+          "description": "Path to the workflow running the experiment.",
+          "title": "Workflow",
+          "type": "string"
+        },
+        "commit": {
+          "description": "Commit hash of the experiment/rig repo.",
+          "title": "Commit",
+          "type": "string"
+        },
+        "repositoryUrl": {
+          "description": "The URL of the git repository used to version experiment source code.",
+          "title": "RepositoryUrl",
+          "type": "string"
+        },
+        "loggingRootPath": {
+          "title": "LoggingRootPath",
+          "type": "string"
+        },
+        "animalId": {
+          "title": "AnimalId",
+          "type": "string"
+        },
+        "sessionId": {
+          "title": "SessionId",
+          "type": "string"
+        }
+      },
+      "required": [
+        "workflow",
+        "commit",
+        "repositoryUrl",
+        "loggingRootPath",
+        "animalId",
+        "sessionId"
+      ],
+      "title": "UclOpenSession",
+      "type": "object"
+    },
+    "UclOpenVrCorridor2pRig": {
+      "properties": {
+        "version": {
+          "const": "0.0.0-rc1",
+          "default": "0.0.0-rc1",
+          "title": "Version",
+          "type": "string"
+        },
+        "screen": {
+          "$ref": "#/$defs/Screen"
+        },
+        "syncQuad": {
+          "$ref": "#/$defs/SyncQuad"
+        }
+      },
+      "required": [
+        "screen",
+        "syncQuad"
+      ],
+      "title": "UclOpenVrCorridor2pRig",
+      "type": "object"
+    },
+    "UclOpenVrCorridor2pTaskLogic": {
+      "properties": {
+        "version": {
+          "const": "0.0.0-rc1",
+          "default": "0.0.0-rc1",
+          "title": "Version",
+          "type": "string"
+        },
+        "name": {
+          "const": "UclOpenVrCorridor2p",
+          "default": "UclOpenVrCorridor2p",
+          "description": "Name of the task logic",
+          "title": "Name",
+          "type": "string"
+        },
+        "taskParameters": {
+          "$ref": "#/$defs/UclOpenVrCorridor2pTaskParameters",
+          "description": "Parameters of the task logic",
+          "title": "TaskParameters"
+        }
+      },
+      "required": [
+        "taskParameters"
+      ],
+      "title": "UclOpenVrCorridor2pTaskLogic",
+      "type": "object"
+    },
+    "UclOpenVrCorridor2pTaskParameters": {
+      "properties": {
+        "corridorWidth": {
+          "default": 2,
+          "title": "CorridorWidth",
+          "type": "number"
+        },
+        "blocks": {
+          "items": {
+            "$ref": "#/$defs/Block"
+          },
+          "title": "Blocks",
+          "type": "array"
+        }
+      },
+      "required": [
+        "blocks"
+      ],
+      "title": "UclOpenVrCorridor2pTaskParameters",
+      "type": "object"
+    },
+    "Vector3": {
+      "properties": {
+        "x": {
+          "description": "X coordinate of the point.",
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "description": "Y coordinate of the point.",
+          "title": "Y",
+          "type": "number"
+        },
+        "z": {
+          "description": "Z coordinate of the point.",
+          "title": "Z",
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "z"
+      ],
+      "title": "Vector3",
+      "type": "object"
+    }
+  }
+}

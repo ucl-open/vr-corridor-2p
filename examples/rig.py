@@ -1,10 +1,85 @@
 import os
 
 from ucl_open_vr_corridor_2p.rig import (
-    UclOpenVrCorridor2pRig
+    UclOpenVrCorridor2pRig,
+    SyncQuad
 )
 
-rig = UclOpenVrCorridor2pRig()
+from ucl_open.rigs.device import (
+    Screen,
+)
+
+from ucl_open.rigs.data_types import (
+    Vector3
+)
+
+from ucl_open.rigs.displays import (
+    DisplayCalibration,
+    DisplayIntrinsics,
+    DisplayExtrinsics
+)
+
+rig = UclOpenVrCorridor2pRig(
+    screen=Screen(
+        texture_assets_directory="../textures",
+        calibration={
+            "debug": DisplayCalibration(
+                intrinsics=DisplayIntrinsics(
+                    frame_width=640,
+                    frame_height=480,
+                    display_width=0.54,
+                    display_height=0.3
+                ),
+                extrinsics=DisplayExtrinsics(
+                    rotation=Vector3(x=0, y=0, z=0),
+                    translation=Vector3(x=0, y=0, z=0.3)
+                )
+            ),
+            "left": DisplayCalibration(
+                intrinsics=DisplayIntrinsics(
+                    frame_width=640,
+                    frame_height=480,
+                    display_width=0.54,
+                    display_height=0.3
+                ),
+                extrinsics=DisplayExtrinsics(
+                    rotation=Vector3(x=0, y=-45, z=0),
+                    translation=Vector3(x=-0.3, y=0, z=0.3)
+                )
+            ),
+            "center": DisplayCalibration(
+                    intrinsics=DisplayIntrinsics(
+                    frame_width=640,
+                    frame_height=480,
+                    display_width=0.54,
+                    display_height=0.3
+                ),
+                extrinsics=DisplayExtrinsics(
+                    rotation=Vector3(x=0, y=0, z=0),
+                    translation=Vector3(x=0, y=0, z=0.3)
+                )
+            ),
+            "right": DisplayCalibration(
+                    intrinsics=DisplayIntrinsics(
+                    frame_width=640,
+                    frame_height=480,
+                    display_width=0.54,
+                    display_height=0.3
+                ),
+                extrinsics=DisplayExtrinsics(
+                    rotation=Vector3(x=0, y=45, z=0),
+                    translation=Vector3(x=0.3, y=0, z=0.3)
+                )
+            ),
+        }
+    ),
+    sync_quad=SyncQuad(
+        extent_x=0.1,
+        extent_y=0.1,
+        location_x=1,
+        location_y=1
+    ),
+)
 
 def main(path_seed: str = "./local/{schema}.json"):
     os.makedirs(os.path.dirname(path_seed), exist_ok=True)
@@ -12,7 +87,7 @@ def main(path_seed: str = "./local/{schema}.json"):
 
     for model in models:
         with open(path_seed.format(schema=model.__class__.__name__), "w", encoding="utf-8") as f:
-            f.write(model.model_dump_json(indent=2))
+            f.write(model.model_dump_json(indent=2, by_alias=True))
 
 
 if __name__ == "__main__":
