@@ -927,14 +927,30 @@ namespace UclOpenHfVisualDataSchema
     
         private System.Collections.Generic.List<System.Collections.Generic.List<Landmark>> _landmarks;
     
+        private double _boundaryThreshold;
+    
+        private double _endTrialThreshold;
+    
+        private double _maximumTrialTime;
+    
+        private double _interTrialInterval;
+    
         public Trial()
         {
             _landmarks = new System.Collections.Generic.List<System.Collections.Generic.List<Landmark>>();
+            _boundaryThreshold = 1D;
+            _endTrialThreshold = 1.5D;
+            _maximumTrialTime = 60D;
+            _interTrialInterval = 3D;
         }
     
         protected Trial(Trial other)
         {
             _landmarks = other._landmarks;
+            _boundaryThreshold = other._boundaryThreshold;
+            _endTrialThreshold = other._endTrialThreshold;
+            _maximumTrialTime = other._maximumTrialTime;
+            _interTrialInterval = other._interTrialInterval;
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
@@ -951,6 +967,74 @@ namespace UclOpenHfVisualDataSchema
             }
         }
     
+        /// <summary>
+        /// Buffer applied to far boundary of corridor to determine stopping distance.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("boundaryThreshold")]
+        [System.ComponentModel.DescriptionAttribute("Buffer applied to far boundary of corridor to determine stopping distance.")]
+        public double BoundaryThreshold
+        {
+            get
+            {
+                return _boundaryThreshold;
+            }
+            set
+            {
+                _boundaryThreshold = value;
+            }
+        }
+    
+        /// <summary>
+        /// Buffer applied to far boundary of corridor to determine trial end distance.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("endTrialThreshold")]
+        [System.ComponentModel.DescriptionAttribute("Buffer applied to far boundary of corridor to determine trial end distance.")]
+        public double EndTrialThreshold
+        {
+            get
+            {
+                return _endTrialThreshold;
+            }
+            set
+            {
+                _endTrialThreshold = value;
+            }
+        }
+    
+        /// <summary>
+        /// Maximum amount of time to spend on this trial.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("maximumTrialTime")]
+        [System.ComponentModel.DescriptionAttribute("Maximum amount of time to spend on this trial.")]
+        public double MaximumTrialTime
+        {
+            get
+            {
+                return _maximumTrialTime;
+            }
+            set
+            {
+                _maximumTrialTime = value;
+            }
+        }
+    
+        /// <summary>
+        /// After boundary is reached, how long to wait before proceeding to next trial.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("interTrialInterval")]
+        [System.ComponentModel.DescriptionAttribute("After boundary is reached, how long to wait before proceeding to next trial.")]
+        public double InterTrialInterval
+        {
+            get
+            {
+                return _interTrialInterval;
+            }
+            set
+            {
+                _interTrialInterval = value;
+            }
+        }
+    
         public System.IObservable<Trial> Generate()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Trial(this)));
@@ -963,7 +1047,11 @@ namespace UclOpenHfVisualDataSchema
     
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
-            stringBuilder.Append("Landmarks = " + _landmarks);
+            stringBuilder.Append("Landmarks = " + _landmarks + ", ");
+            stringBuilder.Append("BoundaryThreshold = " + _boundaryThreshold + ", ");
+            stringBuilder.Append("EndTrialThreshold = " + _endTrialThreshold + ", ");
+            stringBuilder.Append("MaximumTrialTime = " + _maximumTrialTime + ", ");
+            stringBuilder.Append("InterTrialInterval = " + _interTrialInterval);
             return true;
         }
     
