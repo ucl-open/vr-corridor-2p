@@ -26,6 +26,7 @@ class Trial(BaseSchema):
     
 class Block(BaseSchema):
     available_trials: List[Trial]
+    randomise_trial_order: bool = Field(default=False)
     max_trials: int = Field(default=10, ge=1)
     
 
