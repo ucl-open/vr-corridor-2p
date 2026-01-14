@@ -21,7 +21,7 @@ class Trial(BaseSchema):
     end_trial_threshold: float = Field(default=1.5, description="Buffer applied to far boundary of corridor to determine trial end distance.")
     maximum_trial_time: float = Field(default=60, description="Maximum amount of time to spend on this trial.")
     inter_trial_interval: float = Field(default=3, description="After boundary is reached, how long to wait before proceeding to next trial.")
-    detect_lick_threshold: float = Field(default=0, description="Threshold after which licks are detected.")
+    detect_lick_threshold: float = Field(default=-1, description="Threshold after which licks are detected.")
     auto_reward_threshold: float = Field(default=10, description="Reward is automatically given after this threshold is reached.")
     
 class Block(BaseSchema):
