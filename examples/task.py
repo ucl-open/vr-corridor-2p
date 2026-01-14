@@ -13,7 +13,7 @@ task_logic = UclOpenVrCorridor2pTaskLogic(
         corridor_width=4,
         blocks = [
             Block(
-                randomise_trial_order=False,
+                randomise_trial_order=True,
                 available_trials=
                 [
                     Trial(landmarks=[
