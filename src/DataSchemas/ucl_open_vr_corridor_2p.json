@@ -266,6 +266,30 @@
           },
           "title": "Landmarks",
           "type": "array"
+        },
+        "boundaryThreshold": {
+          "default": 1,
+          "description": "Buffer applied to far boundary of corridor to determine stopping distance.",
+          "title": "BoundaryThreshold",
+          "type": "number"
+        },
+        "endTrialThreshold": {
+          "default": 1.5,
+          "description": "Buffer applied to far boundary of corridor to determine trial end distance.",
+          "title": "EndTrialThreshold",
+          "type": "number"
+        },
+        "maximumTrialTime": {
+          "default": 60,
+          "description": "Maximum amount of time to spend on this trial.",
+          "title": "MaximumTrialTime",
+          "type": "number"
+        },
+        "interTrialInterval": {
+          "default": 3,
+          "description": "After boundary is reached, how long to wait before proceeding to next trial.",
+          "title": "InterTrialInterval",
+          "type": "number"
         }
       },
       "required": [
