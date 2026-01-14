@@ -290,6 +290,18 @@
           "description": "After boundary is reached, how long to wait before proceeding to next trial.",
           "title": "InterTrialInterval",
           "type": "number"
+        },
+        "detectLickThreshold": {
+          "default": -1,
+          "description": "Threshold after which licks are detected.",
+          "title": "DetectLickThreshold",
+          "type": "number"
+        },
+        "autoRewardThreshold": {
+          "default": 10,
+          "description": "Reward is automatically given after this threshold is reached.",
+          "title": "AutoRewardThreshold",
+          "type": "number"
         }
       },
       "required": [

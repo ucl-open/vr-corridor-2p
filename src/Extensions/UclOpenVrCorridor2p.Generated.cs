@@ -935,6 +935,10 @@ namespace UclOpenHfVisualDataSchema
     
         private double _interTrialInterval;
     
+        private double _detectLickThreshold;
+    
+        private double _autoRewardThreshold;
+    
         public Trial()
         {
             _landmarks = new System.Collections.Generic.List<System.Collections.Generic.List<Landmark>>();
@@ -942,6 +946,8 @@ namespace UclOpenHfVisualDataSchema
             _endTrialThreshold = 1.5D;
             _maximumTrialTime = 60D;
             _interTrialInterval = 3D;
+            _detectLickThreshold = -1D;
+            _autoRewardThreshold = 10D;
         }
     
         protected Trial(Trial other)
@@ -951,6 +957,8 @@ namespace UclOpenHfVisualDataSchema
             _endTrialThreshold = other._endTrialThreshold;
             _maximumTrialTime = other._maximumTrialTime;
             _interTrialInterval = other._interTrialInterval;
+            _detectLickThreshold = other._detectLickThreshold;
+            _autoRewardThreshold = other._autoRewardThreshold;
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
@@ -1035,6 +1043,40 @@ namespace UclOpenHfVisualDataSchema
             }
         }
     
+        /// <summary>
+        /// Threshold after which licks are detected.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("detectLickThreshold")]
+        [System.ComponentModel.DescriptionAttribute("Threshold after which licks are detected.")]
+        public double DetectLickThreshold
+        {
+            get
+            {
+                return _detectLickThreshold;
+            }
+            set
+            {
+                _detectLickThreshold = value;
+            }
+        }
+    
+        /// <summary>
+        /// Reward is automatically given after this threshold is reached.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("autoRewardThreshold")]
+        [System.ComponentModel.DescriptionAttribute("Reward is automatically given after this threshold is reached.")]
+        public double AutoRewardThreshold
+        {
+            get
+            {
+                return _autoRewardThreshold;
+            }
+            set
+            {
+                _autoRewardThreshold = value;
+            }
+        }
+    
         public System.IObservable<Trial> Generate()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Trial(this)));
@@ -1051,7 +1093,9 @@ namespace UclOpenHfVisualDataSchema
             stringBuilder.Append("BoundaryThreshold = " + _boundaryThreshold + ", ");
             stringBuilder.Append("EndTrialThreshold = " + _endTrialThreshold + ", ");
             stringBuilder.Append("MaximumTrialTime = " + _maximumTrialTime + ", ");
-            stringBuilder.Append("InterTrialInterval = " + _interTrialInterval);
+            stringBuilder.Append("InterTrialInterval = " + _interTrialInterval + ", ");
+            stringBuilder.Append("DetectLickThreshold = " + _detectLickThreshold + ", ");
+            stringBuilder.Append("AutoRewardThreshold = " + _autoRewardThreshold);
             return true;
         }
     
