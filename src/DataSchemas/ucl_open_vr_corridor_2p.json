@@ -9,6 +9,11 @@
           "title": "AvailableTrials",
           "type": "array"
         },
+        "randomiseTrialOrder": {
+          "default": false,
+          "title": "RandomiseTrialOrder",
+          "type": "boolean"
+        },
         "maxTrials": {
           "default": 10,
           "minimum": 1,

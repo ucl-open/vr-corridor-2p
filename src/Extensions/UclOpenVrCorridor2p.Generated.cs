@@ -17,17 +17,21 @@ namespace UclOpenHfVisualDataSchema
     
         private System.Collections.Generic.List<Trial> _availableTrials;
     
+        private bool _randomiseTrialOrder;
+    
         private int _maxTrials;
     
         public Block()
         {
             _availableTrials = new System.Collections.Generic.List<Trial>();
+            _randomiseTrialOrder = false;
             _maxTrials = 10;
         }
     
         protected Block(Block other)
         {
             _availableTrials = other._availableTrials;
+            _randomiseTrialOrder = other._randomiseTrialOrder;
             _maxTrials = other._maxTrials;
         }
     
@@ -42,6 +46,19 @@ namespace UclOpenHfVisualDataSchema
             set
             {
                 _availableTrials = value;
+            }
+        }
+    
+        [Newtonsoft.Json.JsonPropertyAttribute("randomiseTrialOrder")]
+        public bool RandomiseTrialOrder
+        {
+            get
+            {
+                return _randomiseTrialOrder;
+            }
+            set
+            {
+                _randomiseTrialOrder = value;
             }
         }
     
@@ -71,6 +88,7 @@ namespace UclOpenHfVisualDataSchema
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
             stringBuilder.Append("AvailableTrials = " + _availableTrials + ", ");
+            stringBuilder.Append("RandomiseTrialOrder = " + _randomiseTrialOrder + ", ");
             stringBuilder.Append("MaxTrials = " + _maxTrials);
             return true;
         }
