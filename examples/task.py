@@ -17,17 +17,17 @@ task_logic = UclOpenVrCorridor2pTaskLogic(
                 available_trials=
                 [
                     Trial(landmarks=[
-                        [Landmark(size=2, texture="grating", reward_valence=0)],
-                        [Landmark(size=2, texture="dots", reward_valence=0)],
+                        [Landmark(size=4, texture="grating", reward_valence=0)],
+                        [Landmark(size=4, texture="dots", reward_valence=0)],
                         [Landmark(size=2, texture="leaves", reward_valence=0)],
                         [Landmark(size=2, texture="grey", reward_valence=0)]
                     ], auto_reward_threshold=3),
-                    Trial(landmarks=[
-                        [Landmark(size=2, texture="grass", reward_valence=0)],
-                        [Landmark(size=2, texture="tiles", reward_valence=1)],
-                        [Landmark(size=2, texture="bark", reward_valence=0)],
-                        [Landmark(size=2, texture="grey", reward_valence=0)]
-                    ])
+                    # Trial(landmarks=[
+                    #     [Landmark(size=2, texture="grass", reward_valence=0)],
+                    #     [Landmark(size=2, texture="tiles", reward_valence=1)],
+                    #     [Landmark(size=2, texture="bark", reward_valence=0)],
+                    #     [Landmark(size=2, texture="grey", reward_valence=0)]
+                    # ])
                 ],
             )
         ]

@@ -2,12 +2,12 @@
 <VisualizerLayout Version="2.9.0">
   <WindowSettings Index="15">
     <Location>
-      <X>942</X>
-      <Y>-1074</Y>
+      <X>96</X>
+      <Y>104</Y>
     </Location>
     <Size>
       <Width>334</Width>
-      <Height>132</Height>
+      <Height>64</Height>
     </Size>
     <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
     <VisualizerSettings>
@@ -20,12 +20,12 @@
         <NestedLayout>
           <WindowSettings Index="4">
             <Location>
-              <X>1280</X>
-              <Y>-1078</Y>
+              <X>120</X>
+              <Y>130</Y>
             </Location>
             <Size>
-              <Width>557</Width>
-              <Height>134</Height>
+              <Width>334</Width>
+              <Height>81</Height>
             </Size>
             <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
             <VisualizerSettings>
@@ -85,12 +85,12 @@
           </WindowSettings>
           <WindowSettings Index="25">
             <Location>
-              <X>-53</X>
-              <Y>-1176</Y>
+              <X>144</X>
+              <Y>156</Y>
             </Location>
             <Size>
               <Width>334</Width>
-              <Height>223</Height>
+              <Height>64</Height>
             </Size>
             <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
             <VisualizerSettings>
@@ -115,9 +115,10 @@
             </VisualizerSettings>
           </WindowSettings>
           <WindowSettings Index="27">
+            <Visible>false</Visible>
             <Location>
-              <X>21</X>
-              <Y>-812</Y>
+              <X>168</X>
+              <Y>182</Y>
             </Location>
             <Size>
               <Width>413</Width>
@@ -133,9 +134,10 @@
         </NestedLayout>
       </WindowSettings>
       <WindowSettings Index="36">
+        <Visible>false</Visible>
         <Location>
-          <X>448</X>
-          <Y>-1237</Y>
+          <X>20</X>
+          <Y>76</Y>
         </Location>
         <Size>
           <Width>413</Width>

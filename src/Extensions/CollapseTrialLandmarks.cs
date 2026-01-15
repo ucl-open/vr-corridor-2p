@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reactive.Linq;
 using UclOpenHfVisualDataSchema;
+using System.Drawing;
 
 [Combinator]
 [Description("")]
@@ -29,9 +30,8 @@ public class CollapseTrialLandmarks
 
             foreach (var landmark in chosenLandmarks)
             {
+                currentPosition += (lastSize / 2) + (landmark.Size / 2);
                 positionedLandmarks.Add(new PositionedLandmark { Position = currentPosition, Landmark = landmark });
-
-                currentPosition += landmark.Size;
 
                 lastSize = landmark.Size;
             }
