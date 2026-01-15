@@ -33,7 +33,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="io:ReadAllText">
-                <io:Path>C:\Users\neurogears\source\repos\ucl-open\vr-corridor-2p\local\UclOpenSession.json</io:Path>
+                <io:Path>..\local\UclOpenSession.json</io:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:AsyncSubject">
@@ -44,7 +44,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="io:ReadAllText">
-                <io:Path>C:\Users\neurogears\source\repos\ucl-open\vr-corridor-2p\local\UclOpenVrCorridor2pRig.json</io:Path>
+                <io:Path>..\local\UclOpenVrCorridor2pRig.json</io:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:AsyncSubject">
@@ -55,7 +55,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="io:ReadAllText">
-                <io:Path>C:\Users\neurogears\source\repos\ucl-open\vr-corridor-2p\local\UclOpenVrCorridor2pTaskLogic.json</io:Path>
+                <io:Path>..\local\UclOpenVrCorridor2pTaskLogic.json</io:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:AsyncSubject">
@@ -356,7 +356,7 @@
               <Eye>
                 <X>0</X>
                 <Y>0</Y>
-                <Z>3.71999836</Z>
+                <Z>4.559998</Z>
               </Eye>
               <NearClip>0.1</NearClip>
               <FarClip>1000</FarClip>
@@ -1224,7 +1224,7 @@
               <Combinator xsi:type="gl:CreateVector3">
                 <gl:X>0</gl:X>
                 <gl:Y>0</gl:Y>
-                <gl:Z>10</gl:Z>
+                <gl:Z>11</gl:Z>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1354,7 +1354,7 @@
                   <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                     <TranslationX>-2</TranslationX>
                     <TranslationY>0</TranslationY>
-                    <TranslationZ>10</TranslationZ>
+                    <TranslationZ>11</TranslationZ>
                     <RotationZ>0</RotationZ>
                     <RotationY>-90</RotationY>
                     <RotationX>0</RotationX>
@@ -1398,7 +1398,7 @@
                   <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                     <TranslationX>2</TranslationX>
                     <TranslationY>0</TranslationY>
-                    <TranslationZ>10</TranslationZ>
+                    <TranslationZ>11</TranslationZ>
                     <RotationZ>0</RotationZ>
                     <RotationY>-90</RotationY>
                     <RotationX>0</RotationX>
