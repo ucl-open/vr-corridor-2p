@@ -4,12 +4,12 @@
     <NestedLayout>
       <WindowSettings Index="12">
         <Location>
-          <X>-149</X>
-          <Y>-1280</Y>
+          <X>168</X>
+          <Y>182</Y>
         </Location>
         <Size>
-          <Width>633</Width>
-          <Height>145</Height>
+          <Width>334</Width>
+          <Height>81</Height>
         </Size>
         <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
         <VisualizerSettings>
