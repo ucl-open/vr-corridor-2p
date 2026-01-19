@@ -356,7 +356,7 @@
               <Eye>
                 <X>0</X>
                 <Y>0</Y>
-                <Z>4.559998</Z>
+                <Z>5</Z>
               </Eye>
               <NearClip>0.1</NearClip>
               <FarClip>1000</FarClip>
@@ -1135,7 +1135,7 @@
                     <Name>Source1</Name>
                   </Expression>
                   <Expression xsi:type="MemberSelector">
-                    <Selector>Item2.Landmark.RewardValence</Selector>
+                    <Selector>Item2.RewardValence</Selector>
                   </Expression>
                   <Expression xsi:type="GreaterThan">
                     <Operand xsi:type="IntProperty">
@@ -1224,7 +1224,7 @@
               <Combinator xsi:type="gl:CreateVector3">
                 <gl:X>0</gl:X>
                 <gl:Y>0</gl:Y>
-                <gl:Z>11</gl:Z>
+                <gl:Z>5</gl:Z>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1259,7 +1259,7 @@
                   </Expression>
                   <Expression xsi:type="InputMapping">
                     <PropertyMappings>
-                      <Property Name="Value" Selector="Item1.Landmark.Texture" />
+                      <Property Name="Value" Selector="Item1.Texture" />
                     </PropertyMappings>
                     <Selector>Item2</Selector>
                   </Expression>
@@ -1331,7 +1331,7 @@
                   <Expression xsi:type="InputMapping">
                     <PropertyMappings>
                       <Property Name="TranslationZ" Selector="Item2.Item2.Position" />
-                      <Property Name="ScaleX" Selector="Item2.Item2.Landmark.Size" />
+                      <Property Name="ScaleX" Selector="Item2.Item2.Size" />
                     </PropertyMappings>
                     <Selector>Item1</Selector>
                   </Expression>
@@ -1354,11 +1354,11 @@
                   <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                     <TranslationX>-2</TranslationX>
                     <TranslationY>0</TranslationY>
-                    <TranslationZ>11</TranslationZ>
+                    <TranslationZ>0</TranslationZ>
                     <RotationZ>0</RotationZ>
                     <RotationY>-90</RotationY>
                     <RotationX>0</RotationX>
-                    <ScaleX>2</ScaleX>
+                    <ScaleX>4</ScaleX>
                     <ScaleY>1</ScaleY>
                     <ScaleZ>1</ScaleZ>
                     <Ambient>
@@ -1398,7 +1398,7 @@
                   <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                     <TranslationX>2</TranslationX>
                     <TranslationY>0</TranslationY>
-                    <TranslationZ>11</TranslationZ>
+                    <TranslationZ>0</TranslationZ>
                     <RotationZ>0</RotationZ>
                     <RotationY>-90</RotationY>
                     <RotationX>0</RotationX>
@@ -1553,7 +1553,7 @@
                           <Name>Source1</Name>
                         </Expression>
                         <Expression xsi:type="MemberSelector">
-                          <Selector>Item2.Landmark.RewardValence</Selector>
+                          <Selector>Item2.RewardValence</Selector>
                         </Expression>
                         <Expression xsi:type="LessThanOrEqual">
                           <Operand xsi:type="IntProperty">
@@ -1609,7 +1609,7 @@
                     <Combinator xsi:type="rx:DistinctUntilChanged" />
                   </Expression>
                   <Expression xsi:type="MemberSelector">
-                    <Selector>Landmark.RewardValence</Selector>
+                    <Selector>RewardValence</Selector>
                   </Expression>
                   <Expression xsi:type="rx:Accumulate" />
                   <Expression xsi:type="GreaterThan">

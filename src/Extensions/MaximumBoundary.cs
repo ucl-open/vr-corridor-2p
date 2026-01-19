@@ -11,7 +11,7 @@ using UclOpenHfVisualDataSchema;
 [WorkflowElementCategory(ElementCategory.Transform)]
 public class MaximumBoundary
 {
-    public IObservable<double> Process(IObservable<List<PositionedLandmark>> source)
+    public IObservable<double> Process(IObservable<List<Landmark>> source)
     {
         return source.Select(value =>
         {
