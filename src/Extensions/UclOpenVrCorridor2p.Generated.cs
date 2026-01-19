@@ -428,6 +428,10 @@ namespace UclOpenHfVisualDataSchema
     
         private double _size;
     
+        private double _position;
+    
+        private double _centerOfffset;
+    
         private string _texture;
     
         private int _rewardValence;
@@ -435,12 +439,16 @@ namespace UclOpenHfVisualDataSchema
         public Landmark()
         {
             _size = 1D;
+            _position = 0D;
+            _centerOfffset = 0D;
             _rewardValence = 0;
         }
     
         protected Landmark(Landmark other)
         {
             _size = other._size;
+            _position = other._position;
+            _centerOfffset = other._centerOfffset;
             _texture = other._texture;
             _rewardValence = other._rewardValence;
         }
@@ -459,6 +467,41 @@ namespace UclOpenHfVisualDataSchema
             set
             {
                 _size = value;
+            }
+        }
+    
+        /// <summary>
+        /// This landmark's position in VR space.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("position")]
+        [System.ComponentModel.DescriptionAttribute("This landmark\'s position in VR space.")]
+        public double Position
+        {
+            get
+            {
+                return _position;
+            }
+            set
+            {
+                _position = value;
+            }
+        }
+    
+        /// <summary>
+        /// Additonal offset to the corridor width used for layering landmark rendering. Higher values are further from the corridor midline.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("centerOfffset")]
+        [System.ComponentModel.DescriptionAttribute("Additonal offset to the corridor width used for layering landmark rendering. High" +
+            "er values are further from the corridor midline.")]
+        public double CenterOfffset
+        {
+            get
+            {
+                return _centerOfffset;
+            }
+            set
+            {
+                _centerOfffset = value;
             }
         }
     
@@ -505,6 +548,8 @@ namespace UclOpenHfVisualDataSchema
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
             stringBuilder.Append("Size = " + _size + ", ");
+            stringBuilder.Append("Position = " + _position + ", ");
+            stringBuilder.Append("CenterOfffset = " + _centerOfffset + ", ");
             stringBuilder.Append("Texture = " + _texture + ", ");
             stringBuilder.Append("RewardValence = " + _rewardValence);
             return true;

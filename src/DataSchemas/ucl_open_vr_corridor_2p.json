@@ -129,6 +129,18 @@
           "title": "Size",
           "type": "number"
         },
+        "position": {
+          "default": 0,
+          "description": "This landmark's position in VR space.",
+          "title": "Position",
+          "type": "number"
+        },
+        "centerOfffset": {
+          "default": 0,
+          "description": "Additonal offset to the corridor width used for layering landmark rendering. Higher values are further from the corridor midline.",
+          "title": "CenterOfffset",
+          "type": "number"
+        },
         "texture": {
           "title": "Texture",
           "type": "string"
