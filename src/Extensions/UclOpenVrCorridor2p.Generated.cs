@@ -428,6 +428,10 @@ namespace UclOpenHfVisualDataSchema
     
         private double _size;
     
+        private double _position;
+    
+        private double _centerOfffset;
+    
         private string _texture;
     
         private int _rewardValence;
@@ -435,12 +439,16 @@ namespace UclOpenHfVisualDataSchema
         public Landmark()
         {
             _size = 1D;
+            _position = 0D;
+            _centerOfffset = 0D;
             _rewardValence = 0;
         }
     
         protected Landmark(Landmark other)
         {
             _size = other._size;
+            _position = other._position;
+            _centerOfffset = other._centerOfffset;
             _texture = other._texture;
             _rewardValence = other._rewardValence;
         }
@@ -459,6 +467,41 @@ namespace UclOpenHfVisualDataSchema
             set
             {
                 _size = value;
+            }
+        }
+    
+        /// <summary>
+        /// This landmark's position in VR space.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("position")]
+        [System.ComponentModel.DescriptionAttribute("This landmark\'s position in VR space.")]
+        public double Position
+        {
+            get
+            {
+                return _position;
+            }
+            set
+            {
+                _position = value;
+            }
+        }
+    
+        /// <summary>
+        /// Additonal offset to the corridor width used for layering landmark rendering. Higher values are further from the corridor midline.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("centerOfffset")]
+        [System.ComponentModel.DescriptionAttribute("Additonal offset to the corridor width used for layering landmark rendering. High" +
+            "er values are further from the corridor midline.")]
+        public double CenterOfffset
+        {
+            get
+            {
+                return _centerOfffset;
+            }
+            set
+            {
+                _centerOfffset = value;
             }
         }
     
@@ -505,6 +548,8 @@ namespace UclOpenHfVisualDataSchema
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
             stringBuilder.Append("Size = " + _size + ", ");
+            stringBuilder.Append("Position = " + _position + ", ");
+            stringBuilder.Append("CenterOfffset = " + _centerOfffset + ", ");
             stringBuilder.Append("Texture = " + _texture + ", ");
             stringBuilder.Append("RewardValence = " + _rewardValence);
             return true;
@@ -528,65 +573,165 @@ namespace UclOpenHfVisualDataSchema
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     [Bonsai.CombinatorAttribute(MethodName="Generate")]
-    public partial class PositionedLandmark
+    public partial class MatrixArduinoData
     {
     
-        private Landmark _landmark;
+        private int _encoderPos;
     
-        private double _position;
+        private int _lastLeftLickTime;
     
-        public PositionedLandmark()
+        private int _lastRightLickTime;
+    
+        private int _lastSyncPulseTime;
+    
+        private double _photodiodeValue;
+    
+        private int _last2PFrameTime;
+    
+        private int _last2PLineTime;
+    
+        private int _currentMillis;
+    
+        public MatrixArduinoData()
         {
-            _landmark = new Landmark();
         }
     
-        protected PositionedLandmark(PositionedLandmark other)
+        protected MatrixArduinoData(MatrixArduinoData other)
         {
-            _landmark = other._landmark;
-            _position = other._position;
+            _encoderPos = other._encoderPos;
+            _lastLeftLickTime = other._lastLeftLickTime;
+            _lastRightLickTime = other._lastRightLickTime;
+            _lastSyncPulseTime = other._lastSyncPulseTime;
+            _photodiodeValue = other._photodiodeValue;
+            _last2PFrameTime = other._last2PFrameTime;
+            _last2PLineTime = other._last2PLineTime;
+            _currentMillis = other._currentMillis;
         }
     
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [Newtonsoft.Json.JsonPropertyAttribute("landmark", Required=Newtonsoft.Json.Required.Always)]
-        public Landmark Landmark
+        [Newtonsoft.Json.JsonPropertyAttribute("encoderPos", Required=Newtonsoft.Json.Required.Always)]
+        public int EncoderPos
         {
             get
             {
-                return _landmark;
+                return _encoderPos;
             }
             set
             {
-                _landmark = value;
+                _encoderPos = value;
             }
         }
     
-        [Newtonsoft.Json.JsonPropertyAttribute("position", Required=Newtonsoft.Json.Required.Always)]
-        public double Position
+        [Newtonsoft.Json.JsonPropertyAttribute("lastLeftLickTime", Required=Newtonsoft.Json.Required.Always)]
+        public int LastLeftLickTime
         {
             get
             {
-                return _position;
+                return _lastLeftLickTime;
             }
             set
             {
-                _position = value;
+                _lastLeftLickTime = value;
             }
         }
     
-        public System.IObservable<PositionedLandmark> Generate()
+        [Newtonsoft.Json.JsonPropertyAttribute("lastRightLickTime", Required=Newtonsoft.Json.Required.Always)]
+        public int LastRightLickTime
         {
-            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new PositionedLandmark(this)));
+            get
+            {
+                return _lastRightLickTime;
+            }
+            set
+            {
+                _lastRightLickTime = value;
+            }
         }
     
-        public System.IObservable<PositionedLandmark> Generate<TSource>(System.IObservable<TSource> source)
+        [Newtonsoft.Json.JsonPropertyAttribute("lastSyncPulseTime", Required=Newtonsoft.Json.Required.Always)]
+        public int LastSyncPulseTime
         {
-            return System.Reactive.Linq.Observable.Select(source, _ => new PositionedLandmark(this));
+            get
+            {
+                return _lastSyncPulseTime;
+            }
+            set
+            {
+                _lastSyncPulseTime = value;
+            }
+        }
+    
+        [Newtonsoft.Json.JsonPropertyAttribute("photodiodeValue", Required=Newtonsoft.Json.Required.Always)]
+        public double PhotodiodeValue
+        {
+            get
+            {
+                return _photodiodeValue;
+            }
+            set
+            {
+                _photodiodeValue = value;
+            }
+        }
+    
+        [Newtonsoft.Json.JsonPropertyAttribute("last2PFrameTime", Required=Newtonsoft.Json.Required.Always)]
+        public int Last2PFrameTime
+        {
+            get
+            {
+                return _last2PFrameTime;
+            }
+            set
+            {
+                _last2PFrameTime = value;
+            }
+        }
+    
+        [Newtonsoft.Json.JsonPropertyAttribute("last2PLineTime", Required=Newtonsoft.Json.Required.Always)]
+        public int Last2PLineTime
+        {
+            get
+            {
+                return _last2PLineTime;
+            }
+            set
+            {
+                _last2PLineTime = value;
+            }
+        }
+    
+        [Newtonsoft.Json.JsonPropertyAttribute("currentMillis", Required=Newtonsoft.Json.Required.Always)]
+        public int CurrentMillis
+        {
+            get
+            {
+                return _currentMillis;
+            }
+            set
+            {
+                _currentMillis = value;
+            }
+        }
+    
+        public System.IObservable<MatrixArduinoData> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new MatrixArduinoData(this)));
+        }
+    
+        public System.IObservable<MatrixArduinoData> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new MatrixArduinoData(this));
         }
     
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
-            stringBuilder.Append("Landmark = " + _landmark + ", ");
-            stringBuilder.Append("Position = " + _position);
+            stringBuilder.Append("EncoderPos = " + _encoderPos + ", ");
+            stringBuilder.Append("LastLeftLickTime = " + _lastLeftLickTime + ", ");
+            stringBuilder.Append("LastRightLickTime = " + _lastRightLickTime + ", ");
+            stringBuilder.Append("LastSyncPulseTime = " + _lastSyncPulseTime + ", ");
+            stringBuilder.Append("PhotodiodeValue = " + _photodiodeValue + ", ");
+            stringBuilder.Append("Last2PFrameTime = " + _last2PFrameTime + ", ");
+            stringBuilder.Append("Last2PLineTime = " + _last2PLineTime + ", ");
+            stringBuilder.Append("CurrentMillis = " + _currentMillis);
             return true;
         }
     
@@ -1728,9 +1873,9 @@ namespace UclOpenHfVisualDataSchema
             return Process<Landmark>(source);
         }
 
-        public System.IObservable<string> Process(System.IObservable<PositionedLandmark> source)
+        public System.IObservable<string> Process(System.IObservable<MatrixArduinoData> source)
         {
-            return Process<PositionedLandmark>(source);
+            return Process<MatrixArduinoData>(source);
         }
 
         public System.IObservable<string> Process(System.IObservable<Screen> source)
@@ -1787,7 +1932,7 @@ namespace UclOpenHfVisualDataSchema
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<DisplayExtrinsics>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<DisplayIntrinsics>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Landmark>))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<PositionedLandmark>))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<MatrixArduinoData>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Screen>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<SyncQuad>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Trial>))]

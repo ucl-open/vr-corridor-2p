@@ -19,7 +19,7 @@ def main():
         ucl_open_vr_corridor_2p.task.UclOpenVrCorridor2pTaskLogic,
         ucl_open_vr_corridor_2p.rig.UclOpenVrCorridor2pRig,
         ucl_open_vr_corridor_2p.session.UclOpenSession,
-        ucl_open_vr_corridor_2p.data_types.PositionedLandmark
+        ucl_open_vr_corridor_2p.data_types.MatrixArduinoData
     ]
     model = pydantic.RootModel[Union[tuple(models)]]
 

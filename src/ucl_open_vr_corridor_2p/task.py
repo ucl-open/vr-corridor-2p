@@ -12,6 +12,8 @@ class TaskParameters(BaseSchema):
     
 class Landmark(BaseSchema):
     size: float = Field(default=1, description="This landmark's size in VR space.")
+    position: float = Field(default=0, description="This landmark's position in VR space.")
+    center_offfset: float = Field(default=0, description="Additonal offset to the corridor width used for layering landmark rendering. Higher values are further from the corridor midline.")
     texture: str
     reward_valence: int = Field(default=0, description="Flag describing this landmark's reward valence.")
     

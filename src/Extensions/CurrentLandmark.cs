@@ -12,7 +12,7 @@ using UclOpenHfVisualDataSchema;
 [WorkflowElementCategory(ElementCategory.Transform)]
 public class CurrentLandmark
 {
-    public IObservable<PositionedLandmark> Process(IObservable<Tuple<OpenTK.Vector3, List<PositionedLandmark>>> source)
+    public IObservable<Landmark> Process(IObservable<Tuple<OpenTK.Vector3, List<Landmark>>> source)
     {
         return source.Select(value =>
         {

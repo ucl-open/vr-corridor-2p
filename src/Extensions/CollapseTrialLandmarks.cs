@@ -13,7 +13,7 @@ using System.Drawing;
 public class CollapseTrialLandmarks
 {
     Random random = new Random();
-    public IObservable<List<PositionedLandmark>> Process(IObservable<Trial> source)
+    public IObservable<List<Landmark>> Process(IObservable<Trial> source)
     {
         return source.Select(value => {
             // var landmarkSet = value.Landmarks.OrderBy(x => random.Next()).ToList();
@@ -23,20 +23,7 @@ public class CollapseTrialLandmarks
                 return x[random.Next(x.Count)];
             }).ToList();
 
-            // Position landmarks
-            var positionedLandmarks = new List<PositionedLandmark>();
-            double currentPosition = 0;
-            double lastSize = 0;
-
-            foreach (var landmark in chosenLandmarks)
-            {
-                currentPosition += (lastSize / 2) + (landmark.Size / 2);
-                positionedLandmarks.Add(new PositionedLandmark { Position = currentPosition, Landmark = landmark });
-
-                lastSize = landmark.Size;
-            }
-
-            return positionedLandmarks;
+            return chosenLandmarks;
         });
     }
 }

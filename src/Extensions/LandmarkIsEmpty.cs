@@ -9,13 +9,10 @@ using UclOpenHfVisualDataSchema;
 [Combinator]
 [Description("")]
 [WorkflowElementCategory(ElementCategory.Transform)]
-public class MaximumBoundary
+public class LandmarkIsEmpty
 {
-    public IObservable<double> Process(IObservable<List<Landmark>> source)
+    public IObservable<bool> Process(IObservable<Landmark> source)
     {
-        return source.Select(value =>
-        {
-            return value.Max(x => LandmarkUtils.LandmarkToPositionRange(x)[1]);
-        });
+        return source.Select(value => { return value == null; });
     }
 }

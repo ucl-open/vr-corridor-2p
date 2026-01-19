@@ -7,8 +7,8 @@ using System.Reactive.Linq;
 using UclOpenHfVisualDataSchema;
 
 public static class LandmarkUtils {
-    public static double[] LandmarkToPositionRange(PositionedLandmark positionedLandmark)
+    public static double[] LandmarkToPositionRange(Landmark landmark)
     {
-        return new double[] { positionedLandmark.Position - (positionedLandmark.Landmark.Size / 2), positionedLandmark.Position + (positionedLandmark.Landmark.Size / 2) };
+        return new double[] { landmark.Position - (landmark.Size / 2), landmark.Position + (landmark.Size / 2) };
     }
 }
