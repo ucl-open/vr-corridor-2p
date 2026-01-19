@@ -158,21 +158,52 @@
       "title": "Landmark",
       "type": "object"
     },
-    "PositionedLandmark": {
+    "MatrixArduinoData": {
       "properties": {
-        "landmark": {
-          "$ref": "#/$defs/Landmark"
+        "encoderPos": {
+          "title": "EncoderPos",
+          "type": "integer"
         },
-        "position": {
-          "title": "Position",
+        "lastLeftLickTime": {
+          "title": "LastLeftLickTime",
+          "type": "integer"
+        },
+        "lastRightLickTime": {
+          "title": "LastRightLickTime",
+          "type": "integer"
+        },
+        "lastSyncPulseTime": {
+          "title": "LastSyncPulseTime",
+          "type": "integer"
+        },
+        "photodiodeValue": {
+          "title": "PhotodiodeValue",
           "type": "number"
+        },
+        "last2PFrameTime": {
+          "title": "Last2PFrameTime",
+          "type": "integer"
+        },
+        "last2PLineTime": {
+          "title": "Last2PLineTime",
+          "type": "integer"
+        },
+        "currentMillis": {
+          "title": "CurrentMillis",
+          "type": "integer"
         }
       },
       "required": [
-        "landmark",
-        "position"
+        "encoderPos",
+        "lastLeftLickTime",
+        "lastRightLickTime",
+        "lastSyncPulseTime",
+        "photodiodeValue",
+        "last2PFrameTime",
+        "last2PLineTime",
+        "currentMillis"
       ],
-      "title": "PositionedLandmark",
+      "title": "MatrixArduinoData",
       "type": "object"
     },
     "Screen": {
