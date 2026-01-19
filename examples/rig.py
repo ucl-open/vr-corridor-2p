@@ -39,36 +39,36 @@ rig = UclOpenVrCorridor2pRig(
                 intrinsics=DisplayIntrinsics(
                     frame_width=640,
                     frame_height=480,
-                    display_width=0.54,
-                    display_height=0.3
+                    display_width=15,
+                    display_height=19.5
                 ),
                 extrinsics=DisplayExtrinsics(
-                    rotation=Vector3(x=0, y=-45, z=0),
-                    translation=Vector3(x=-0.3, y=0, z=0.3)
+                    rotation=Vector3(x=0, y=-1.0472, z=0),
+                    translation=Vector3(x=-12, y=0, z=9)
                 )
             ),
             "center": DisplayCalibration(
                     intrinsics=DisplayIntrinsics(
                     frame_width=640,
                     frame_height=480,
-                    display_width=0.54,
-                    display_height=0.3
+                    display_width=15,
+                    display_height=19.5
                 ),
                 extrinsics=DisplayExtrinsics(
                     rotation=Vector3(x=0, y=0, z=0),
-                    translation=Vector3(x=0, y=0, z=0.3)
+                    translation=Vector3(x=0, y=0, z=15)
                 )
             ),
             "right": DisplayCalibration(
                     intrinsics=DisplayIntrinsics(
                     frame_width=640,
                     frame_height=480,
-                    display_width=0.54,
-                    display_height=0.3
+                    display_width=15,
+                    display_height=19.5
                 ),
                 extrinsics=DisplayExtrinsics(
-                    rotation=Vector3(x=0, y=45, z=0),
-                    translation=Vector3(x=0.3, y=0, z=0.3)
+                    rotation=Vector3(x=0, y=1.0472, z=0),
+                    translation=Vector3(x=12, y=0, z=9)
                 )
             ),
         }

@@ -10,7 +10,7 @@ from ucl_open_vr_corridor_2p.task import (
 
 task_logic = UclOpenVrCorridor2pTaskLogic(
     task_parameters=UclOpenVrCorridor2pTaskParameters(
-        corridor_width=4,
+        corridor_width=1,
         blocks = [
             Block(
                 randomise_trial_order=True,
