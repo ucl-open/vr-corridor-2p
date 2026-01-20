@@ -1090,6 +1090,8 @@ namespace UclOpenHfVisualDataSchema
     
         private System.Collections.Generic.List<System.Collections.Generic.List<Landmark>> _landmarks;
     
+        private string _backgroundTexture;
+    
         private double _boundaryThreshold;
     
         private double _endTrialThreshold;
@@ -1105,6 +1107,7 @@ namespace UclOpenHfVisualDataSchema
         public Trial()
         {
             _landmarks = new System.Collections.Generic.List<System.Collections.Generic.List<Landmark>>();
+            _backgroundTexture = "waves";
             _boundaryThreshold = 1D;
             _endTrialThreshold = 1.5D;
             _maximumTrialTime = 60D;
@@ -1116,6 +1119,7 @@ namespace UclOpenHfVisualDataSchema
         protected Trial(Trial other)
         {
             _landmarks = other._landmarks;
+            _backgroundTexture = other._backgroundTexture;
             _boundaryThreshold = other._boundaryThreshold;
             _endTrialThreshold = other._endTrialThreshold;
             _maximumTrialTime = other._maximumTrialTime;
@@ -1135,6 +1139,19 @@ namespace UclOpenHfVisualDataSchema
             set
             {
                 _landmarks = value;
+            }
+        }
+    
+        [Newtonsoft.Json.JsonPropertyAttribute("backgroundTexture")]
+        public string BackgroundTexture
+        {
+            get
+            {
+                return _backgroundTexture;
+            }
+            set
+            {
+                _backgroundTexture = value;
             }
         }
     
@@ -1253,6 +1270,7 @@ namespace UclOpenHfVisualDataSchema
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
             stringBuilder.Append("Landmarks = " + _landmarks + ", ");
+            stringBuilder.Append("BackgroundTexture = " + _backgroundTexture + ", ");
             stringBuilder.Append("BoundaryThreshold = " + _boundaryThreshold + ", ");
             stringBuilder.Append("EndTrialThreshold = " + _endTrialThreshold + ", ");
             stringBuilder.Append("MaximumTrialTime = " + _maximumTrialTime + ", ");
