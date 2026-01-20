@@ -4,7 +4,7 @@
     <NestedLayout>
       <WindowSettings Index="1">
         <NestedLayout>
-          <WindowSettings Index="28">
+          <WindowSettings Index="31">
             <Location>
               <X>120</X>
               <Y>130</Y>
@@ -22,45 +22,7 @@
       </WindowSettings>
     </NestedLayout>
   </WindowSettings>
-  <WindowSettings Index="17">
-    <Location>
-      <X>209</X>
-      <Y>232</Y>
-    </Location>
-    <Size>
-      <Width>416</Width>
-      <Height>279</Height>
-    </Size>
-    <VisualizerTypeName>Bonsai.Design.Visualizers.TimeSeriesVisualizer</VisualizerTypeName>
-    <VisualizerSettings>
-      <TimeSeriesVisualizer>
-        <Capacity>640</Capacity>
-        <Min>0</Min>
-        <Max>70000</Max>
-        <AutoScale>true</AutoScale>
-      </TimeSeriesVisualizer>
-    </VisualizerSettings>
-  </WindowSettings>
-  <WindowSettings Index="20">
-    <Location>
-      <X>180</X>
-      <Y>420</Y>
-    </Location>
-    <Size>
-      <Width>416</Width>
-      <Height>279</Height>
-    </Size>
-    <VisualizerTypeName>Bonsai.Design.Visualizers.TimeSeriesVisualizer</VisualizerTypeName>
-    <VisualizerSettings>
-      <TimeSeriesVisualizer>
-        <Capacity>640</Capacity>
-        <Min>-6</Min>
-        <Max>6</Max>
-        <AutoScale>true</AutoScale>
-      </TimeSeriesVisualizer>
-    </VisualizerSettings>
-  </WindowSettings>
-  <WindowSettings Index="34">
+  <WindowSettings Index="35">
     <Visible>false</Visible>
     <Location>
       <X>48</X>
@@ -74,5 +36,21 @@
     <VisualizerSettings>
       <ObjectTextVisualizer />
     </VisualizerSettings>
+    <NestedLayout>
+      <WindowSettings Index="29">
+        <Location>
+          <X>455</X>
+          <Y>344</Y>
+        </Location>
+        <Size>
+          <Width>336</Width>
+          <Height>65</Height>
+        </Size>
+        <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
+        <VisualizerSettings>
+          <ObjectTextVisualizer />
+        </VisualizerSettings>
+      </WindowSettings>
+    </NestedLayout>
   </WindowSettings>
 </VisualizerLayout>

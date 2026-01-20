@@ -475,6 +475,12 @@
           "description": "Reward is automatically given after this threshold is reached.",
           "title": "AutoRewardThreshold",
           "type": "number"
+        },
+        "movementVisualGain": {
+          "default": 0.0613,
+          "description": "Gain between encoder delta and visual movement.",
+          "title": "MovementVisualGain",
+          "type": "number"
         }
       },
       "required": [
@@ -593,6 +599,11 @@
         "corridorWidth": {
           "default": 2,
           "title": "CorridorWidth",
+          "type": "number"
+        },
+        "farClip": {
+          "default": 20,
+          "title": "FarClip",
           "type": "number"
         },
         "blocks": {

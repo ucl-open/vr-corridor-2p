@@ -1516,6 +1516,8 @@ namespace UclOpenHfVisualDataSchema
     
         private double _autoRewardThreshold;
     
+        private double _movementVisualGain;
+    
         public Trial()
         {
             _landmarks = new System.Collections.Generic.List<System.Collections.Generic.List<Landmark>>();
@@ -1526,6 +1528,7 @@ namespace UclOpenHfVisualDataSchema
             _interTrialInterval = 3D;
             _detectLickThreshold = -1D;
             _autoRewardThreshold = 10D;
+            _movementVisualGain = 0.0613D;
         }
     
         protected Trial(Trial other)
@@ -1538,6 +1541,7 @@ namespace UclOpenHfVisualDataSchema
             _interTrialInterval = other._interTrialInterval;
             _detectLickThreshold = other._detectLickThreshold;
             _autoRewardThreshold = other._autoRewardThreshold;
+            _movementVisualGain = other._movementVisualGain;
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
@@ -1669,6 +1673,23 @@ namespace UclOpenHfVisualDataSchema
             }
         }
     
+        /// <summary>
+        /// Gain between encoder delta and visual movement.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("movementVisualGain")]
+        [System.ComponentModel.DescriptionAttribute("Gain between encoder delta and visual movement.")]
+        public double MovementVisualGain
+        {
+            get
+            {
+                return _movementVisualGain;
+            }
+            set
+            {
+                _movementVisualGain = value;
+            }
+        }
+    
         public System.IObservable<Trial> Generate()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Trial(this)));
@@ -1688,7 +1709,8 @@ namespace UclOpenHfVisualDataSchema
             stringBuilder.Append("MaximumTrialTime = " + _maximumTrialTime + ", ");
             stringBuilder.Append("InterTrialInterval = " + _interTrialInterval + ", ");
             stringBuilder.Append("DetectLickThreshold = " + _detectLickThreshold + ", ");
-            stringBuilder.Append("AutoRewardThreshold = " + _autoRewardThreshold);
+            stringBuilder.Append("AutoRewardThreshold = " + _autoRewardThreshold + ", ");
+            stringBuilder.Append("MovementVisualGain = " + _movementVisualGain);
             return true;
         }
     
@@ -2135,17 +2157,21 @@ namespace UclOpenHfVisualDataSchema
     
         private double _corridorWidth;
     
+        private double _farClip;
+    
         private System.Collections.Generic.List<Block> _blocks;
     
         public UclOpenVrCorridor2pTaskParameters()
         {
             _corridorWidth = 2D;
+            _farClip = 20D;
             _blocks = new System.Collections.Generic.List<Block>();
         }
     
         protected UclOpenVrCorridor2pTaskParameters(UclOpenVrCorridor2pTaskParameters other)
         {
             _corridorWidth = other._corridorWidth;
+            _farClip = other._farClip;
             _blocks = other._blocks;
         }
     
@@ -2159,6 +2185,19 @@ namespace UclOpenHfVisualDataSchema
             set
             {
                 _corridorWidth = value;
+            }
+        }
+    
+        [Newtonsoft.Json.JsonPropertyAttribute("farClip")]
+        public double FarClip
+        {
+            get
+            {
+                return _farClip;
+            }
+            set
+            {
+                _farClip = value;
             }
         }
     
@@ -2189,6 +2228,7 @@ namespace UclOpenHfVisualDataSchema
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
             stringBuilder.Append("CorridorWidth = " + _corridorWidth + ", ");
+            stringBuilder.Append("FarClip = " + _farClip + ", ");
             stringBuilder.Append("Blocks = " + _blocks);
             return true;
         }

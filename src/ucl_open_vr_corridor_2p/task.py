@@ -26,6 +26,7 @@ class Trial(BaseSchema):
     inter_trial_interval: float = Field(default=3, description="After boundary is reached, how long to wait before proceeding to next trial.")
     detect_lick_threshold: float = Field(default=-1, description="Threshold after which licks are detected.")
     auto_reward_threshold: float = Field(default=10, description="Reward is automatically given after this threshold is reached.")
+    movement_visual_gain: float = Field(default=0.0613, description="Gain between encoder delta and visual movement.")
     
 class Block(BaseSchema):
     available_trials: List[Trial]
@@ -36,6 +37,7 @@ class Block(BaseSchema):
 # TODO - should inherit from some TaskParameters base class rather than BaseSchema
 class UclOpenVrCorridor2pTaskParameters(BaseSchema):
     corridor_width: float = Field(default=2)
+    far_clip: float = Field(default=20)
     blocks: List[Block]
 
 
