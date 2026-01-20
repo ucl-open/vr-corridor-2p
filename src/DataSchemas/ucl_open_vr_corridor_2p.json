@@ -315,6 +315,11 @@
           "title": "Landmarks",
           "type": "array"
         },
+        "backgroundTexture": {
+          "default": "waves",
+          "title": "BackgroundTexture",
+          "type": "string"
+        },
         "boundaryThreshold": {
           "default": 1,
           "description": "Buffer applied to far boundary of corridor to determine stopping distance.",
