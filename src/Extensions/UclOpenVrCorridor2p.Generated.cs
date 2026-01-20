@@ -1510,7 +1510,9 @@ namespace UclOpenHfVisualDataSchema
     
         private double _maximumTrialTime;
     
-        private double _interTrialInterval;
+        private double _interTrialIntervalLowerBound;
+    
+        private double _interTrialIntervalUpperBound;
     
         private double _detectLickThreshold;
     
@@ -1525,7 +1527,8 @@ namespace UclOpenHfVisualDataSchema
             _boundaryThreshold = 1D;
             _endTrialThreshold = 1.5D;
             _maximumTrialTime = 60D;
-            _interTrialInterval = 3D;
+            _interTrialIntervalLowerBound = 1D;
+            _interTrialIntervalUpperBound = 3D;
             _detectLickThreshold = -1D;
             _autoRewardThreshold = 10D;
             _movementVisualGain = 0.0613D;
@@ -1538,7 +1541,8 @@ namespace UclOpenHfVisualDataSchema
             _boundaryThreshold = other._boundaryThreshold;
             _endTrialThreshold = other._endTrialThreshold;
             _maximumTrialTime = other._maximumTrialTime;
-            _interTrialInterval = other._interTrialInterval;
+            _interTrialIntervalLowerBound = other._interTrialIntervalLowerBound;
+            _interTrialIntervalUpperBound = other._interTrialIntervalUpperBound;
             _detectLickThreshold = other._detectLickThreshold;
             _autoRewardThreshold = other._autoRewardThreshold;
             _movementVisualGain = other._movementVisualGain;
@@ -1623,19 +1627,38 @@ namespace UclOpenHfVisualDataSchema
         }
     
         /// <summary>
-        /// After boundary is reached, how long to wait before proceeding to next trial.
+        /// After boundary is reached, how long to wait before proceeding to next trial (lower bound).
         /// </summary>
-        [Newtonsoft.Json.JsonPropertyAttribute("interTrialInterval")]
-        [System.ComponentModel.DescriptionAttribute("After boundary is reached, how long to wait before proceeding to next trial.")]
-        public double InterTrialInterval
+        [Newtonsoft.Json.JsonPropertyAttribute("interTrialIntervalLowerBound")]
+        [System.ComponentModel.DescriptionAttribute("After boundary is reached, how long to wait before proceeding to next trial (lowe" +
+            "r bound).")]
+        public double InterTrialIntervalLowerBound
         {
             get
             {
-                return _interTrialInterval;
+                return _interTrialIntervalLowerBound;
             }
             set
             {
-                _interTrialInterval = value;
+                _interTrialIntervalLowerBound = value;
+            }
+        }
+    
+        /// <summary>
+        /// After boundary is reached, how long to wait before proceeding to next trial (upper bound).
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("interTrialIntervalUpperBound")]
+        [System.ComponentModel.DescriptionAttribute("After boundary is reached, how long to wait before proceeding to next trial (uppe" +
+            "r bound).")]
+        public double InterTrialIntervalUpperBound
+        {
+            get
+            {
+                return _interTrialIntervalUpperBound;
+            }
+            set
+            {
+                _interTrialIntervalUpperBound = value;
             }
         }
     
@@ -1707,7 +1730,8 @@ namespace UclOpenHfVisualDataSchema
             stringBuilder.Append("BoundaryThreshold = " + _boundaryThreshold + ", ");
             stringBuilder.Append("EndTrialThreshold = " + _endTrialThreshold + ", ");
             stringBuilder.Append("MaximumTrialTime = " + _maximumTrialTime + ", ");
-            stringBuilder.Append("InterTrialInterval = " + _interTrialInterval + ", ");
+            stringBuilder.Append("InterTrialIntervalLowerBound = " + _interTrialIntervalLowerBound + ", ");
+            stringBuilder.Append("InterTrialIntervalUpperBound = " + _interTrialIntervalUpperBound + ", ");
             stringBuilder.Append("DetectLickThreshold = " + _detectLickThreshold + ", ");
             stringBuilder.Append("AutoRewardThreshold = " + _autoRewardThreshold + ", ");
             stringBuilder.Append("MovementVisualGain = " + _movementVisualGain);

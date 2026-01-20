@@ -458,10 +458,16 @@
           "title": "MaximumTrialTime",
           "type": "number"
         },
-        "interTrialInterval": {
+        "interTrialIntervalLowerBound": {
+          "default": 1,
+          "description": "After boundary is reached, how long to wait before proceeding to next trial (lower bound).",
+          "title": "InterTrialIntervalLowerBound",
+          "type": "number"
+        },
+        "interTrialIntervalUpperBound": {
           "default": 3,
-          "description": "After boundary is reached, how long to wait before proceeding to next trial.",
-          "title": "InterTrialInterval",
+          "description": "After boundary is reached, how long to wait before proceeding to next trial (upper bound).",
+          "title": "InterTrialIntervalUpperBound",
           "type": "number"
         },
         "detectLickThreshold": {
