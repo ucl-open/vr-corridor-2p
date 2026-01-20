@@ -417,6 +417,16 @@
         },
         "syncQuad": {
           "$ref": "#/$defs/SyncQuad"
+        },
+        "quadTimeLowerBound": {
+          "default": 0.2,
+          "title": "QuadTimeLowerBound",
+          "type": "number"
+        },
+        "quadTimeUpperBound": {
+          "default": 0.5,
+          "title": "QuadTimeUpperBound",
+          "type": "number"
         }
       },
       "required": [

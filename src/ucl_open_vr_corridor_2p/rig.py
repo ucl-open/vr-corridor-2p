@@ -18,3 +18,5 @@ class UclOpenVrCorridor2pRig(BaseSchema):
     version: Literal[__semver__] = __semver__
     screen: Screen
     sync_quad: SyncQuad
+    quad_time_lower_bound: float = Field(default=0.2)
+    quad_time_upper_bound: float = Field(default=0.5)
