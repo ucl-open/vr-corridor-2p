@@ -401,7 +401,7 @@
                     <Eye>
                       <X>0</X>
                       <Y>0</Y>
-                      <Z>-0.24000001</Z>
+                      <Z>2.5199995</Z>
                     </Eye>
                     <NearClip>0.1</NearClip>
                     <FarClip>1000</FarClip>
@@ -908,9 +908,9 @@
                           <LocationY>-1</LocationY>
                           <Layer>1</Layer>
                           <Angle>0</Angle>
-                          <ColorR>0</ColorR>
-                          <ColorG>0</ColorG>
-                          <ColorB>0</ColorB>
+                          <ColorR>1</ColorR>
+                          <ColorG>1</ColorG>
+                          <ColorB>1</ColorB>
                           <ColorA>1</ColorA>
                         </Expression>
                         <Expression xsi:type="SubscribeSubject">
@@ -1031,7 +1031,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT0.21S</rx:DueTime>
+                                  <rx:DueTime>PT0.479S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -1097,7 +1097,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT0.412S</rx:DueTime>
+                                  <rx:DueTime>PT0.269S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -1323,7 +1323,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-20T11-02-51\MatrixArduino\MatrixArduino.csv</io:FileName>
+                    <io:FileName>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-20T12-04-18\MatrixArduino\MatrixArduino.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1442,7 +1442,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-20T11-02-51\VrPosition\VrPosition.csv</io:FileName>
+                    <io:FileName>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-20T12-04-18\VrPosition\VrPosition.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1556,7 +1556,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-20T11-02-51\RigSchema\RigSchema.json</p5:Path>
+                      <p5:Path>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-20T12-04-18\RigSchema\RigSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -1667,7 +1667,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-20T11-02-51\TaskLogicSchema\TaskLogicSchema.json</p5:Path>
+                      <p5:Path>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-20T12-04-18\TaskLogicSchema\TaskLogicSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -1778,7 +1778,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-20T11-02-51\SessionSchema\SessionSchema.json</p5:Path>
+                      <p5:Path>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-20T12-04-18\SessionSchema\SessionSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -2503,21 +2503,21 @@
                     <ScaleY>2</ScaleY>
                     <ScaleZ>1</ScaleZ>
                     <Ambient>
-                      <X>0.2</X>
-                      <Y>0.2</Y>
-                      <Z>0.2</Z>
+                      <X>1</X>
+                      <Y>1</Y>
+                      <Z>1</Z>
                     </Ambient>
                     <Diffuse>
-                      <X>0.8</X>
-                      <Y>0.8</Y>
-                      <Z>0.8</Z>
+                      <X>0</X>
+                      <Y>0</Y>
+                      <Z>0</Z>
                     </Diffuse>
                     <Specular>
-                      <X>0.8</X>
-                      <Y>0.8</Y>
-                      <Z>0.8</Z>
+                      <X>0</X>
+                      <Y>0</Y>
+                      <Z>0</Z>
                     </Specular>
-                    <SpecularExponent>10</SpecularExponent>
+                    <SpecularExponent>1</SpecularExponent>
                     <MeshName>Plane</MeshName>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
@@ -2558,21 +2558,21 @@
                     <ScaleY>2</ScaleY>
                     <ScaleZ>1</ScaleZ>
                     <Ambient>
-                      <X>0.2</X>
-                      <Y>0.2</Y>
-                      <Z>0.2</Z>
+                      <X>1</X>
+                      <Y>1</Y>
+                      <Z>1</Z>
                     </Ambient>
                     <Diffuse>
-                      <X>0.8</X>
-                      <Y>0.8</Y>
-                      <Z>0.8</Z>
+                      <X>0</X>
+                      <Y>0</Y>
+                      <Z>0</Z>
                     </Diffuse>
                     <Specular>
-                      <X>0.8</X>
-                      <Y>0.8</Y>
-                      <Z>0.8</Z>
+                      <X>0</X>
+                      <Y>0</Y>
+                      <Z>0</Z>
                     </Specular>
-                    <SpecularExponent>10</SpecularExponent>
+                    <SpecularExponent>1</SpecularExponent>
                     <MeshName>Plane</MeshName>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
@@ -2613,21 +2613,21 @@
                     <ScaleY>2</ScaleY>
                     <ScaleZ>1</ScaleZ>
                     <Ambient>
-                      <X>0.2</X>
-                      <Y>0.2</Y>
-                      <Z>0.2</Z>
+                      <X>1</X>
+                      <Y>1</Y>
+                      <Z>1</Z>
                     </Ambient>
                     <Diffuse>
-                      <X>0.8</X>
-                      <Y>0.8</Y>
-                      <Z>0.8</Z>
+                      <X>0</X>
+                      <Y>0</Y>
+                      <Z>0</Z>
                     </Diffuse>
                     <Specular>
-                      <X>0.8</X>
-                      <Y>0.8</Y>
-                      <Z>0.8</Z>
+                      <X>0</X>
+                      <Y>0</Y>
+                      <Z>0</Z>
                     </Specular>
-                    <SpecularExponent>10</SpecularExponent>
+                    <SpecularExponent>1</SpecularExponent>
                     <MeshName>Plane</MeshName>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
@@ -2668,21 +2668,21 @@
                     <ScaleY>2</ScaleY>
                     <ScaleZ>1</ScaleZ>
                     <Ambient>
-                      <X>0.2</X>
-                      <Y>0.2</Y>
-                      <Z>0.2</Z>
+                      <X>1</X>
+                      <Y>1</Y>
+                      <Z>1</Z>
                     </Ambient>
                     <Diffuse>
-                      <X>0.8</X>
-                      <Y>0.8</Y>
-                      <Z>0.8</Z>
+                      <X>0</X>
+                      <Y>0</Y>
+                      <Z>0</Z>
                     </Diffuse>
                     <Specular>
-                      <X>0.8</X>
-                      <Y>0.8</Y>
-                      <Z>0.8</Z>
+                      <X>0</X>
+                      <Y>0</Y>
+                      <Z>0</Z>
                     </Specular>
-                    <SpecularExponent>10</SpecularExponent>
+                    <SpecularExponent>1</SpecularExponent>
                     <MeshName>Plane</MeshName>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -2856,21 +2856,21 @@
               <ScaleY>2.001</ScaleY>
               <ScaleZ>1</ScaleZ>
               <Ambient>
-                <X>0.2</X>
-                <Y>0.2</Y>
-                <Z>0.2</Z>
+                <X>1</X>
+                <Y>1</Y>
+                <Z>1</Z>
               </Ambient>
               <Diffuse>
-                <X>0.8</X>
-                <Y>0.8</Y>
-                <Z>0.8</Z>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
               </Diffuse>
               <Specular>
-                <X>0.8</X>
-                <Y>0.8</Y>
-                <Z>0.8</Z>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
               </Specular>
-              <SpecularExponent>10</SpecularExponent>
+              <SpecularExponent>1</SpecularExponent>
               <MeshName>Plane</MeshName>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
@@ -2937,21 +2937,21 @@
               <ScaleY>2.001</ScaleY>
               <ScaleZ>1</ScaleZ>
               <Ambient>
-                <X>0.2</X>
-                <Y>0.2</Y>
-                <Z>0.2</Z>
+                <X>1</X>
+                <Y>1</Y>
+                <Z>1</Z>
               </Ambient>
               <Diffuse>
-                <X>0.8</X>
-                <Y>0.8</Y>
-                <Z>0.8</Z>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
               </Diffuse>
               <Specular>
-                <X>0.8</X>
-                <Y>0.8</Y>
-                <Z>0.8</Z>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
               </Specular>
-              <SpecularExponent>10</SpecularExponent>
+              <SpecularExponent>1</SpecularExponent>
               <MeshName>Plane</MeshName>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
@@ -3018,21 +3018,21 @@
               <ScaleY>2.001</ScaleY>
               <ScaleZ>6</ScaleZ>
               <Ambient>
-                <X>0.2</X>
-                <Y>0.2</Y>
-                <Z>0.2</Z>
+                <X>1</X>
+                <Y>1</Y>
+                <Z>1</Z>
               </Ambient>
               <Diffuse>
-                <X>0.8</X>
-                <Y>0.8</Y>
-                <Z>0.8</Z>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
               </Diffuse>
               <Specular>
-                <X>0.8</X>
-                <Y>0.8</Y>
-                <Z>0.8</Z>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
               </Specular>
-              <SpecularExponent>10</SpecularExponent>
+              <SpecularExponent>1</SpecularExponent>
               <MeshName>Plane</MeshName>
             </Expression>
             <Expression xsi:type="Combinator">
