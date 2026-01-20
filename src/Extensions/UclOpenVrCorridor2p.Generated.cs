@@ -1465,11 +1465,17 @@ namespace UclOpenHfVisualDataSchema
     
         private SyncQuad _syncQuad;
     
+        private double _quadTimeLowerBound;
+    
+        private double _quadTimeUpperBound;
+    
         public UclOpenVrCorridor2pRig()
         {
             _version = "0.0.0-rc1";
             _screen = new Screen();
             _syncQuad = new SyncQuad();
+            _quadTimeLowerBound = 0.2D;
+            _quadTimeUpperBound = 0.5D;
         }
     
         protected UclOpenVrCorridor2pRig(UclOpenVrCorridor2pRig other)
@@ -1477,6 +1483,8 @@ namespace UclOpenHfVisualDataSchema
             _version = other._version;
             _screen = other._screen;
             _syncQuad = other._syncQuad;
+            _quadTimeLowerBound = other._quadTimeLowerBound;
+            _quadTimeUpperBound = other._quadTimeUpperBound;
         }
     
         [Newtonsoft.Json.JsonPropertyAttribute("version")]
@@ -1520,6 +1528,32 @@ namespace UclOpenHfVisualDataSchema
             }
         }
     
+        [Newtonsoft.Json.JsonPropertyAttribute("quadTimeLowerBound")]
+        public double QuadTimeLowerBound
+        {
+            get
+            {
+                return _quadTimeLowerBound;
+            }
+            set
+            {
+                _quadTimeLowerBound = value;
+            }
+        }
+    
+        [Newtonsoft.Json.JsonPropertyAttribute("quadTimeUpperBound")]
+        public double QuadTimeUpperBound
+        {
+            get
+            {
+                return _quadTimeUpperBound;
+            }
+            set
+            {
+                _quadTimeUpperBound = value;
+            }
+        }
+    
         public System.IObservable<UclOpenVrCorridor2pRig> Generate()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new UclOpenVrCorridor2pRig(this)));
@@ -1534,7 +1568,9 @@ namespace UclOpenHfVisualDataSchema
         {
             stringBuilder.Append("Version = " + _version + ", ");
             stringBuilder.Append("Screen = " + _screen + ", ");
-            stringBuilder.Append("SyncQuad = " + _syncQuad);
+            stringBuilder.Append("SyncQuad = " + _syncQuad + ", ");
+            stringBuilder.Append("QuadTimeLowerBound = " + _quadTimeLowerBound + ", ");
+            stringBuilder.Append("QuadTimeUpperBound = " + _quadTimeUpperBound);
             return true;
         }
     

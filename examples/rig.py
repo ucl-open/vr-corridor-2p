@@ -74,11 +74,13 @@ rig = UclOpenVrCorridor2pRig(
         }
     ),
     sync_quad=SyncQuad(
-        extent_x=0.1,
-        extent_y=0.1,
+        extent_x=0.2,
+        extent_y=0.2,
         location_x=1,
-        location_y=1
+        location_y=-1
     ),
+    quad_time_lower_bound=0.2,
+    quad_time_upper_bound=0.5
 )
 
 def main(path_seed: str = "./local/{schema}.json"):
