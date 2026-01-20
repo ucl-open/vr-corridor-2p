@@ -2,7 +2,7 @@ from typing import Literal, Dict
 from pydantic import Field
 
 from ucl_open.rigs.base import BaseSchema
-from ucl_open.rigs.device import Screen
+from ucl_open.rigs.device import Screen, SerialDeviceModule
 
 from ucl_open_vr_corridor_2p import __semver__
 
@@ -14,9 +14,13 @@ class SyncQuad(BaseSchema):
     location_x: float
     location_y: float
 
+class MatrixArduino(SerialDeviceModule):
+    device_type: Literal["MatrixArduino"] = "MatrixArduino"
+
 class UclOpenVrCorridor2pRig(BaseSchema):
     version: Literal[__semver__] = __semver__
     screen: Screen
     sync_quad: SyncQuad
+    arduino: MatrixArduino
     quad_time_lower_bound: float = Field(default=0.2)
     quad_time_upper_bound: float = Field(default=0.5)

@@ -2,7 +2,8 @@ import os
 
 from ucl_open_vr_corridor_2p.rig import (
     UclOpenVrCorridor2pRig,
-    SyncQuad
+    SyncQuad,
+    MatrixArduino
 )
 
 from ucl_open.rigs.device import (
@@ -78,6 +79,11 @@ rig = UclOpenVrCorridor2pRig(
         extent_y=0.2,
         location_x=1,
         location_y=-1
+    ),
+    arduino=MatrixArduino(
+        port_name="COM3",
+        baud_rate=1000000,
+        new_line="\n"
     ),
     quad_time_lower_bound=0.2,
     quad_time_upper_bound=0.5

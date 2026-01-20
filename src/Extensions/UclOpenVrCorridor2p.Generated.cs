@@ -573,6 +573,418 @@ namespace UclOpenHfVisualDataSchema
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class MatrixArduino
+    {
+    
+        private string _deviceType;
+    
+        private string _portName;
+    
+        private int _baudRate;
+    
+        private string _encoding;
+    
+        private string _newLine;
+    
+        private string _parity;
+    
+        private int _parityReplace;
+    
+        private int _dataBits;
+    
+        private string _stopBits;
+    
+        private string _handshake;
+    
+        private bool _discardNull;
+    
+        private bool _dtrEnable;
+    
+        private bool _rtsEnable;
+    
+        private int _readBufferSize;
+    
+        private int _writeBufferSize;
+    
+        private int _receivedBytesThreshold;
+    
+        private string _serialMessageSubjectName;
+    
+        public MatrixArduino()
+        {
+            _deviceType = "MatrixArduino";
+            _baudRate = 9600;
+            _newLine = "\r\n";
+            _parity = "None";
+            _parityReplace = 63;
+            _dataBits = 8;
+            _stopBits = "One";
+            _handshake = "None";
+            _discardNull = false;
+            _dtrEnable = false;
+            _rtsEnable = false;
+            _readBufferSize = 4096;
+            _writeBufferSize = 2048;
+            _receivedBytesThreshold = 1;
+            _serialMessageSubjectName = "SerialMessages";
+        }
+    
+        protected MatrixArduino(MatrixArduino other)
+        {
+            _deviceType = other._deviceType;
+            _portName = other._portName;
+            _baudRate = other._baudRate;
+            _encoding = other._encoding;
+            _newLine = other._newLine;
+            _parity = other._parity;
+            _parityReplace = other._parityReplace;
+            _dataBits = other._dataBits;
+            _stopBits = other._stopBits;
+            _handshake = other._handshake;
+            _discardNull = other._discardNull;
+            _dtrEnable = other._dtrEnable;
+            _rtsEnable = other._rtsEnable;
+            _readBufferSize = other._readBufferSize;
+            _writeBufferSize = other._writeBufferSize;
+            _receivedBytesThreshold = other._receivedBytesThreshold;
+            _serialMessageSubjectName = other._serialMessageSubjectName;
+        }
+    
+        [Newtonsoft.Json.JsonPropertyAttribute("deviceType")]
+        public string DeviceType
+        {
+            get
+            {
+                return _deviceType;
+            }
+            set
+            {
+                _deviceType = value;
+            }
+        }
+    
+        /// <summary>
+        /// The name of the device serial port.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("portName", Required=Newtonsoft.Json.Required.Always)]
+        [System.ComponentModel.DescriptionAttribute("The name of the device serial port.")]
+        public string PortName
+        {
+            get
+            {
+                return _portName;
+            }
+            set
+            {
+                _portName = value;
+            }
+        }
+    
+        /// <summary>
+        /// Baud rate for serial communication.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("baudRate")]
+        [System.ComponentModel.DescriptionAttribute("Baud rate for serial communication.")]
+        public int BaudRate
+        {
+            get
+            {
+                return _baudRate;
+            }
+            set
+            {
+                _baudRate = value;
+            }
+        }
+    
+        /// <summary>
+        /// Optional text encoding for interpreting incoming bytes.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("encoding")]
+        [System.ComponentModel.DescriptionAttribute("Optional text encoding for interpreting incoming bytes.")]
+        public string Encoding
+        {
+            get
+            {
+                return _encoding;
+            }
+            set
+            {
+                _encoding = value;
+            }
+        }
+    
+        /// <summary>
+        /// Line termination sequence used to delimit incoming messages.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("newLine")]
+        [System.ComponentModel.DescriptionAttribute("Line termination sequence used to delimit incoming messages.")]
+        public string NewLine
+        {
+            get
+            {
+                return _newLine;
+            }
+            set
+            {
+                _newLine = value;
+            }
+        }
+    
+        /// <summary>
+        /// Parity checking mode for the serial port.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("parity")]
+        [System.ComponentModel.DescriptionAttribute("Parity checking mode for the serial port.")]
+        public string Parity
+        {
+            get
+            {
+                return _parity;
+            }
+            set
+            {
+                _parity = value;
+            }
+        }
+    
+        /// <summary>
+        /// Byte used to replace invalid bytes detected by a parity error.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("parityReplace")]
+        [System.ComponentModel.DescriptionAttribute("Byte used to replace invalid bytes detected by a parity error.")]
+        public int ParityReplace
+        {
+            get
+            {
+                return _parityReplace;
+            }
+            set
+            {
+                _parityReplace = value;
+            }
+        }
+    
+        /// <summary>
+        /// Number of data bits per serial frame.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("dataBits")]
+        [System.ComponentModel.DescriptionAttribute("Number of data bits per serial frame.")]
+        public int DataBits
+        {
+            get
+            {
+                return _dataBits;
+            }
+            set
+            {
+                _dataBits = value;
+            }
+        }
+    
+        /// <summary>
+        /// Number of stop bits per serial frame.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("stopBits")]
+        [System.ComponentModel.DescriptionAttribute("Number of stop bits per serial frame.")]
+        public string StopBits
+        {
+            get
+            {
+                return _stopBits;
+            }
+            set
+            {
+                _stopBits = value;
+            }
+        }
+    
+        /// <summary>
+        /// Hardware or software handshaking mode.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("handshake")]
+        [System.ComponentModel.DescriptionAttribute("Hardware or software handshaking mode.")]
+        public string Handshake
+        {
+            get
+            {
+                return _handshake;
+            }
+            set
+            {
+                _handshake = value;
+            }
+        }
+    
+        /// <summary>
+        /// Whether to discard null bytes appearing in the serial stream.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("discardNull")]
+        [System.ComponentModel.DescriptionAttribute("Whether to discard null bytes appearing in the serial stream.")]
+        public bool DiscardNull
+        {
+            get
+            {
+                return _discardNull;
+            }
+            set
+            {
+                _discardNull = value;
+            }
+        }
+    
+        /// <summary>
+        /// Whether to enable Data Terminal Ready (DTR) control line.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("dtrEnable")]
+        [System.ComponentModel.DescriptionAttribute("Whether to enable Data Terminal Ready (DTR) control line.")]
+        public bool DtrEnable
+        {
+            get
+            {
+                return _dtrEnable;
+            }
+            set
+            {
+                _dtrEnable = value;
+            }
+        }
+    
+        /// <summary>
+        /// Whether to enable Request To Send (RTS) control line.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("rtsEnable")]
+        [System.ComponentModel.DescriptionAttribute("Whether to enable Request To Send (RTS) control line.")]
+        public bool RtsEnable
+        {
+            get
+            {
+                return _rtsEnable;
+            }
+            set
+            {
+                _rtsEnable = value;
+            }
+        }
+    
+        /// <summary>
+        /// Size, in bytes, of the read buffer.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("readBufferSize")]
+        [System.ComponentModel.DescriptionAttribute("Size, in bytes, of the read buffer.")]
+        public int ReadBufferSize
+        {
+            get
+            {
+                return _readBufferSize;
+            }
+            set
+            {
+                _readBufferSize = value;
+            }
+        }
+    
+        /// <summary>
+        /// Size, in bytes, of the write buffer.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("writeBufferSize")]
+        [System.ComponentModel.DescriptionAttribute("Size, in bytes, of the write buffer.")]
+        public int WriteBufferSize
+        {
+            get
+            {
+                return _writeBufferSize;
+            }
+            set
+            {
+                _writeBufferSize = value;
+            }
+        }
+    
+        /// <summary>
+        /// Minimum number of bytes in the buffer that triggers a read event.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("receivedBytesThreshold")]
+        [System.ComponentModel.DescriptionAttribute("Minimum number of bytes in the buffer that triggers a read event.")]
+        public int ReceivedBytesThreshold
+        {
+            get
+            {
+                return _receivedBytesThreshold;
+            }
+            set
+            {
+                _receivedBytesThreshold = value;
+            }
+        }
+    
+        /// <summary>
+        /// Name of the subject to which parsed serial messages are published.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("serialMessageSubjectName")]
+        [System.ComponentModel.DescriptionAttribute("Name of the subject to which parsed serial messages are published.")]
+        public string SerialMessageSubjectName
+        {
+            get
+            {
+                return _serialMessageSubjectName;
+            }
+            set
+            {
+                _serialMessageSubjectName = value;
+            }
+        }
+    
+        public System.IObservable<MatrixArduino> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new MatrixArduino(this)));
+        }
+    
+        public System.IObservable<MatrixArduino> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new MatrixArduino(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("DeviceType = " + _deviceType + ", ");
+            stringBuilder.Append("PortName = " + _portName + ", ");
+            stringBuilder.Append("BaudRate = " + _baudRate + ", ");
+            stringBuilder.Append("Encoding = " + _encoding + ", ");
+            stringBuilder.Append("NewLine = " + _newLine + ", ");
+            stringBuilder.Append("Parity = " + _parity + ", ");
+            stringBuilder.Append("ParityReplace = " + _parityReplace + ", ");
+            stringBuilder.Append("DataBits = " + _dataBits + ", ");
+            stringBuilder.Append("StopBits = " + _stopBits + ", ");
+            stringBuilder.Append("Handshake = " + _handshake + ", ");
+            stringBuilder.Append("DiscardNull = " + _discardNull + ", ");
+            stringBuilder.Append("DtrEnable = " + _dtrEnable + ", ");
+            stringBuilder.Append("RtsEnable = " + _rtsEnable + ", ");
+            stringBuilder.Append("ReadBufferSize = " + _readBufferSize + ", ");
+            stringBuilder.Append("WriteBufferSize = " + _writeBufferSize + ", ");
+            stringBuilder.Append("ReceivedBytesThreshold = " + _receivedBytesThreshold + ", ");
+            stringBuilder.Append("SerialMessageSubjectName = " + _serialMessageSubjectName);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
     public partial class MatrixArduinoData
     {
     
@@ -1465,6 +1877,8 @@ namespace UclOpenHfVisualDataSchema
     
         private SyncQuad _syncQuad;
     
+        private MatrixArduino _arduino;
+    
         private double _quadTimeLowerBound;
     
         private double _quadTimeUpperBound;
@@ -1474,6 +1888,7 @@ namespace UclOpenHfVisualDataSchema
             _version = "0.0.0-rc1";
             _screen = new Screen();
             _syncQuad = new SyncQuad();
+            _arduino = new MatrixArduino();
             _quadTimeLowerBound = 0.2D;
             _quadTimeUpperBound = 0.5D;
         }
@@ -1483,6 +1898,7 @@ namespace UclOpenHfVisualDataSchema
             _version = other._version;
             _screen = other._screen;
             _syncQuad = other._syncQuad;
+            _arduino = other._arduino;
             _quadTimeLowerBound = other._quadTimeLowerBound;
             _quadTimeUpperBound = other._quadTimeUpperBound;
         }
@@ -1528,6 +1944,20 @@ namespace UclOpenHfVisualDataSchema
             }
         }
     
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [Newtonsoft.Json.JsonPropertyAttribute("arduino", Required=Newtonsoft.Json.Required.Always)]
+        public MatrixArduino Arduino
+        {
+            get
+            {
+                return _arduino;
+            }
+            set
+            {
+                _arduino = value;
+            }
+        }
+    
         [Newtonsoft.Json.JsonPropertyAttribute("quadTimeLowerBound")]
         public double QuadTimeLowerBound
         {
@@ -1569,6 +1999,7 @@ namespace UclOpenHfVisualDataSchema
             stringBuilder.Append("Version = " + _version + ", ");
             stringBuilder.Append("Screen = " + _screen + ", ");
             stringBuilder.Append("SyncQuad = " + _syncQuad + ", ");
+            stringBuilder.Append("Arduino = " + _arduino + ", ");
             stringBuilder.Append("QuadTimeLowerBound = " + _quadTimeLowerBound + ", ");
             stringBuilder.Append("QuadTimeUpperBound = " + _quadTimeUpperBound);
             return true;
@@ -1927,6 +2358,11 @@ namespace UclOpenHfVisualDataSchema
             return Process<Landmark>(source);
         }
 
+        public System.IObservable<string> Process(System.IObservable<MatrixArduino> source)
+        {
+            return Process<MatrixArduino>(source);
+        }
+
         public System.IObservable<string> Process(System.IObservable<MatrixArduinoData> source)
         {
             return Process<MatrixArduinoData>(source);
@@ -1986,6 +2422,7 @@ namespace UclOpenHfVisualDataSchema
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<DisplayExtrinsics>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<DisplayIntrinsics>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Landmark>))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<MatrixArduino>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<MatrixArduinoData>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Screen>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<SyncQuad>))]
