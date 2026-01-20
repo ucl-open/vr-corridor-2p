@@ -1502,7 +1502,7 @@ namespace UclOpenHfVisualDataSchema
     
         private System.Collections.Generic.List<System.Collections.Generic.List<Landmark>> _landmarks;
     
-        private string _backgroundTexture;
+        private Landmark _backgroundLandmark;
     
         private double _boundaryThreshold;
     
@@ -1523,7 +1523,7 @@ namespace UclOpenHfVisualDataSchema
         public Trial()
         {
             _landmarks = new System.Collections.Generic.List<System.Collections.Generic.List<Landmark>>();
-            _backgroundTexture = "waves";
+            _backgroundLandmark = new Landmark();
             _boundaryThreshold = 1D;
             _endTrialThreshold = 1.5D;
             _maximumTrialTime = 60D;
@@ -1537,7 +1537,7 @@ namespace UclOpenHfVisualDataSchema
         protected Trial(Trial other)
         {
             _landmarks = other._landmarks;
-            _backgroundTexture = other._backgroundTexture;
+            _backgroundLandmark = other._backgroundLandmark;
             _boundaryThreshold = other._boundaryThreshold;
             _endTrialThreshold = other._endTrialThreshold;
             _maximumTrialTime = other._maximumTrialTime;
@@ -1562,16 +1562,17 @@ namespace UclOpenHfVisualDataSchema
             }
         }
     
-        [Newtonsoft.Json.JsonPropertyAttribute("backgroundTexture")]
-        public string BackgroundTexture
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [Newtonsoft.Json.JsonPropertyAttribute("backgroundLandmark", Required=Newtonsoft.Json.Required.Always)]
+        public Landmark BackgroundLandmark
         {
             get
             {
-                return _backgroundTexture;
+                return _backgroundLandmark;
             }
             set
             {
-                _backgroundTexture = value;
+                _backgroundLandmark = value;
             }
         }
     
@@ -1726,7 +1727,7 @@ namespace UclOpenHfVisualDataSchema
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
             stringBuilder.Append("Landmarks = " + _landmarks + ", ");
-            stringBuilder.Append("BackgroundTexture = " + _backgroundTexture + ", ");
+            stringBuilder.Append("BackgroundLandmark = " + _backgroundLandmark + ", ");
             stringBuilder.Append("BoundaryThreshold = " + _boundaryThreshold + ", ");
             stringBuilder.Append("EndTrialThreshold = " + _endTrialThreshold + ", ");
             stringBuilder.Append("MaximumTrialTime = " + _maximumTrialTime + ", ");

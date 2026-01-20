@@ -435,10 +435,9 @@
           "title": "Landmarks",
           "type": "array"
         },
-        "backgroundTexture": {
-          "default": "waves",
-          "title": "BackgroundTexture",
-          "type": "string"
+        "backgroundLandmark": {
+          "$ref": "#/$defs/Landmark",
+          "title": "BackgroundLandmark"
         },
         "boundaryThreshold": {
           "default": 1,
@@ -490,7 +489,8 @@
         }
       },
       "required": [
-        "landmarks"
+        "landmarks",
+        "backgroundLandmark"
       ],
       "title": "Trial",
       "type": "object"
