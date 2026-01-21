@@ -7,9 +7,10 @@
           <WindowSettings Index="13">
             <NestedLayout>
               <WindowSettings Index="2">
+                <Visible>false</Visible>
                 <Location>
-                  <X>78</X>
-                  <Y>78</Y>
+                  <X>399</X>
+                  <Y>492</Y>
                 </Location>
                 <Size>
                   <Width>336</Width>

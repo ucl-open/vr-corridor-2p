@@ -75,13 +75,13 @@ rig = UclOpenVrCorridor2pRig(
         }
     ),
     sync_quad=SyncQuad(
-        extent_x=0.2,
-        extent_y=0.2,
+        extent_x=0.5,
+        extent_y=0.5,
         location_x=1,
         location_y=-1
     ),
     arduino=MatrixArduino(
-        port_name="COM3",
+        port_name="COM10",
         baud_rate=1000000,
         new_line="\n"
     ),

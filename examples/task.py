@@ -23,6 +23,24 @@ task_logic = UclOpenVrCorridor2pTaskLogic(
                     ],
                     background_landmark=Landmark(size=140, position=0, texture="smoothed_fwn4_25perC", reward_valence=0))
                 ],
+            ),
+            Block(
+                randomise_trial_order=True,
+                available_trials=
+                [
+                    Trial(landmarks=[
+                        [Landmark(size=4, position=0, texture="bark", reward_valence=0)],
+                        [Landmark(size=2, position=4, texture="tiles", reward_valence=1),],
+                        [Landmark(size=2, position=7, texture="grey", reward_valence=0)]
+                    ],
+                    background_landmark=Landmark(size=140, position=0, texture="smoothed_fwn4_25perC", reward_valence=0)),
+                    Trial(landmarks=[
+                        [Landmark(size=4, position=0, texture="bark", reward_valence=0)],
+                        [Landmark(size=2, position=4, texture="dots", reward_valence=1),],
+                        [Landmark(size=2, position=7, texture="grey", reward_valence=0)]
+                    ],
+                    background_landmark=Landmark(size=140, position=0, texture="smoothed_fwn4_25perC", reward_valence=0))
+                ],
             )
         ]
     ),
