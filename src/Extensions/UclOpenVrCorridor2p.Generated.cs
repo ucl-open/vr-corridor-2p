@@ -1533,11 +1533,11 @@ namespace UclOpenHfVisualDataSchema
             _backgroundLandmarkRight = new Landmark();
             _backgroundLandmarkCeil = new Landmark();
             _backgroundLandmarkFloor = new Landmark();
-            _boundaryThreshold = 1D;
-            _endTrialThreshold = 1.5D;
+            _boundaryThreshold = -29D;
+            _endTrialThreshold = -29D;
             _maximumTrialTime = 60D;
-            _interTrialIntervalLowerBound = 1D;
-            _interTrialIntervalUpperBound = 3D;
+            _interTrialIntervalLowerBound = 3D;
+            _interTrialIntervalUpperBound = 5D;
             _detectLickThreshold = -1D;
             _autoRewardThreshold = 10D;
             _movementVisualGain = 0.0613D;

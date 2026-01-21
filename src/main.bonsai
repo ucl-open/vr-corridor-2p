@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <WorkflowBuilder Version="2.9.0"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xmlns:io="clr-namespace:Bonsai.IO;assembly=Bonsai.System"
@@ -281,7 +281,7 @@
                       <gl:CursorVisible>true</gl:CursorVisible>
                       <gl:Location xsi:nil="true" />
                       <gl:WindowBorder>Resizable</gl:WindowBorder>
-                      <gl:WindowState>Normal</gl:WindowState>
+                      <gl:WindowState>Fullscreen</gl:WindowState>
                       <gl:DisplayDevice>Second</gl:DisplayDevice>
                       <gl:TargetRenderFrequency>60</gl:TargetRenderFrequency>
                       <gl:TargetUpdateFrequency>120</gl:TargetUpdateFrequency>
@@ -382,7 +382,7 @@
                                   <gl:WrapT>Repeat</gl:WrapT>
                                   <gl:MinFilter>Linear</gl:MinFilter>
                                   <gl:MagFilter>Linear</gl:MagFilter>
-                                  <gl:FileName>../textures\waves.png</gl:FileName>
+                                  <gl:FileName>../textures\bark.png</gl:FileName>
                                   <gl:ColorType>Unchanged</gl:ColorType>
                                   <gl:FlipMode>Vertical</gl:FlipMode>
                                 </Combinator>
@@ -1930,7 +1930,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="cv:VideoWriter">
-                            <cv:FileName>../temp_data\sub-Plimbo\ses-001_date-2026-01-21T16-23-12\FrameDump\FrameDump.avi</cv:FileName>
+                            <cv:FileName>../temp_data\sub-Plimbo\ses-00003_date-2026-01-21T15-36-21\FrameDump\FrameDump.avi</cv:FileName>
                             <cv:Suffix>None</cv:Suffix>
                             <cv:Buffered>true</cv:Buffered>
                             <cv:Overwrite>false</cv:Overwrite>
@@ -2080,7 +2080,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>../temp_data\sub-Plimbo\ses-001_date-2026-01-21T16-23-12\RenderFrameCount\RenderFrameCount.csv</io:FileName>
+                    <io:FileName>../temp_data\sub-Plimbo\ses-00003_date-2026-01-21T15-43-08\RenderFrameCount\RenderFrameCount.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2199,7 +2199,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>../temp_data\sub-Plimbo\ses-001_date-2026-01-21T16-23-12\QuadState\QuadState.csv</io:FileName>
+                    <io:FileName>../temp_data\sub-Plimbo\ses-00003_date-2026-01-21T15-43-08\QuadState\QuadState.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2313,7 +2313,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>../temp_data\sub-Plimbo\ses-001_date-2026-01-21T16-23-12\RigSchema\RigSchema.json</p5:Path>
+                      <p5:Path>../temp_data\sub-Plimbo\ses-00003_date-2026-01-21T15-43-08\RigSchema\RigSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -2424,7 +2424,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>../temp_data\sub-Plimbo\ses-001_date-2026-01-21T16-23-12\TaskLogicSchema\TaskLogicSchema.json</p5:Path>
+                      <p5:Path>../temp_data\sub-Plimbo\ses-00003_date-2026-01-21T15-43-08\TaskLogicSchema\TaskLogicSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -2535,7 +2535,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>../temp_data\sub-Plimbo\ses-001_date-2026-01-21T16-23-12\SessionSchema\SessionSchema.json</p5:Path>
+                      <p5:Path>../temp_data\sub-Plimbo\ses-00003_date-2026-01-21T15-43-08\SessionSchema\SessionSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -4987,7 +4987,53 @@
               <Combinator xsi:type="rx:Concat" />
             </Expression>
             <Expression xsi:type="Combinator">
-              <Combinator xsi:type="rx:Repeat" />
+              <Combinator xsi:type="num:CreateRandom">
+                <num:Seed xsi:nil="true" />
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>Trial</Name>
+            </Expression>
+            <Expression xsi:type="MemberSelector">
+              <Selector>InterTrialIntervalLowerBound</Selector>
+            </Expression>
+            <Expression xsi:type="PropertyMapping">
+              <PropertyMappings>
+                <Property Name="Lower" />
+              </PropertyMappings>
+            </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>Trial</Name>
+            </Expression>
+            <Expression xsi:type="MemberSelector">
+              <Selector>InterTrialIntervalUpperBound</Selector>
+            </Expression>
+            <Expression xsi:type="PropertyMapping">
+              <PropertyMappings>
+                <Property Name="Upper" />
+              </PropertyMappings>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="p3:CreateContinuousUniform">
+                <p3:Lower>1</p3:Lower>
+                <p3:Upper>3</p3:Upper>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="p3:Sample" />
+            </Expression>
+            <Expression xsi:type="scr:ExpressionTransform">
+              <scr:Expression>TimeSpan.FromSeconds(it)</scr:Expression>
+            </Expression>
+            <Expression xsi:type="PropertyMapping">
+              <PropertyMappings>
+                <Property Name="DueTime" />
+              </PropertyMappings>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Delay">
+                <rx:DueTime>PT1.043S</rx:DueTime>
+              </Combinator>
             </Expression>
             <Expression xsi:type="WorkflowOutput" />
           </Nodes>
