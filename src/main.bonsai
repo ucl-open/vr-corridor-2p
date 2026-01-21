@@ -504,9 +504,9 @@
                           <LocationY>-1</LocationY>
                           <Layer>1</Layer>
                           <Angle>0</Angle>
-                          <ColorR>0</ColorR>
-                          <ColorG>0</ColorG>
-                          <ColorB>0</ColorB>
+                          <ColorR>1</ColorR>
+                          <ColorG>1</ColorG>
+                          <ColorB>1</ColorB>
                           <ColorA>1</ColorA>
                         </Expression>
                         <Expression xsi:type="rx:PublishSubject">
@@ -630,7 +630,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT0.238S</rx:DueTime>
+                                  <rx:DueTime>PT0.429S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -696,7 +696,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT0.267S</rx:DueTime>
+                                  <rx:DueTime>PT0.498S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -786,7 +786,7 @@
                     <Eye>
                       <X>0</X>
                       <Y>0</Y>
-                      <Z>1.015127</Z>
+                      <Z>0</Z>
                     </Eye>
                     <NearClip>0.1</NearClip>
                     <FarClip>20</FarClip>
@@ -1402,7 +1402,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-21T10-53-43\MatrixArduino\MatrixArduino.csv</io:FileName>
+                    <io:FileName>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-21T11-16-09\MatrixArduino\MatrixArduino.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1527,7 +1527,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-21T10-53-43\LandmarkChoice\LandmarkChoice.csv</io:FileName>
+                    <io:FileName>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-21T11-16-09\LandmarkChoice\LandmarkChoice.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1646,7 +1646,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-21T10-53-43\VrPosition\VrPosition.csv</io:FileName>
+                    <io:FileName>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-21T11-16-09\VrPosition\VrPosition.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1789,7 +1789,7 @@
                           </PropertyMappings>
                         </Expression>
                         <Expression xsi:type="io:CsvWriter">
-                          <io:FileName>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-21T10-53-43\FrameDump\FrameDump.csv</io:FileName>
+                          <io:FileName>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-21T11-16-09\FrameDump\FrameDump.csv</io:FileName>
                           <io:Append>false</io:Append>
                           <io:Overwrite>false</io:Overwrite>
                           <io:Suffix>None</io:Suffix>
@@ -1874,7 +1874,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="cv:VideoWriter">
-                            <cv:FileName>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-21T10-53-43\FrameDump\FrameDump.avi</cv:FileName>
+                            <cv:FileName>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-21T11-16-09\FrameDump\FrameDump.avi</cv:FileName>
                             <cv:Suffix>None</cv:Suffix>
                             <cv:Buffered>true</cv:Buffered>
                             <cv:Overwrite>false</cv:Overwrite>
@@ -2024,7 +2024,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-21T10-53-43\RenderFrameCount\RenderFrameCount.csv</io:FileName>
+                    <io:FileName>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-21T11-16-09\RenderFrameCount\RenderFrameCount.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2143,7 +2143,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-21T10-53-43\QuadState\QuadState.csv</io:FileName>
+                    <io:FileName>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-21T11-16-09\QuadState\QuadState.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2257,7 +2257,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-21T10-53-43\RigSchema\RigSchema.json</p5:Path>
+                      <p5:Path>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-21T11-16-09\RigSchema\RigSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -2368,7 +2368,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-21T10-53-43\TaskLogicSchema\TaskLogicSchema.json</p5:Path>
+                      <p5:Path>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-21T11-16-09\TaskLogicSchema\TaskLogicSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -2479,7 +2479,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-21T10-53-43\SessionSchema\SessionSchema.json</p5:Path>
+                      <p5:Path>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data\sub-Plimbo\ses-001_date-2026-01-21T11-16-09\SessionSchema\SessionSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -3257,6 +3257,76 @@
                     <Name>Texture</Name>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
+                    <Name>TaskLogicParameters</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>CorridorWidth</Selector>
+                  </Expression>
+                  <Expression xsi:type="Multiply">
+                    <Operand xsi:type="DoubleProperty">
+                      <Value>0.5</Value>
+                    </Operand>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>Landmark</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>CenterOffset</Selector>
+                  </Expression>
+                  <Expression xsi:type="PropertyMapping">
+                    <PropertyMappings>
+                      <Property Name="Value" />
+                    </PropertyMappings>
+                  </Expression>
+                  <Expression xsi:type="Add">
+                    <Operand xsi:type="DoubleProperty">
+                      <Value>0</Value>
+                    </Operand>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:Take">
+                      <rx:Count>1</rx:Count>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="rx:AsyncSubject">
+                    <Name>CenterOffset</Name>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>TaskLogicParameters</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>CorridorWidth</Selector>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>Landmark</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>CenterOffset</Selector>
+                  </Expression>
+                  <Expression xsi:type="Add">
+                    <Operand xsi:type="DoubleProperty">
+                      <Value>1</Value>
+                    </Operand>
+                  </Expression>
+                  <Expression xsi:type="PropertyMapping">
+                    <PropertyMappings>
+                      <Property Name="Value" />
+                    </PropertyMappings>
+                  </Expression>
+                  <Expression xsi:type="Multiply">
+                    <Operand xsi:type="DoubleProperty">
+                      <Value>1</Value>
+                    </Operand>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:Take">
+                      <rx:Count>1</rx:Count>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="rx:AsyncSubject">
+                    <Name>Scale</Name>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
                     <Name>DrawCall</Name>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
@@ -3293,14 +3363,11 @@
                     <Selector>Item2.Item1</Selector>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
-                    <Name>TaskLogicParameters</Name>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>CorridorWidth</Selector>
+                    <Name>CenterOffset</Name>
                   </Expression>
                   <Expression xsi:type="Multiply">
                     <Operand xsi:type="DoubleProperty">
-                      <Value>-0.5</Value>
+                      <Value>-1</Value>
                     </Operand>
                   </Expression>
                   <Expression xsi:type="PropertyMapping">
@@ -3309,10 +3376,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
-                    <Name>TaskLogicParameters</Name>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>CorridorWidth</Selector>
+                    <Name>Scale</Name>
                   </Expression>
                   <Expression xsi:type="PropertyMapping">
                     <PropertyMappings>
@@ -3348,15 +3412,7 @@
                     <MeshName>Plane</MeshName>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
-                    <Name>TaskLogicParameters</Name>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>CorridorWidth</Selector>
-                  </Expression>
-                  <Expression xsi:type="Multiply">
-                    <Operand xsi:type="DoubleProperty">
-                      <Value>0.5</Value>
-                    </Operand>
+                    <Name>CenterOffset</Name>
                   </Expression>
                   <Expression xsi:type="PropertyMapping">
                     <PropertyMappings>
@@ -3364,10 +3420,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
-                    <Name>TaskLogicParameters</Name>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>CorridorWidth</Selector>
+                    <Name>Scale</Name>
                   </Expression>
                   <Expression xsi:type="PropertyMapping">
                     <PropertyMappings>
@@ -3403,15 +3456,7 @@
                     <MeshName>Plane</MeshName>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
-                    <Name>TaskLogicParameters</Name>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>CorridorWidth</Selector>
-                  </Expression>
-                  <Expression xsi:type="Multiply">
-                    <Operand xsi:type="DoubleProperty">
-                      <Value>0.5</Value>
-                    </Operand>
+                    <Name>CenterOffset</Name>
                   </Expression>
                   <Expression xsi:type="PropertyMapping">
                     <PropertyMappings>
@@ -3419,10 +3464,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
-                    <Name>TaskLogicParameters</Name>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>CorridorWidth</Selector>
+                    <Name>Scale</Name>
                   </Expression>
                   <Expression xsi:type="PropertyMapping">
                     <PropertyMappings>
@@ -3458,14 +3500,11 @@
                     <MeshName>Plane</MeshName>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
-                    <Name>TaskLogicParameters</Name>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>CorridorWidth</Selector>
+                    <Name>CenterOffset</Name>
                   </Expression>
                   <Expression xsi:type="Multiply">
                     <Operand xsi:type="DoubleProperty">
-                      <Value>-0.5</Value>
+                      <Value>-1</Value>
                     </Operand>
                   </Expression>
                   <Expression xsi:type="PropertyMapping">
@@ -3474,10 +3513,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
-                    <Name>TaskLogicParameters</Name>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>CorridorWidth</Selector>
+                    <Name>Scale</Name>
                   </Expression>
                   <Expression xsi:type="PropertyMapping">
                     <PropertyMappings>
@@ -3525,52 +3561,58 @@
                   <Edge From="4" To="5" Label="Source1" />
                   <Edge From="5" To="6" Label="Source1" />
                   <Edge From="6" To="7" Label="Source1" />
-                  <Edge From="8" To="12" Label="Source1" />
-                  <Edge From="9" To="11" Label="Source1" />
-                  <Edge From="10" To="11" Label="Source2" />
-                  <Edge From="11" To="12" Label="Source2" />
+                  <Edge From="8" To="9" Label="Source1" />
+                  <Edge From="9" To="10" Label="Source1" />
+                  <Edge From="10" To="14" Label="Source1" />
+                  <Edge From="11" To="12" Label="Source1" />
                   <Edge From="12" To="13" Label="Source1" />
-                  <Edge From="12" To="15" Label="Source2" />
-                  <Edge From="13" To="14" Label="Source1" />
+                  <Edge From="13" To="14" Label="Source2" />
                   <Edge From="14" To="15" Label="Source1" />
                   <Edge From="15" To="16" Label="Source1" />
-                  <Edge From="16" To="24" Label="Source1" />
-                  <Edge From="16" To="32" Label="Source1" />
-                  <Edge From="16" To="40" Label="Source1" />
-                  <Edge From="16" To="48" Label="Source1" />
                   <Edge From="17" To="18" Label="Source1" />
-                  <Edge From="18" To="19" Label="Source1" />
+                  <Edge From="18" To="23" Label="Source1" />
                   <Edge From="19" To="20" Label="Source1" />
-                  <Edge From="20" To="24" Label="Source2" />
+                  <Edge From="20" To="21" Label="Source1" />
                   <Edge From="21" To="22" Label="Source1" />
-                  <Edge From="22" To="23" Label="Source1" />
-                  <Edge From="23" To="24" Label="Source3" />
-                  <Edge From="24" To="49" Label="Source1" />
-                  <Edge From="25" To="26" Label="Source1" />
-                  <Edge From="26" To="27" Label="Source1" />
-                  <Edge From="27" To="28" Label="Source1" />
-                  <Edge From="28" To="32" Label="Source2" />
-                  <Edge From="29" To="30" Label="Source1" />
+                  <Edge From="22" To="23" Label="Source2" />
+                  <Edge From="23" To="24" Label="Source1" />
+                  <Edge From="24" To="25" Label="Source1" />
+                  <Edge From="26" To="30" Label="Source1" />
+                  <Edge From="27" To="29" Label="Source1" />
+                  <Edge From="28" To="29" Label="Source2" />
+                  <Edge From="29" To="30" Label="Source2" />
                   <Edge From="30" To="31" Label="Source1" />
-                  <Edge From="31" To="32" Label="Source3" />
-                  <Edge From="32" To="49" Label="Source2" />
+                  <Edge From="30" To="33" Label="Source2" />
+                  <Edge From="31" To="32" Label="Source1" />
+                  <Edge From="32" To="33" Label="Source1" />
                   <Edge From="33" To="34" Label="Source1" />
-                  <Edge From="34" To="35" Label="Source1" />
+                  <Edge From="34" To="40" Label="Source1" />
+                  <Edge From="34" To="45" Label="Source1" />
+                  <Edge From="34" To="50" Label="Source1" />
+                  <Edge From="34" To="56" Label="Source1" />
                   <Edge From="35" To="36" Label="Source1" />
-                  <Edge From="36" To="40" Label="Source2" />
-                  <Edge From="37" To="38" Label="Source1" />
+                  <Edge From="36" To="37" Label="Source1" />
+                  <Edge From="37" To="40" Label="Source2" />
                   <Edge From="38" To="39" Label="Source1" />
                   <Edge From="39" To="40" Label="Source3" />
-                  <Edge From="40" To="49" Label="Source3" />
+                  <Edge From="40" To="57" Label="Source1" />
                   <Edge From="41" To="42" Label="Source1" />
-                  <Edge From="42" To="43" Label="Source1" />
+                  <Edge From="42" To="45" Label="Source2" />
                   <Edge From="43" To="44" Label="Source1" />
-                  <Edge From="44" To="48" Label="Source2" />
-                  <Edge From="45" To="46" Label="Source1" />
+                  <Edge From="44" To="45" Label="Source3" />
+                  <Edge From="45" To="57" Label="Source2" />
                   <Edge From="46" To="47" Label="Source1" />
-                  <Edge From="47" To="48" Label="Source3" />
-                  <Edge From="48" To="49" Label="Source4" />
-                  <Edge From="49" To="50" Label="Source1" />
+                  <Edge From="47" To="50" Label="Source2" />
+                  <Edge From="48" To="49" Label="Source1" />
+                  <Edge From="49" To="50" Label="Source3" />
+                  <Edge From="50" To="57" Label="Source3" />
+                  <Edge From="51" To="52" Label="Source1" />
+                  <Edge From="52" To="53" Label="Source1" />
+                  <Edge From="53" To="56" Label="Source2" />
+                  <Edge From="54" To="55" Label="Source1" />
+                  <Edge From="55" To="56" Label="Source3" />
+                  <Edge From="56" To="57" Label="Source4" />
+                  <Edge From="57" To="58" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
@@ -3619,6 +3661,76 @@
                     <Name>Texture</Name>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
+                    <Name>TaskLogicParameters</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>CorridorWidth</Selector>
+                  </Expression>
+                  <Expression xsi:type="Multiply">
+                    <Operand xsi:type="DoubleProperty">
+                      <Value>0.5</Value>
+                    </Operand>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>Landmark</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>CenterOffset</Selector>
+                  </Expression>
+                  <Expression xsi:type="PropertyMapping">
+                    <PropertyMappings>
+                      <Property Name="Value" />
+                    </PropertyMappings>
+                  </Expression>
+                  <Expression xsi:type="Add">
+                    <Operand xsi:type="DoubleProperty">
+                      <Value>0.0001</Value>
+                    </Operand>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:Take">
+                      <rx:Count>1</rx:Count>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="rx:AsyncSubject">
+                    <Name>CenterOffset</Name>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>TaskLogicParameters</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>CorridorWidth</Selector>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>Landmark</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>CenterOffset</Selector>
+                  </Expression>
+                  <Expression xsi:type="Add">
+                    <Operand xsi:type="DoubleProperty">
+                      <Value>1</Value>
+                    </Operand>
+                  </Expression>
+                  <Expression xsi:type="PropertyMapping">
+                    <PropertyMappings>
+                      <Property Name="Value" />
+                    </PropertyMappings>
+                  </Expression>
+                  <Expression xsi:type="Multiply">
+                    <Operand xsi:type="DoubleProperty">
+                      <Value>1.0001</Value>
+                    </Operand>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:Take">
+                      <rx:Count>1</rx:Count>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="rx:AsyncSubject">
+                    <Name>Scale</Name>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
                     <Name>DrawCall</Name>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
@@ -3655,19 +3767,11 @@
                     <Selector>Item2.Item1</Selector>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
-                    <Name>TaskLogicParameters</Name>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>CorridorWidth</Selector>
+                    <Name>CenterOffset</Name>
                   </Expression>
                   <Expression xsi:type="Multiply">
                     <Operand xsi:type="DoubleProperty">
-                      <Value>-0.5</Value>
-                    </Operand>
-                  </Expression>
-                  <Expression xsi:type="Add">
-                    <Operand xsi:type="DoubleProperty">
-                      <Value>-0.0001</Value>
+                      <Value>-1</Value>
                     </Operand>
                   </Expression>
                   <Expression xsi:type="PropertyMapping">
@@ -3676,15 +3780,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
-                    <Name>TaskLogicParameters</Name>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>CorridorWidth</Selector>
-                  </Expression>
-                  <Expression xsi:type="Multiply">
-                    <Operand xsi:type="DoubleProperty">
-                      <Value>1.01</Value>
-                    </Operand>
+                    <Name>Scale</Name>
                   </Expression>
                   <Expression xsi:type="PropertyMapping">
                     <PropertyMappings>
@@ -3699,7 +3795,7 @@
                     <RotationY>-90</RotationY>
                     <RotationX>0</RotationX>
                     <ScaleX>140</ScaleX>
-                    <ScaleY>2.02</ScaleY>
+                    <ScaleY>2.0002</ScaleY>
                     <ScaleZ>1</ScaleZ>
                     <Ambient>
                       <X>1</X>
@@ -3720,20 +3816,7 @@
                     <MeshName>Plane</MeshName>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
-                    <Name>TaskLogicParameters</Name>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>CorridorWidth</Selector>
-                  </Expression>
-                  <Expression xsi:type="Multiply">
-                    <Operand xsi:type="DoubleProperty">
-                      <Value>0.5</Value>
-                    </Operand>
-                  </Expression>
-                  <Expression xsi:type="Add">
-                    <Operand xsi:type="DoubleProperty">
-                      <Value>0.0001</Value>
-                    </Operand>
+                    <Name>CenterOffset</Name>
                   </Expression>
                   <Expression xsi:type="PropertyMapping">
                     <PropertyMappings>
@@ -3741,15 +3824,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
-                    <Name>TaskLogicParameters</Name>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>CorridorWidth</Selector>
-                  </Expression>
-                  <Expression xsi:type="Multiply">
-                    <Operand xsi:type="DoubleProperty">
-                      <Value>1.01</Value>
-                    </Operand>
+                    <Name>Scale</Name>
                   </Expression>
                   <Expression xsi:type="PropertyMapping">
                     <PropertyMappings>
@@ -3764,7 +3839,7 @@
                     <RotationY>-90</RotationY>
                     <RotationX>0</RotationX>
                     <ScaleX>140</ScaleX>
-                    <ScaleY>2.02</ScaleY>
+                    <ScaleY>2.0002</ScaleY>
                     <ScaleZ>1</ScaleZ>
                     <Ambient>
                       <X>1</X>
@@ -3785,20 +3860,7 @@
                     <MeshName>Plane</MeshName>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
-                    <Name>TaskLogicParameters</Name>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>CorridorWidth</Selector>
-                  </Expression>
-                  <Expression xsi:type="Multiply">
-                    <Operand xsi:type="DoubleProperty">
-                      <Value>0.5</Value>
-                    </Operand>
-                  </Expression>
-                  <Expression xsi:type="Add">
-                    <Operand xsi:type="DoubleProperty">
-                      <Value>0.0001</Value>
-                    </Operand>
+                    <Name>CenterOffset</Name>
                   </Expression>
                   <Expression xsi:type="PropertyMapping">
                     <PropertyMappings>
@@ -3806,15 +3868,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
-                    <Name>TaskLogicParameters</Name>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>CorridorWidth</Selector>
-                  </Expression>
-                  <Expression xsi:type="Multiply">
-                    <Operand xsi:type="DoubleProperty">
-                      <Value>1.01</Value>
-                    </Operand>
+                    <Name>Scale</Name>
                   </Expression>
                   <Expression xsi:type="PropertyMapping">
                     <PropertyMappings>
@@ -3829,7 +3883,7 @@
                     <RotationY>-90</RotationY>
                     <RotationX>-90</RotationX>
                     <ScaleX>140</ScaleX>
-                    <ScaleY>2.02</ScaleY>
+                    <ScaleY>2.0002</ScaleY>
                     <ScaleZ>1</ScaleZ>
                     <Ambient>
                       <X>1</X>
@@ -3850,19 +3904,11 @@
                     <MeshName>Plane</MeshName>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
-                    <Name>TaskLogicParameters</Name>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>CorridorWidth</Selector>
+                    <Name>CenterOffset</Name>
                   </Expression>
                   <Expression xsi:type="Multiply">
                     <Operand xsi:type="DoubleProperty">
-                      <Value>-0.5</Value>
-                    </Operand>
-                  </Expression>
-                  <Expression xsi:type="Add">
-                    <Operand xsi:type="DoubleProperty">
-                      <Value>-0.0001</Value>
+                      <Value>-1</Value>
                     </Operand>
                   </Expression>
                   <Expression xsi:type="PropertyMapping">
@@ -3871,15 +3917,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
-                    <Name>TaskLogicParameters</Name>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>CorridorWidth</Selector>
-                  </Expression>
-                  <Expression xsi:type="Multiply">
-                    <Operand xsi:type="DoubleProperty">
-                      <Value>1.01</Value>
-                    </Operand>
+                    <Name>Scale</Name>
                   </Expression>
                   <Expression xsi:type="PropertyMapping">
                     <PropertyMappings>
@@ -3894,7 +3932,7 @@
                     <RotationY>-90</RotationY>
                     <RotationX>-90</RotationX>
                     <ScaleX>140</ScaleX>
-                    <ScaleY>2.02</ScaleY>
+                    <ScaleY>2.0002</ScaleY>
                     <ScaleZ>1</ScaleZ>
                     <Ambient>
                       <X>1</X>
@@ -3927,56 +3965,54 @@
                   <Edge From="4" To="5" Label="Source1" />
                   <Edge From="5" To="6" Label="Source1" />
                   <Edge From="6" To="7" Label="Source1" />
-                  <Edge From="8" To="12" Label="Source1" />
-                  <Edge From="9" To="11" Label="Source1" />
-                  <Edge From="10" To="11" Label="Source2" />
-                  <Edge From="11" To="12" Label="Source2" />
+                  <Edge From="8" To="9" Label="Source1" />
+                  <Edge From="9" To="10" Label="Source1" />
+                  <Edge From="10" To="14" Label="Source1" />
+                  <Edge From="11" To="12" Label="Source1" />
                   <Edge From="12" To="13" Label="Source1" />
-                  <Edge From="12" To="15" Label="Source2" />
-                  <Edge From="13" To="14" Label="Source1" />
+                  <Edge From="13" To="14" Label="Source2" />
                   <Edge From="14" To="15" Label="Source1" />
                   <Edge From="15" To="16" Label="Source1" />
-                  <Edge From="16" To="26" Label="Source1" />
-                  <Edge From="16" To="36" Label="Source1" />
-                  <Edge From="16" To="46" Label="Source1" />
-                  <Edge From="16" To="56" Label="Source1" />
                   <Edge From="17" To="18" Label="Source1" />
-                  <Edge From="18" To="19" Label="Source1" />
+                  <Edge From="18" To="23" Label="Source1" />
                   <Edge From="19" To="20" Label="Source1" />
                   <Edge From="20" To="21" Label="Source1" />
-                  <Edge From="21" To="26" Label="Source2" />
-                  <Edge From="22" To="23" Label="Source1" />
+                  <Edge From="21" To="22" Label="Source1" />
+                  <Edge From="22" To="23" Label="Source2" />
                   <Edge From="23" To="24" Label="Source1" />
                   <Edge From="24" To="25" Label="Source1" />
-                  <Edge From="25" To="26" Label="Source3" />
-                  <Edge From="26" To="57" Label="Source1" />
-                  <Edge From="27" To="28" Label="Source1" />
-                  <Edge From="28" To="29" Label="Source1" />
-                  <Edge From="29" To="30" Label="Source1" />
+                  <Edge From="26" To="30" Label="Source1" />
+                  <Edge From="27" To="29" Label="Source1" />
+                  <Edge From="28" To="29" Label="Source2" />
+                  <Edge From="29" To="30" Label="Source2" />
                   <Edge From="30" To="31" Label="Source1" />
-                  <Edge From="31" To="36" Label="Source2" />
+                  <Edge From="30" To="33" Label="Source2" />
+                  <Edge From="31" To="32" Label="Source1" />
                   <Edge From="32" To="33" Label="Source1" />
                   <Edge From="33" To="34" Label="Source1" />
-                  <Edge From="34" To="35" Label="Source1" />
-                  <Edge From="35" To="36" Label="Source3" />
-                  <Edge From="36" To="57" Label="Source2" />
-                  <Edge From="37" To="38" Label="Source1" />
+                  <Edge From="34" To="40" Label="Source1" />
+                  <Edge From="34" To="45" Label="Source1" />
+                  <Edge From="34" To="50" Label="Source1" />
+                  <Edge From="34" To="56" Label="Source1" />
+                  <Edge From="35" To="36" Label="Source1" />
+                  <Edge From="36" To="37" Label="Source1" />
+                  <Edge From="37" To="40" Label="Source2" />
                   <Edge From="38" To="39" Label="Source1" />
-                  <Edge From="39" To="40" Label="Source1" />
-                  <Edge From="40" To="41" Label="Source1" />
-                  <Edge From="41" To="46" Label="Source2" />
-                  <Edge From="42" To="43" Label="Source1" />
+                  <Edge From="39" To="40" Label="Source3" />
+                  <Edge From="40" To="57" Label="Source1" />
+                  <Edge From="41" To="42" Label="Source1" />
+                  <Edge From="42" To="45" Label="Source2" />
                   <Edge From="43" To="44" Label="Source1" />
-                  <Edge From="44" To="45" Label="Source1" />
-                  <Edge From="45" To="46" Label="Source3" />
-                  <Edge From="46" To="57" Label="Source3" />
-                  <Edge From="47" To="48" Label="Source1" />
+                  <Edge From="44" To="45" Label="Source3" />
+                  <Edge From="45" To="57" Label="Source2" />
+                  <Edge From="46" To="47" Label="Source1" />
+                  <Edge From="47" To="50" Label="Source2" />
                   <Edge From="48" To="49" Label="Source1" />
-                  <Edge From="49" To="50" Label="Source1" />
-                  <Edge From="50" To="51" Label="Source1" />
-                  <Edge From="51" To="56" Label="Source2" />
+                  <Edge From="49" To="50" Label="Source3" />
+                  <Edge From="50" To="57" Label="Source3" />
+                  <Edge From="51" To="52" Label="Source1" />
                   <Edge From="52" To="53" Label="Source1" />
-                  <Edge From="53" To="54" Label="Source1" />
+                  <Edge From="53" To="56" Label="Source2" />
                   <Edge From="54" To="55" Label="Source1" />
                   <Edge From="55" To="56" Label="Source3" />
                   <Edge From="56" To="57" Label="Source4" />
@@ -4285,7 +4321,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Delay">
-                <rx:DueTime>PT1.099S</rx:DueTime>
+                <rx:DueTime>PT1.648S</rx:DueTime>
               </Combinator>
             </Expression>
             <Expression xsi:type="WorkflowOutput" />

@@ -135,10 +135,10 @@
           "title": "Position",
           "type": "number"
         },
-        "centerOfffset": {
+        "centerOffset": {
           "default": 0,
           "description": "Additonal offset to the corridor width used for layering landmark rendering. Higher values are further from the corridor midline.",
-          "title": "CenterOfffset",
+          "title": "CenterOffset",
           "type": "number"
         },
         "texture": {

@@ -430,7 +430,7 @@ namespace UclOpenHfVisualDataSchema
     
         private double _position;
     
-        private double _centerOfffset;
+        private double _centerOffset;
     
         private string _texture;
     
@@ -440,7 +440,7 @@ namespace UclOpenHfVisualDataSchema
         {
             _size = 1D;
             _position = 0D;
-            _centerOfffset = 0D;
+            _centerOffset = 0D;
             _rewardValence = 0;
         }
     
@@ -448,7 +448,7 @@ namespace UclOpenHfVisualDataSchema
         {
             _size = other._size;
             _position = other._position;
-            _centerOfffset = other._centerOfffset;
+            _centerOffset = other._centerOffset;
             _texture = other._texture;
             _rewardValence = other._rewardValence;
         }
@@ -490,18 +490,18 @@ namespace UclOpenHfVisualDataSchema
         /// <summary>
         /// Additonal offset to the corridor width used for layering landmark rendering. Higher values are further from the corridor midline.
         /// </summary>
-        [Newtonsoft.Json.JsonPropertyAttribute("centerOfffset")]
+        [Newtonsoft.Json.JsonPropertyAttribute("centerOffset")]
         [System.ComponentModel.DescriptionAttribute("Additonal offset to the corridor width used for layering landmark rendering. High" +
             "er values are further from the corridor midline.")]
-        public double CenterOfffset
+        public double CenterOffset
         {
             get
             {
-                return _centerOfffset;
+                return _centerOffset;
             }
             set
             {
-                _centerOfffset = value;
+                _centerOffset = value;
             }
         }
     
@@ -549,7 +549,7 @@ namespace UclOpenHfVisualDataSchema
         {
             stringBuilder.Append("Size = " + _size + ", ");
             stringBuilder.Append("Position = " + _position + ", ");
-            stringBuilder.Append("CenterOfffset = " + _centerOfffset + ", ");
+            stringBuilder.Append("CenterOffset = " + _centerOffset + ", ");
             stringBuilder.Append("Texture = " + _texture + ", ");
             stringBuilder.Append("RewardValence = " + _rewardValence);
             return true;
