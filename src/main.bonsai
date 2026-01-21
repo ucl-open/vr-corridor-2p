@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <WorkflowBuilder Version="2.9.0"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xmlns:io="clr-namespace:Bonsai.IO;assembly=Bonsai.System"
@@ -630,6 +630,7 @@
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
                                   <rx:DueTime>PT0.386S</rx:DueTime>
+                                  <rx:DueTime>PT0.265S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
