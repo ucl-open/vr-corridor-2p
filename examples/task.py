@@ -8,24 +8,67 @@ from ucl_open_vr_corridor_2p.task import (
     Landmark
 )
 
+trial_base = Trial(landmarks=[
+                        [Landmark(size=4, position=50, texture="plaid_50perC", reward_valence=0)],
+                        [Landmark(size=4, position=70, texture="vertGrat_50perC", reward_valence=0)],
+                        [Landmark(size=4, position=90, texture="plaid_50perC", reward_valence=1)],
+                        [Landmark(size=4, position=110, texture="vertGrat_50perC", reward_valence=0)]
+                    ],
+                    background_landmark_left=Landmark(size=140, position=70, texture="smoothed_fwn1_25perC", reward_valence=0, center_offset=0.0001),
+                    background_landmark_right=Landmark(size=140, position=70, texture="smoothed_fwn2_25perC", reward_valence=0, center_offset=0.0001),
+                    background_landmark_ceil=Landmark(size=140, position=70, texture="smoothed_fwn3_25perC", reward_valence=0, center_offset=0.0001),
+                    background_landmark_floor=Landmark(size=140, position=70, texture="smoothed_fwn4_25perC", reward_valence=0, center_offset=0.0001)
+                    )
+
+trial_skip2 = Trial(landmarks=[
+                        [Landmark(size=4, position=50, texture="plaid_50perC", reward_valence=0)],
+                        [Landmark(size=4, position=90, texture="plaid_50perC", reward_valence=1)],
+                        [Landmark(size=4, position=110, texture="vertGrat_50perC", reward_valence=0)]
+                    ],
+                    background_landmark_left=Landmark(size=140, position=70, texture="smoothed_fwn1_25perC", reward_valence=0, center_offset=0.0001),
+                    background_landmark_right=Landmark(size=140, position=70, texture="smoothed_fwn2_25perC", reward_valence=0, center_offset=0.0001),
+                    background_landmark_ceil=Landmark(size=140, position=70, texture="smoothed_fwn3_25perC", reward_valence=0, center_offset=0.0001),
+                    background_landmark_floor=Landmark(size=140, position=70, texture="smoothed_fwn4_25perC", reward_valence=0, center_offset=0.0001)
+                    )
+
+trial_skip3 = Trial(landmarks=[
+                        [Landmark(size=4, position=50, texture="plaid_50perC", reward_valence=0)],
+                        [Landmark(size=4, position=70, texture="vertGrat_50perC", reward_valence=0)],
+                        [Landmark(size=4, position=110, texture="vertGrat_50perC", reward_valence=0)]
+                    ],
+                    background_landmark_left=Landmark(size=140, position=70, texture="smoothed_fwn1_25perC", reward_valence=0, center_offset=0.0001),
+                    background_landmark_right=Landmark(size=140, position=70, texture="smoothed_fwn2_25perC", reward_valence=0, center_offset=0.0001),
+                    background_landmark_ceil=Landmark(size=140, position=70, texture="smoothed_fwn3_25perC", reward_valence=0, center_offset=0.0001),
+                    background_landmark_floor=Landmark(size=140, position=70, texture="smoothed_fwn4_25perC", reward_valence=0, center_offset=0.0001)
+                    )
+
+trial_swap23 = Trial(landmarks=[
+                        [Landmark(size=4, position=50, texture="plaid_50perC", reward_valence=0)],
+                        [Landmark(size=4, position=70, texture="plaid_50perC", reward_valence=0)],
+                        [Landmark(size=4, position=90, texture="vertGrat_50perC", reward_valence=1)],
+                        [Landmark(size=4, position=110, texture="vertGrat_50perC", reward_valence=0)]
+                    ],
+                    background_landmark_left=Landmark(size=140, position=70, texture="smoothed_fwn1_25perC", reward_valence=0, center_offset=0.0001),
+                    background_landmark_right=Landmark(size=140, position=70, texture="smoothed_fwn2_25perC", reward_valence=0, center_offset=0.0001),
+                    background_landmark_ceil=Landmark(size=140, position=70, texture="smoothed_fwn3_25perC", reward_valence=0, center_offset=0.0001),
+                    background_landmark_floor=Landmark(size=140, position=70, texture="smoothed_fwn4_25perC", reward_valence=0, center_offset=0.0001)
+                    )
+
 task_logic = UclOpenVrCorridor2pTaskLogic(
     task_parameters=UclOpenVrCorridor2pTaskParameters(
-        corridor_width=2,
+        corridor_width=8,
         blocks = [
             Block(
-                randomise_trial_order=True,
+                randomise_trial_order=False,
                 available_trials=
                 [
-                    Trial(landmarks=[
-                        [Landmark(size=4, position=0, texture="bark", reward_valence=0)],
-                        [Landmark(size=2, position=4, texture="tiles", reward_valence=1), Landmark(size=2, position=4, texture="dots", reward_valence=1)],
-                        [Landmark(size=2, position=7, texture="grey", reward_valence=0)]
-                    ],
-                    background_landmark_left=Landmark(size=140, position=0, texture="smoothed_fwn4_25perC", reward_valence=0, center_offset=0.0001),
-                    background_landmark_right=Landmark(size=140, position=0, texture="bark", reward_valence=0, center_offset=0.0001),
-                    background_landmark_ceil=Landmark(size=140, position=0, texture="smoothed_fwn4_25perC", reward_valence=0, center_offset=0.0001),
-                    background_landmark_floor=Landmark(size=140, position=0, texture="smoothed_fwn4_25perC", reward_valence=0, center_offset=0.0001)
-                    )
+                    trial_base,
+                    trial_skip2,
+                    trial_base,
+                    trial_swap23,
+                    trial_base,
+                    trial_skip3,
+                    trial_base
                 ],
             ),
         ]
