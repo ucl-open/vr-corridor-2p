@@ -35,7 +35,7 @@
           <Y>397</Y>
         </Location>
         <Size>
-          <Width>1539</Width>
+          <Width>1456</Width>
           <Height>881</Height>
         </Size>
         <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
@@ -86,6 +86,7 @@
         </VisualizerSettings>
       </WindowSettings>
       <WindowSettings Index="52">
+        <Visible>false</Visible>
         <Location>
           <X>155</X>
           <Y>154</Y>
