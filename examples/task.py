@@ -21,7 +21,11 @@ task_logic = UclOpenVrCorridor2pTaskLogic(
                         [Landmark(size=2, position=4, texture="tiles", reward_valence=1), Landmark(size=2, position=4, texture="dots", reward_valence=1)],
                         [Landmark(size=2, position=7, texture="grey", reward_valence=0)]
                     ],
-                    background_landmark=Landmark(size=140, position=0, texture="smoothed_fwn4_25perC", reward_valence=0, center_offset=0.0001))
+                    background_landmark_left=Landmark(size=140, position=0, texture="smoothed_fwn4_25perC", reward_valence=0, center_offset=0.0001),
+                    background_landmark_right=Landmark(size=140, position=0, texture="bark", reward_valence=0, center_offset=0.0001),
+                    background_landmark_ceil=Landmark(size=140, position=0, texture="smoothed_fwn4_25perC", reward_valence=0, center_offset=0.0001),
+                    background_landmark_floor=Landmark(size=140, position=0, texture="smoothed_fwn4_25perC", reward_valence=0, center_offset=0.0001)
+                    )
                 ],
             ),
         ]

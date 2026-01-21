@@ -19,7 +19,10 @@ class Landmark(BaseSchema):
     
 class Trial(BaseSchema):
     landmarks: List[List[Landmark]]
-    background_landmark: Landmark
+    background_landmark_left: Landmark
+    background_landmark_right: Landmark
+    background_landmark_ceil: Landmark
+    background_landmark_floor: Landmark
     boundary_threshold: float = Field(default=1, description="Buffer applied to far boundary of corridor to determine stopping distance.")
     end_trial_threshold: float = Field(default=1.5, description="Buffer applied to far boundary of corridor to determine trial end distance.")
     maximum_trial_time: float = Field(default=60, description="Maximum amount of time to spend on this trial.")

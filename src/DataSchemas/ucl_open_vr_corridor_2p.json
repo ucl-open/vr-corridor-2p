@@ -435,9 +435,21 @@
           "title": "Landmarks",
           "type": "array"
         },
-        "backgroundLandmark": {
+        "backgroundLandmarkLeft": {
           "$ref": "#/$defs/Landmark",
-          "title": "BackgroundLandmark"
+          "title": "BackgroundLandmarkLeft"
+        },
+        "backgroundLandmarkRight": {
+          "$ref": "#/$defs/Landmark",
+          "title": "BackgroundLandmarkRight"
+        },
+        "backgroundLandmarkCeil": {
+          "$ref": "#/$defs/Landmark",
+          "title": "BackgroundLandmarkCeil"
+        },
+        "backgroundLandmarkFloor": {
+          "$ref": "#/$defs/Landmark",
+          "title": "BackgroundLandmarkFloor"
         },
         "boundaryThreshold": {
           "default": 1,
@@ -490,7 +502,10 @@
       },
       "required": [
         "landmarks",
-        "backgroundLandmark"
+        "backgroundLandmarkLeft",
+        "backgroundLandmarkRight",
+        "backgroundLandmarkCeil",
+        "backgroundLandmarkFloor"
       ],
       "title": "Trial",
       "type": "object"

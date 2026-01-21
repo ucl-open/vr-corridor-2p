@@ -1502,7 +1502,13 @@ namespace UclOpenHfVisualDataSchema
     
         private System.Collections.Generic.List<System.Collections.Generic.List<Landmark>> _landmarks;
     
-        private Landmark _backgroundLandmark;
+        private Landmark _backgroundLandmarkLeft;
+    
+        private Landmark _backgroundLandmarkRight;
+    
+        private Landmark _backgroundLandmarkCeil;
+    
+        private Landmark _backgroundLandmarkFloor;
     
         private double _boundaryThreshold;
     
@@ -1523,7 +1529,10 @@ namespace UclOpenHfVisualDataSchema
         public Trial()
         {
             _landmarks = new System.Collections.Generic.List<System.Collections.Generic.List<Landmark>>();
-            _backgroundLandmark = new Landmark();
+            _backgroundLandmarkLeft = new Landmark();
+            _backgroundLandmarkRight = new Landmark();
+            _backgroundLandmarkCeil = new Landmark();
+            _backgroundLandmarkFloor = new Landmark();
             _boundaryThreshold = 1D;
             _endTrialThreshold = 1.5D;
             _maximumTrialTime = 60D;
@@ -1537,7 +1546,10 @@ namespace UclOpenHfVisualDataSchema
         protected Trial(Trial other)
         {
             _landmarks = other._landmarks;
-            _backgroundLandmark = other._backgroundLandmark;
+            _backgroundLandmarkLeft = other._backgroundLandmarkLeft;
+            _backgroundLandmarkRight = other._backgroundLandmarkRight;
+            _backgroundLandmarkCeil = other._backgroundLandmarkCeil;
+            _backgroundLandmarkFloor = other._backgroundLandmarkFloor;
             _boundaryThreshold = other._boundaryThreshold;
             _endTrialThreshold = other._endTrialThreshold;
             _maximumTrialTime = other._maximumTrialTime;
@@ -1563,16 +1575,58 @@ namespace UclOpenHfVisualDataSchema
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [Newtonsoft.Json.JsonPropertyAttribute("backgroundLandmark", Required=Newtonsoft.Json.Required.Always)]
-        public Landmark BackgroundLandmark
+        [Newtonsoft.Json.JsonPropertyAttribute("backgroundLandmarkLeft", Required=Newtonsoft.Json.Required.Always)]
+        public Landmark BackgroundLandmarkLeft
         {
             get
             {
-                return _backgroundLandmark;
+                return _backgroundLandmarkLeft;
             }
             set
             {
-                _backgroundLandmark = value;
+                _backgroundLandmarkLeft = value;
+            }
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [Newtonsoft.Json.JsonPropertyAttribute("backgroundLandmarkRight", Required=Newtonsoft.Json.Required.Always)]
+        public Landmark BackgroundLandmarkRight
+        {
+            get
+            {
+                return _backgroundLandmarkRight;
+            }
+            set
+            {
+                _backgroundLandmarkRight = value;
+            }
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [Newtonsoft.Json.JsonPropertyAttribute("backgroundLandmarkCeil", Required=Newtonsoft.Json.Required.Always)]
+        public Landmark BackgroundLandmarkCeil
+        {
+            get
+            {
+                return _backgroundLandmarkCeil;
+            }
+            set
+            {
+                _backgroundLandmarkCeil = value;
+            }
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [Newtonsoft.Json.JsonPropertyAttribute("backgroundLandmarkFloor", Required=Newtonsoft.Json.Required.Always)]
+        public Landmark BackgroundLandmarkFloor
+        {
+            get
+            {
+                return _backgroundLandmarkFloor;
+            }
+            set
+            {
+                _backgroundLandmarkFloor = value;
             }
         }
     
@@ -1727,7 +1781,10 @@ namespace UclOpenHfVisualDataSchema
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
             stringBuilder.Append("Landmarks = " + _landmarks + ", ");
-            stringBuilder.Append("BackgroundLandmark = " + _backgroundLandmark + ", ");
+            stringBuilder.Append("BackgroundLandmarkLeft = " + _backgroundLandmarkLeft + ", ");
+            stringBuilder.Append("BackgroundLandmarkRight = " + _backgroundLandmarkRight + ", ");
+            stringBuilder.Append("BackgroundLandmarkCeil = " + _backgroundLandmarkCeil + ", ");
+            stringBuilder.Append("BackgroundLandmarkFloor = " + _backgroundLandmarkFloor + ", ");
             stringBuilder.Append("BoundaryThreshold = " + _boundaryThreshold + ", ");
             stringBuilder.Append("EndTrialThreshold = " + _endTrialThreshold + ", ");
             stringBuilder.Append("MaximumTrialTime = " + _maximumTrialTime + ", ");
