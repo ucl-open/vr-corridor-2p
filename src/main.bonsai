@@ -630,7 +630,6 @@
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
                                   <rx:DueTime>PT0.386S</rx:DueTime>
-                                  <rx:DueTime>PT0.265S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -4988,53 +4987,7 @@
               <Combinator xsi:type="rx:Concat" />
             </Expression>
             <Expression xsi:type="Combinator">
-              <Combinator xsi:type="num:CreateRandom">
-                <num:Seed xsi:nil="true" />
-              </Combinator>
-            </Expression>
-            <Expression xsi:type="SubscribeSubject">
-              <Name>Trial</Name>
-            </Expression>
-            <Expression xsi:type="MemberSelector">
-              <Selector>InterTrialIntervalLowerBound</Selector>
-            </Expression>
-            <Expression xsi:type="PropertyMapping">
-              <PropertyMappings>
-                <Property Name="Lower" />
-              </PropertyMappings>
-            </Expression>
-            <Expression xsi:type="SubscribeSubject">
-              <Name>Trial</Name>
-            </Expression>
-            <Expression xsi:type="MemberSelector">
-              <Selector>InterTrialIntervalUpperBound</Selector>
-            </Expression>
-            <Expression xsi:type="PropertyMapping">
-              <PropertyMappings>
-                <Property Name="Upper" />
-              </PropertyMappings>
-            </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="p3:CreateContinuousUniform">
-                <p3:Lower>1</p3:Lower>
-                <p3:Upper>3</p3:Upper>
-              </Combinator>
-            </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="p3:Sample" />
-            </Expression>
-            <Expression xsi:type="scr:ExpressionTransform">
-              <scr:Expression>TimeSpan.FromSeconds(it)</scr:Expression>
-            </Expression>
-            <Expression xsi:type="PropertyMapping">
-              <PropertyMappings>
-                <Property Name="DueTime" />
-              </PropertyMappings>
-            </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="rx:Delay">
-                <rx:DueTime>PT1.043S</rx:DueTime>
-              </Combinator>
+              <Combinator xsi:type="rx:Repeat" />
             </Expression>
             <Expression xsi:type="WorkflowOutput" />
           </Nodes>
