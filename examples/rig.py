@@ -81,7 +81,7 @@ rig = UclOpenVrCorridor2pRig(
         location_y=-1
     ),
     arduino=MatrixArduino(
-        port_name="COM10",
+        port_name="COM3",
         baud_rate=1000000,
         new_line="\n"
     ),
