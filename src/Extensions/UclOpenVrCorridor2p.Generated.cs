@@ -1979,6 +1979,8 @@ namespace UclOpenHfVisualDataSchema
     
         private Screen _screen;
     
+        private string _gammaCorrectionFile;
+    
         private SyncQuad _syncQuad;
     
         private MatrixArduino _arduino;
@@ -2001,6 +2003,7 @@ namespace UclOpenHfVisualDataSchema
         {
             _version = other._version;
             _screen = other._screen;
+            _gammaCorrectionFile = other._gammaCorrectionFile;
             _syncQuad = other._syncQuad;
             _arduino = other._arduino;
             _quadTimeLowerBound = other._quadTimeLowerBound;
@@ -2031,6 +2034,23 @@ namespace UclOpenHfVisualDataSchema
             set
             {
                 _screen = value;
+            }
+        }
+    
+        /// <summary>
+        /// Path to file to be used as gamma LUT.
+        /// </summary>
+        [Newtonsoft.Json.JsonPropertyAttribute("gammaCorrectionFile", Required=Newtonsoft.Json.Required.Always)]
+        [System.ComponentModel.DescriptionAttribute("Path to file to be used as gamma LUT.")]
+        public string GammaCorrectionFile
+        {
+            get
+            {
+                return _gammaCorrectionFile;
+            }
+            set
+            {
+                _gammaCorrectionFile = value;
             }
         }
     
@@ -2102,6 +2122,7 @@ namespace UclOpenHfVisualDataSchema
         {
             stringBuilder.Append("Version = " + _version + ", ");
             stringBuilder.Append("Screen = " + _screen + ", ");
+            stringBuilder.Append("GammaCorrectionFile = " + _gammaCorrectionFile + ", ");
             stringBuilder.Append("SyncQuad = " + _syncQuad + ", ");
             stringBuilder.Append("Arduino = " + _arduino + ", ");
             stringBuilder.Append("QuadTimeLowerBound = " + _quadTimeLowerBound + ", ");

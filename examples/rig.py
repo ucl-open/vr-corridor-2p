@@ -21,6 +21,7 @@ from ucl_open.rigs.displays import (
 )
 
 rig = UclOpenVrCorridor2pRig(
+    gamma_correction_file="C:/Users/saleem_lab/Desktop/Sonali-2PStim/HALFINTENSITY_LUT_NoRed_SALEEM20_20250219.bmp",
     screen=Screen(
         texture_assets_directory="../textures",
         calibration={

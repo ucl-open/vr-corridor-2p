@@ -20,6 +20,7 @@ class MatrixArduino(SerialDeviceModule):
 class UclOpenVrCorridor2pRig(BaseSchema):
     version: Literal[__semver__] = __semver__
     screen: Screen
+    gamma_correction_file: str = Field(description="Path to file to be used as gamma LUT.")
     sync_quad: SyncQuad
     arduino: MatrixArduino
     quad_time_lower_bound: float = Field(default=0.2)

@@ -562,6 +562,11 @@
         "screen": {
           "$ref": "#/$defs/Screen"
         },
+        "gammaCorrectionFile": {
+          "description": "Path to file to be used as gamma LUT.",
+          "title": "GammaCorrectionFile",
+          "type": "string"
+        },
         "syncQuad": {
           "$ref": "#/$defs/SyncQuad"
         },
@@ -582,6 +587,7 @@
       },
       "required": [
         "screen",
+        "gammaCorrectionFile",
         "syncQuad",
         "arduino"
       ],
