@@ -212,3 +212,15 @@ end
 % savefile='textures_MM6.mat';
 % 
 % save([savefolder,filesep,savefile], 'textures')
+tex1 = textures(2).matrix;
+tex2 = textures(3).matrix;
+tex3 = textures(4).matrix;
+tex4 = textures(5).matrix;
+figure;
+imagesc(tex, [0 1]);
+axis equal; axis off; colormap(gray);
+
+imwrite(tex1, '../BG1.jpg');
+imwrite(tex2, '../BG2.jpg');
+imwrite(tex3, '../BG3.jpg');
+imwrite(tex4, '../BG4.jpg');
