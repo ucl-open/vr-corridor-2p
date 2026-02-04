@@ -34,15 +34,15 @@ textures(8).matrix = (textures(6).matrix+textures(7).matrix)/2;
 %% Filtered BG noise
 
 % BG periodocity and chunk parameters
-BG_contrast = 0.8;
-BGperiodicity = 0.24; %fraction of the corridor's visible length
+BG_contrast = 0.25;
+BGperiodicity = 0.12; %fraction of the corridor's visible length
 BGchunkWidth = 0.02; %fraction of the corridor's visible length
 BGdensity = 20; %# dots per chunk
 BGchunkNb = BGperiodicity / BGchunkWidth;
 
 % Corridor's parameters
-length = 200; % "visible length", ie HALF actual VR corridor length in cm
-height = 12; % VR corridor height in cm
+length = 140; % "visible length", ie HALF actual VR corridor length in cm
+height = 8; % VR corridor height in cm
 finalBGlength = 2048; % Size of the BG textures in pixels. Should be power of 2
 finalBGheight = 2^round(log2(finalBGlength * height / (2*length)));
 
@@ -224,3 +224,4 @@ imwrite(tex1, '../BG1.jpg');
 imwrite(tex2, '../BG2.jpg');
 imwrite(tex3, '../BG3.jpg');
 imwrite(tex4, '../BG4.jpg');
+close all

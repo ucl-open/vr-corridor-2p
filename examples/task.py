@@ -14,10 +14,10 @@ trial_base = Trial(landmarks=[
                         [Landmark(size=4, position=90, texture="plaid_50perC", reward_valence=1)],
                         [Landmark(size=4, position=110, texture="vertGrat_50perC", reward_valence=0)]
                     ],
-                    background_landmark_left=Landmark(size=140, position=70, texture="BG1", reward_valence=0, center_offset=0.0001),
-                    background_landmark_right=Landmark(size=140, position=70, texture="BG2", reward_valence=0, center_offset=0.0001),
-                    background_landmark_ceil=Landmark(size=140, position=70, texture="BG3", reward_valence=0, center_offset=0.0001),
-                    background_landmark_floor=Landmark(size=140, position=70, texture="BG4", reward_valence=0, center_offset=0.0001)
+                    background_landmark_left=Landmark(size=140, position=70, texture="smoothed_fwn1_25perC", reward_valence=0, center_offset=0.0001),
+                    background_landmark_right=Landmark(size=140, position=70, texture="smoothed_fwn4_25perC", reward_valence=0, center_offset=0.0001),
+                    background_landmark_ceil=Landmark(size=140, position=70, texture="smoothed_fwn2_25perC", reward_valence=0, center_offset=0.0001),
+                    background_landmark_floor=Landmark(size=140, position=70, texture="smoothed_fwn3_25perC", reward_valence=0, center_offset=0.0001)
                     )
 
 trial_skip2 = Trial(landmarks=[
@@ -63,12 +63,12 @@ task_logic = UclOpenVrCorridor2pTaskLogic(
                 available_trials=
                 [
                     trial_base,
-                    trial_skip2,
-                    trial_base,
-                    trial_swap23,
-                    trial_base,
-                    trial_skip3,
-                    trial_base
+                   # trial_skip2,
+                   # trial_base,
+                   # trial_swap23,
+                   # trial_base,
+                   # trial_skip3,
+                   # trial_base
                 ],
             ),
         ]
