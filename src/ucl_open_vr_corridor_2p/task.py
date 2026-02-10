@@ -9,7 +9,8 @@ from ucl_open_vr_corridor_2p import __semver__
 
 class TaskParameters(BaseSchema):
     rng_seed: Optional[float] = Field(default=None, description="Seed of the random number generator")
-    
+
+# TODO - refactor landmark types, distinction between rewarded (with valence), unrewarded (with offsets), and unrewarded (automatically sized and positioned based on other trial parameters)
 class Landmark(BaseSchema):
     size: float = Field(default=1, description="This landmark's size in VR space.")
     position: float = Field(default=0, description="This landmark's position in VR space.")
@@ -23,6 +24,7 @@ class Trial(BaseSchema):
     background_landmark_right: Landmark
     background_landmark_ceil: Landmark
     background_landmark_floor: Landmark
+    background_landmark_end: Landmark
     boundary_threshold: float = Field(default=-29, description="Buffer applied to far boundary of corridor to determine stopping distance.")
     end_trial_threshold: float = Field(default=-29, description="Buffer applied to far boundary of corridor to determine trial end distance.")
     maximum_trial_time: float = Field(default=60, description="Maximum amount of time to spend on this trial.")

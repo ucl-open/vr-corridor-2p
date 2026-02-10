@@ -451,6 +451,10 @@
           "$ref": "#/$defs/Landmark",
           "title": "BackgroundLandmarkFloor"
         },
+        "backgroundLandmarkEnd": {
+          "$ref": "#/$defs/Landmark",
+          "title": "BackgroundLandmarkEnd"
+        },
         "boundaryThreshold": {
           "default": -29,
           "description": "Buffer applied to far boundary of corridor to determine stopping distance.",
@@ -505,7 +509,8 @@
         "backgroundLandmarkLeft",
         "backgroundLandmarkRight",
         "backgroundLandmarkCeil",
-        "backgroundLandmarkFloor"
+        "backgroundLandmarkFloor",
+        "backgroundLandmarkEnd"
       ],
       "title": "Trial",
       "type": "object"
