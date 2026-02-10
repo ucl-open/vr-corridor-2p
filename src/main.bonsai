@@ -5,20 +5,20 @@
                  xmlns:rx="clr-namespace:Bonsai.Reactive;assembly=Bonsai.Core"
                  xmlns:p1="clr-namespace:UclOpenHfVisualDataSchema;assembly=Extensions"
                  xmlns:p2="clr-namespace:;assembly=Extensions"
+                 xmlns:p3="clr-namespace:System.Reactive;assembly=System.Reactive.Core"
                  xmlns:gl="clr-namespace:Bonsai.Shaders;assembly=Bonsai.Shaders"
                  xmlns:res="clr-namespace:Bonsai.Resources;assembly=Bonsai.System"
                  xmlns:num="clr-namespace:Bonsai.Numerics;assembly=Bonsai.Numerics"
-                 xmlns:p3="clr-namespace:Bonsai.Numerics.Distributions;assembly=Bonsai.Numerics"
+                 xmlns:p4="clr-namespace:Bonsai.Numerics.Distributions;assembly=Bonsai.Numerics"
                  xmlns:sys="clr-namespace:System;assembly=mscorlib"
                  xmlns:scr="clr-namespace:Bonsai.Scripting.Expressions;assembly=Bonsai.Scripting.Expressions"
                  xmlns:cv="clr-namespace:Bonsai.Vision;assembly=Bonsai.Vision"
-                 xmlns:p4="clr-namespace:UclOpen.Core;assembly=UclOpen.Core"
+                 xmlns:p5="clr-namespace:UclOpen.Core;assembly=UclOpen.Core"
                  xmlns:harp="clr-namespace:Bonsai.Harp;assembly=Bonsai.Harp"
-                 xmlns:p5="clr-namespace:UclOpen.Logging;assembly=UclOpen.Logging"
-                 xmlns:p6="clr-namespace:OpenTK;assembly=OpenTK"
+                 xmlns:p6="clr-namespace:UclOpen.Logging;assembly=UclOpen.Logging"
+                 xmlns:p7="clr-namespace:OpenTK;assembly=OpenTK"
                  xmlns:wie="clr-namespace:Bonsai.Windows.Input;assembly=Bonsai.Windows.Input"
                  xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
-                 xmlns:p7="clr-namespace:System.Reactive;assembly=System.Reactive.Core"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
     <Nodes>
@@ -200,8 +200,7 @@
                     <PortName>COM3</PortName>
                     <BaudRate>1000000</BaudRate>
                     <Encoding>utf-8</Encoding>
-                    <NewLine>
-</NewLine>
+                    <NewLine />
                     <Parity>None</Parity>
                     <ParityReplace>63</ParityReplace>
                     <DataBits>8</DataBits>
@@ -224,6 +223,9 @@
                   </Expression>
                   <Expression xsi:type="rx:PublishSubject">
                     <Name>MatrixArduino</Name>
+                  </Expression>
+                  <Expression xsi:type="rx:PublishSubject" TypeArguments="p3:Unit">
+                    <rx:Name>LickDetection</rx:Name>
                   </Expression>
                 </Nodes>
                 <Edges>
@@ -561,9 +563,9 @@
                                 </PropertyMappings>
                               </Expression>
                               <Expression xsi:type="Combinator">
-                                <Combinator xsi:type="p3:CreateContinuousUniform">
-                                  <p3:Lower>0.2</p3:Lower>
-                                  <p3:Upper>0.5</p3:Upper>
+                                <Combinator xsi:type="p4:CreateContinuousUniform">
+                                  <p4:Lower>0.2</p4:Lower>
+                                  <p4:Upper>0.5</p4:Upper>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Disable">
@@ -604,7 +606,7 @@
                                 <Name>RandomSource</Name>
                               </Expression>
                               <Expression xsi:type="Combinator">
-                                <Combinator xsi:type="p3:Sample" />
+                                <Combinator xsi:type="p4:Sample" />
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Take">
@@ -670,7 +672,7 @@
                                 <Name>RandomSource</Name>
                               </Expression>
                               <Expression xsi:type="Combinator">
-                                <Combinator xsi:type="p3:Sample" />
+                                <Combinator xsi:type="p4:Sample" />
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Take">
@@ -1418,7 +1420,7 @@
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="p4:StripSubstring" />
+                          <Combinator xsi:type="p5:StripSubstring" />
                         </Expression>
                         <Expression xsi:type="ExternalizedMapping">
                           <Property Name="Value" DisplayName="Extension" Description="The file extension" />
@@ -1543,7 +1545,7 @@
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="p4:StripSubstring" />
+                          <Combinator xsi:type="p5:StripSubstring" />
                         </Expression>
                         <Expression xsi:type="ExternalizedMapping">
                           <Property Name="Value" DisplayName="Extension" Description="The file extension" />
@@ -1662,7 +1664,7 @@
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="p4:StripSubstring" />
+                          <Combinator xsi:type="p5:StripSubstring" />
                         </Expression>
                         <Expression xsi:type="ExternalizedMapping">
                           <Property Name="Value" DisplayName="Extension" Description="The file extension" />
@@ -1769,8 +1771,8 @@
                       <Name>Source1</Name>
                     </Expression>
                     <Expression xsi:type="Combinator">
-                      <Combinator xsi:type="p4:GroupByTime">
-                        <p4:ChunkSize>1</p4:ChunkSize>
+                      <Combinator xsi:type="p5:GroupByTime">
+                        <p5:ChunkSize>1</p5:ChunkSize>
                       </Combinator>
                     </Expression>
                     <Expression xsi:type="ExternalizedMapping">
@@ -1822,7 +1824,7 @@
                                   </Combinator>
                                 </Expression>
                                 <Expression xsi:type="Combinator">
-                                  <Combinator xsi:type="p4:StripSubstring" />
+                                  <Combinator xsi:type="p5:StripSubstring" />
                                 </Expression>
                                 <Expression xsi:type="ExternalizedMapping">
                                   <Property Name="Value" DisplayName="Extension" Description="The file extension" />
@@ -1903,7 +1905,7 @@
                                   </Combinator>
                                 </Expression>
                                 <Expression xsi:type="Combinator">
-                                  <Combinator xsi:type="p4:StripSubstring" />
+                                  <Combinator xsi:type="p5:StripSubstring" />
                                 </Expression>
                                 <Expression xsi:type="ExternalizedMapping">
                                   <Property Name="Value" DisplayName="Extension" Description="The file extension" />
@@ -2054,7 +2056,7 @@
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="p4:StripSubstring" />
+                          <Combinator xsi:type="p5:StripSubstring" />
                         </Expression>
                         <Expression xsi:type="ExternalizedMapping">
                           <Property Name="Value" DisplayName="Extension" Description="The file extension" />
@@ -2173,7 +2175,7 @@
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="p4:StripSubstring" />
+                          <Combinator xsi:type="p5:StripSubstring" />
                         </Expression>
                         <Expression xsi:type="ExternalizedMapping">
                           <Property Name="Value" DisplayName="Extension" Description="The file extension" />
@@ -2289,7 +2291,7 @@
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="p4:StripSubstring" />
+                          <Combinator xsi:type="p5:StripSubstring" />
                         </Expression>
                         <Expression xsi:type="ExternalizedMapping">
                           <Property Name="Value" DisplayName="Extension" Description="The file extension" />
@@ -2335,10 +2337,10 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-01-27T10-20-28\RigSchema\RigSchema.json</p5:Path>
-                      <p5:Suffix>None</p5:Suffix>
-                      <p5:Overwrite>false</p5:Overwrite>
+                    <Combinator xsi:type="p6:JsonWriter">
+                      <p6:Path>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-01-27T10-20-28\RigSchema\RigSchema.json</p6:Path>
+                      <p6:Suffix>None</p6:Suffix>
+                      <p6:Overwrite>false</p6:Overwrite>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -2400,7 +2402,7 @@
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="p4:StripSubstring" />
+                          <Combinator xsi:type="p5:StripSubstring" />
                         </Expression>
                         <Expression xsi:type="ExternalizedMapping">
                           <Property Name="Value" DisplayName="Extension" Description="The file extension" />
@@ -2446,10 +2448,10 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-01-27T10-20-28\TaskLogicSchema\TaskLogicSchema.json</p5:Path>
-                      <p5:Suffix>None</p5:Suffix>
-                      <p5:Overwrite>false</p5:Overwrite>
+                    <Combinator xsi:type="p6:JsonWriter">
+                      <p6:Path>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-01-27T10-20-28\TaskLogicSchema\TaskLogicSchema.json</p6:Path>
+                      <p6:Suffix>None</p6:Suffix>
+                      <p6:Overwrite>false</p6:Overwrite>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -2511,7 +2513,7 @@
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="p4:StripSubstring" />
+                          <Combinator xsi:type="p5:StripSubstring" />
                         </Expression>
                         <Expression xsi:type="ExternalizedMapping">
                           <Property Name="Value" DisplayName="Extension" Description="The file extension" />
@@ -2557,10 +2559,10 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-01-27T10-20-28\SessionSchema\SessionSchema.json</p5:Path>
-                      <p5:Suffix>None</p5:Suffix>
-                      <p5:Overwrite>false</p5:Overwrite>
+                    <Combinator xsi:type="p6:JsonWriter">
+                      <p6:Path>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-01-27T10-20-28\SessionSchema\SessionSchema.json</p6:Path>
+                      <p6:Suffix>None</p6:Suffix>
+                      <p6:Overwrite>false</p6:Overwrite>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -2626,7 +2628,7 @@
           </Edges>
         </Workflow>
       </Expression>
-      <Expression xsi:type="rx:BehaviorSubject" TypeArguments="p6:Vector3">
+      <Expression xsi:type="rx:BehaviorSubject" TypeArguments="p7:Vector3">
         <rx:Name>CurrentPosition</rx:Name>
       </Expression>
       <Expression xsi:type="Combinator">
@@ -2679,22 +2681,10 @@
       <Expression xsi:type="rx:PublishSubject">
         <Name>MovementDelta</Name>
       </Expression>
-      <Expression xsi:type="Disable">
-        <Builder xsi:type="Combinator">
-          <Combinator xsi:type="wie:KeyDown">
-            <wie:Filter>L</wie:Filter>
-            <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
-          </Combinator>
-        </Builder>
-      </Expression>
-      <Expression xsi:type="Unit" />
-      <Expression xsi:type="rx:PublishSubject">
-        <Name>LickDetection</Name>
-      </Expression>
       <Expression xsi:type="rx:BehaviorSubject" TypeArguments="scg:List(p1:Landmark)">
         <rx:Name>LandmarkSet</rx:Name>
       </Expression>
-      <Expression xsi:type="rx:BehaviorSubject" TypeArguments="p7:Unit">
+      <Expression xsi:type="rx:BehaviorSubject" TypeArguments="p3:Unit">
         <rx:Name>Reward</rx:Name>
       </Expression>
       <Expression xsi:type="rx:Defer">
@@ -4941,13 +4931,13 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="p3:CreateContinuousUniform">
-                      <p3:Lower>3</p3:Lower>
-                      <p3:Upper>5</p3:Upper>
+                    <Combinator xsi:type="p4:CreateContinuousUniform">
+                      <p4:Lower>3</p4:Lower>
+                      <p4:Upper>5</p4:Upper>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="p3:Sample" />
+                    <Combinator xsi:type="p4:Sample" />
                   </Expression>
                   <Expression xsi:type="scr:ExpressionTransform">
                     <scr:Expression>TimeSpan.FromSeconds(it)</scr:Expression>
@@ -5071,14 +5061,12 @@
       <Edge From="15" To="16" Label="Source1" />
       <Edge From="16" To="17" Label="Source1" />
       <Edge From="17" To="18" Label="Source2" />
-      <Edge From="19" To="20" Label="Source1" />
-      <Edge From="20" To="21" Label="Source1" />
+      <Edge From="21" To="24" Label="Source1" />
+      <Edge From="22" To="23" Label="Source1" />
+      <Edge From="23" To="24" Label="Source2" />
       <Edge From="24" To="27" Label="Source1" />
       <Edge From="25" To="26" Label="Source1" />
       <Edge From="26" To="27" Label="Source2" />
-      <Edge From="27" To="30" Label="Source1" />
-      <Edge From="28" To="29" Label="Source1" />
-      <Edge From="29" To="30" Label="Source2" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
