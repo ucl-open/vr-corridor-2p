@@ -456,13 +456,13 @@
           "title": "BackgroundLandmarkEnd"
         },
         "boundaryThreshold": {
-          "default": -29,
+          "default": 40,
           "description": "Buffer applied to far boundary of corridor to determine stopping distance.",
           "title": "BoundaryThreshold",
           "type": "number"
         },
         "endTrialThreshold": {
-          "default": -29,
+          "default": 40,
           "description": "Buffer applied to far boundary of corridor to determine trial end distance.",
           "title": "EndTrialThreshold",
           "type": "number"
@@ -634,7 +634,7 @@
           "type": "number"
         },
         "farClip": {
-          "default": 20,
+          "default": 200,
           "title": "FarClip",
           "type": "number"
         },

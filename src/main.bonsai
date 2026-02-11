@@ -197,10 +197,11 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="IncludeWorkflow" Path="UclOpen.Devices:SerialDevice.bonsai">
-                    <PortName>COM10</PortName>
+                    <PortName>COM3</PortName>
                     <BaudRate>1000000</BaudRate>
                     <Encoding>utf-8</Encoding>
-                    <NewLine />
+                    <NewLine>
+</NewLine>
                     <Parity>None</Parity>
                     <ParityReplace>63</ParityReplace>
                     <DataBits>8</DataBits>
@@ -503,9 +504,9 @@
                           <LocationY>-1</LocationY>
                           <Layer>1</Layer>
                           <Angle>0</Angle>
-                          <ColorR>1</ColorR>
-                          <ColorG>1</ColorG>
-                          <ColorB>1</ColorB>
+                          <ColorR>0</ColorR>
+                          <ColorG>0</ColorG>
+                          <ColorB>0</ColorB>
                           <ColorA>1</ColorA>
                         </Expression>
                         <Expression xsi:type="rx:PublishSubject">
@@ -629,7 +630,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT0.219S</rx:DueTime>
+                                  <rx:DueTime>PT0.43S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -695,7 +696,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT0.34S</rx:DueTime>
+                                  <rx:DueTime>PT0.485S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -788,7 +789,7 @@
                       <Z>0</Z>
                     </Eye>
                     <NearClip>0.1</NearClip>
-                    <FarClip>1000</FarClip>
+                    <FarClip>200</FarClip>
                     <Light>
                       <X>0</X>
                       <Y>0</Y>
@@ -921,7 +922,7 @@
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Environment.GammaCorrection.bonsai">
                           <ClearColor>Gray</ClearColor>
-                          <GammaLut>../luts/HALFINTENSITY_LUT_NoRed.bmp</GammaLut>
+                          <GammaLut>C:/Users/saleem_lab/Desktop/Sonali-2PStim/LUTs/HALFINTENSITY_LUT_NoRed_SALEEM20_20250219.bmp</GammaLut>
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Environment.DrawViewport.bonsai">
                           <X>0</X>
@@ -1072,7 +1073,7 @@
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Environment.GammaCorrection.bonsai">
                           <ClearColor>Gray</ClearColor>
-                          <GammaLut>../luts/HALFINTENSITY_LUT_NoRed.bmp</GammaLut>
+                          <GammaLut>C:/Users/saleem_lab/Desktop/Sonali-2PStim/LUTs/HALFINTENSITY_LUT_NoRed_SALEEM20_20250219.bmp</GammaLut>
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Environment.DrawViewport.bonsai">
                           <X>0.333333343</X>
@@ -1223,7 +1224,7 @@
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Environment.GammaCorrection.bonsai">
                           <ClearColor>Gray</ClearColor>
-                          <GammaLut>../luts/HALFINTENSITY_LUT_NoRed.bmp</GammaLut>
+                          <GammaLut>C:/Users/saleem_lab/Desktop/Sonali-2PStim/LUTs/HALFINTENSITY_LUT_NoRed_SALEEM20_20250219.bmp</GammaLut>
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Environment.DrawViewport.bonsai">
                           <X>0.6666667</X>
@@ -1275,27 +1276,19 @@
                   <Expression xsi:type="rx:BehaviorSubject">
                     <Name>RenderFrameCount</Name>
                   </Expression>
-                  <Expression xsi:type="Disable">
-                    <Builder xsi:type="Combinator">
-                      <Combinator xsi:type="gl:UpdateFrame" />
-                    </Builder>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="gl:UpdateFrame" />
                   </Expression>
-                  <Expression xsi:type="Disable">
-                    <Builder xsi:type="Combinator">
-                      <Combinator xsi:type="gl:ReadPixels">
-                        <gl:RegionOfInterest xsi:nil="true" />
-                      </Combinator>
-                    </Builder>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="gl:ReadPixels">
+                      <gl:RegionOfInterest xsi:nil="true" />
+                    </Combinator>
                   </Expression>
-                  <Expression xsi:type="Disable">
-                    <Builder xsi:type="Combinator">
-                      <Combinator xsi:type="rx:ElementIndex" />
-                    </Builder>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:ElementIndex" />
                   </Expression>
-                  <Expression xsi:type="Disable">
-                    <Builder xsi:type="rx:PublishSubject">
-                      <Name>FramePixels</Name>
-                    </Builder>
+                  <Expression xsi:type="rx:PublishSubject">
+                    <Name>FramePixels</Name>
                   </Expression>
                 </Nodes>
                 <Edges>
@@ -1377,9 +1370,9 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="UclOpen.Logging:LogController.bonsai">
-              <SubjectId>Plimbo</SubjectId>
-              <SessionId>001</SessionId>
-              <Path>../temp_data</Path>
+              <SubjectId>M25126/20260124/</SubjectId>
+              <SessionId>M25126_LandManiCorridorTest_20260124_00001</SessionId>
+              <Path>C:/UCLOpenDATA/</Path>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>MatrixArduino</Name>
@@ -1469,7 +1462,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>../temp_data\sub-Plimbo\ses-001_date-2026-02-10T15-17-03\MatrixArduino\MatrixArduino.csv</io:FileName>
+                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-11T13-10-51\MatrixArduino\MatrixArduino.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1594,7 +1587,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>../temp_data\sub-Plimbo\ses-001_date-2026-02-10T15-17-03\LandmarkChoice\LandmarkChoice.csv</io:FileName>
+                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-11T13-10-51\LandmarkChoice\LandmarkChoice.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1713,7 +1706,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>../temp_data\sub-Plimbo\ses-001_date-2026-02-10T15-17-03\VrPosition\VrPosition.csv</io:FileName>
+                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-11T13-10-51\VrPosition\VrPosition.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1732,278 +1725,264 @@
                 </Edges>
               </Workflow>
             </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="SubscribeSubject">
-                <Name>FramePixels</Name>
-              </Builder>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>FramePixels</Name>
             </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="SubscribeSubject">
-                <Name>MatrixArduino</Name>
-              </Builder>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>MatrixArduino</Name>
             </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="MemberSelector">
-                <Selector>Seconds</Selector>
-              </Builder>
+            <Expression xsi:type="MemberSelector">
+              <Selector>Seconds</Selector>
             </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="Combinator">
-                <Combinator xsi:type="rx:WithLatestFrom" />
-              </Builder>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:WithLatestFrom" />
             </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="Combinator">
-                <Combinator xsi:type="harp:CreateTimestamped" />
-              </Builder>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="harp:CreateTimestamped" />
             </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="Annotation">
-                <Text><![CDATA[TODO - Variation on standard video logger]]></Text>
-              </Builder>
+            <Expression xsi:type="Annotation">
+              <Text><![CDATA[TODO - Variation on standard video logger]]></Text>
             </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="GroupWorkflow">
-                <Name>LogVideo</Name>
-                <Workflow>
-                  <Nodes>
-                    <Expression xsi:type="WorkflowInput">
-                      <Name>Source1</Name>
-                    </Expression>
-                    <Expression xsi:type="Combinator">
-                      <Combinator xsi:type="p5:GroupByTime">
-                        <p5:ChunkSize>1</p5:ChunkSize>
-                      </Combinator>
-                    </Expression>
-                    <Expression xsi:type="ExternalizedMapping">
-                      <Property Name="Name" DisplayName="LogName" Description="The base name of the video log, without extension." />
-                      <Property Name="FrameRate" />
-                    </Expression>
-                    <Expression xsi:type="rx:CreateObservable">
-                      <Name>LogVideo</Name>
-                      <Workflow>
-                        <Nodes>
-                          <Expression xsi:type="WorkflowInput">
-                            <Name>Source1</Name>
-                          </Expression>
-                          <Expression xsi:type="rx:AsyncSubject">
-                            <Name>Data</Name>
-                          </Expression>
-                          <Expression xsi:type="SubscribeSubject">
-                            <Name>Data</Name>
-                          </Expression>
-                          <Expression xsi:type="Combinator">
-                            <Combinator xsi:type="rx:Merge" />
-                          </Expression>
-                          <Expression xsi:type="SubscribeSubject">
-                            <Name>Data</Name>
-                          </Expression>
-                          <Expression xsi:type="MemberSelector">
-                            <Selector>Key</Selector>
-                          </Expression>
-                          <Expression xsi:type="ExternalizedMapping">
-                            <Property Name="Name" />
-                          </Expression>
-                          <Expression xsi:type="GroupWorkflow">
-                            <Name>FormatFileName</Name>
-                            <Description>Generates a log filename based on the input timestamp.</Description>
-                            <Workflow>
-                              <Nodes>
-                                <Expression xsi:type="SubscribeSubject">
-                                  <Name>PathPrefix</Name>
-                                </Expression>
-                                <Expression xsi:type="WorkflowInput">
-                                  <Name>Source1</Name>
-                                </Expression>
-                                <Expression xsi:type="ExternalizedMapping">
-                                  <Property Name="Value" DisplayName="Name" Description="The base name of the log file." />
-                                </Expression>
-                                <Expression xsi:type="Combinator">
-                                  <Combinator xsi:type="StringProperty">
-                                    <Value>FrameDump</Value>
-                                  </Combinator>
-                                </Expression>
-                                <Expression xsi:type="Combinator">
-                                  <Combinator xsi:type="p5:StripSubstring" />
-                                </Expression>
-                                <Expression xsi:type="ExternalizedMapping">
-                                  <Property Name="Value" DisplayName="Extension" Description="The file extension" />
-                                </Expression>
-                                <Expression xsi:type="Combinator">
-                                  <Combinator xsi:type="StringProperty">
-                                    <Value>csv</Value>
-                                  </Combinator>
-                                </Expression>
-                                <Expression xsi:type="Combinator">
-                                  <Combinator xsi:type="rx:Take">
-                                    <rx:Count>1</rx:Count>
-                                  </Combinator>
-                                </Expression>
-                                <Expression xsi:type="Combinator">
-                                  <Combinator xsi:type="rx:Zip" />
-                                </Expression>
-                                <Expression xsi:type="Format">
-                                  <Format>{0}\{1}\{2}.{3}</Format>
-                                  <Selector>Item1,Item2,Item3,Item4</Selector>
-                                </Expression>
-                                <Expression xsi:type="WorkflowOutput" />
-                              </Nodes>
-                              <Edges>
-                                <Edge From="0" To="8" Label="Source1" />
-                                <Edge From="1" To="3" Label="Source1" />
-                                <Edge From="2" To="3" Label="Source2" />
-                                <Edge From="3" To="4" Label="Source1" />
-                                <Edge From="3" To="8" Label="Source3" />
-                                <Edge From="4" To="8" Label="Source2" />
-                                <Edge From="5" To="6" Label="Source1" />
-                                <Edge From="6" To="7" Label="Source1" />
-                                <Edge From="7" To="8" Label="Source4" />
-                                <Edge From="8" To="9" Label="Source1" />
-                                <Edge From="9" To="10" Label="Source1" />
-                              </Edges>
-                            </Workflow>
-                          </Expression>
-                          <Expression xsi:type="PropertyMapping">
-                            <PropertyMappings>
-                              <Property Name="FileName" />
-                            </PropertyMappings>
-                          </Expression>
-                          <Expression xsi:type="io:CsvWriter">
-                            <io:FileName>../temp_data\sub-Plimbo\ses-001_date-2026-01-21T16-23-12\FrameDump\FrameDump.csv</io:FileName>
-                            <io:Append>false</io:Append>
-                            <io:Overwrite>false</io:Overwrite>
-                            <io:Suffix>None</io:Suffix>
-                            <io:IncludeHeader>true</io:IncludeHeader>
-                            <io:Selector>Seconds,Value.Index</io:Selector>
-                          </Expression>
-                          <Expression xsi:type="MemberSelector">
-                            <Selector>Value.Value</Selector>
-                          </Expression>
-                          <Expression xsi:type="SubscribeSubject">
-                            <Name>Data</Name>
-                          </Expression>
-                          <Expression xsi:type="MemberSelector">
-                            <Selector>Key</Selector>
-                          </Expression>
-                          <Expression xsi:type="GroupWorkflow">
-                            <Name>FormatFileName</Name>
-                            <Description>Generates a log filename based on the input timestamp.</Description>
-                            <Workflow>
-                              <Nodes>
-                                <Expression xsi:type="SubscribeSubject">
-                                  <Name>PathPrefix</Name>
-                                </Expression>
-                                <Expression xsi:type="WorkflowInput">
-                                  <Name>Source1</Name>
-                                </Expression>
-                                <Expression xsi:type="ExternalizedMapping">
-                                  <Property Name="Value" DisplayName="Name" Description="The base name of the log file." />
-                                </Expression>
-                                <Expression xsi:type="Combinator">
-                                  <Combinator xsi:type="StringProperty">
-                                    <Value>FrameDump</Value>
-                                  </Combinator>
-                                </Expression>
-                                <Expression xsi:type="Combinator">
-                                  <Combinator xsi:type="p5:StripSubstring" />
-                                </Expression>
-                                <Expression xsi:type="ExternalizedMapping">
-                                  <Property Name="Value" DisplayName="Extension" Description="The file extension" />
-                                </Expression>
-                                <Expression xsi:type="Combinator">
-                                  <Combinator xsi:type="StringProperty">
-                                    <Value>avi</Value>
-                                  </Combinator>
-                                </Expression>
-                                <Expression xsi:type="Combinator">
-                                  <Combinator xsi:type="rx:Take">
-                                    <rx:Count>1</rx:Count>
-                                  </Combinator>
-                                </Expression>
-                                <Expression xsi:type="Combinator">
-                                  <Combinator xsi:type="rx:Zip" />
-                                </Expression>
-                                <Expression xsi:type="Format">
-                                  <Format>{0}\{1}\{2}.{3}</Format>
-                                  <Selector>Item1,Item2,Item3,Item4</Selector>
-                                </Expression>
-                                <Expression xsi:type="WorkflowOutput" />
-                              </Nodes>
-                              <Edges>
-                                <Edge From="0" To="8" Label="Source1" />
-                                <Edge From="1" To="3" Label="Source1" />
-                                <Edge From="2" To="3" Label="Source2" />
-                                <Edge From="3" To="4" Label="Source1" />
-                                <Edge From="3" To="8" Label="Source3" />
-                                <Edge From="4" To="8" Label="Source2" />
-                                <Edge From="5" To="6" Label="Source1" />
-                                <Edge From="6" To="7" Label="Source1" />
-                                <Edge From="7" To="8" Label="Source4" />
-                                <Edge From="8" To="9" Label="Source1" />
-                                <Edge From="9" To="10" Label="Source1" />
-                              </Edges>
-                            </Workflow>
-                          </Expression>
-                          <Expression xsi:type="PropertyMapping">
-                            <PropertyMappings>
-                              <Property Name="FileName" />
-                            </PropertyMappings>
-                          </Expression>
-                          <Expression xsi:type="ExternalizedMapping">
-                            <Property Name="FrameRate" />
-                          </Expression>
-                          <Expression xsi:type="Combinator">
-                            <Combinator xsi:type="cv:VideoWriter">
-                              <cv:FileName>../temp_data\sub-Plimbo\ses-00003_date-2026-01-21T15-36-21\FrameDump\FrameDump.avi</cv:FileName>
-                              <cv:Suffix>None</cv:Suffix>
-                              <cv:Buffered>true</cv:Buffered>
-                              <cv:Overwrite>false</cv:Overwrite>
-                              <cv:FourCC>FMP4</cv:FourCC>
-                              <cv:FrameRate>60</cv:FrameRate>
-                              <cv:FrameSize>
-                                <cv:Width>0</cv:Width>
-                                <cv:Height>0</cv:Height>
-                              </cv:FrameSize>
-                              <cv:ResizeInterpolation>NearestNeighbor</cv:ResizeInterpolation>
-                            </Combinator>
-                          </Expression>
-                          <Expression xsi:type="WorkflowOutput" />
-                        </Nodes>
-                        <Edges>
-                          <Edge From="0" To="1" Label="Source1" />
-                          <Edge From="2" To="3" Label="Source1" />
-                          <Edge From="3" To="9" Label="Source1" />
-                          <Edge From="4" To="5" Label="Source1" />
-                          <Edge From="5" To="7" Label="Source1" />
-                          <Edge From="6" To="7" Label="Source2" />
-                          <Edge From="6" To="13" Label="Source2" />
-                          <Edge From="7" To="8" Label="Source1" />
-                          <Edge From="8" To="9" Label="Source2" />
-                          <Edge From="9" To="10" Label="Source1" />
-                          <Edge From="10" To="16" Label="Source1" />
-                          <Edge From="11" To="12" Label="Source1" />
-                          <Edge From="12" To="13" Label="Source1" />
-                          <Edge From="13" To="14" Label="Source1" />
-                          <Edge From="14" To="16" Label="Source2" />
-                          <Edge From="15" To="16" Label="Source3" />
-                          <Edge From="16" To="17" Label="Source1" />
-                        </Edges>
-                      </Workflow>
-                    </Expression>
-                    <Expression xsi:type="Combinator">
-                      <Combinator xsi:type="rx:Switch" />
-                    </Expression>
-                    <Expression xsi:type="WorkflowOutput" />
-                  </Nodes>
-                  <Edges>
-                    <Edge From="0" To="1" Label="Source1" />
-                    <Edge From="1" To="3" Label="Source1" />
-                    <Edge From="2" To="3" Label="Source2" />
-                    <Edge From="3" To="4" Label="Source1" />
-                    <Edge From="4" To="5" Label="Source1" />
-                  </Edges>
-                </Workflow>
-              </Builder>
+            <Expression xsi:type="GroupWorkflow">
+              <Name>LogVideo</Name>
+              <Workflow>
+                <Nodes>
+                  <Expression xsi:type="WorkflowInput">
+                    <Name>Source1</Name>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="p5:GroupByTime">
+                      <p5:ChunkSize>1</p5:ChunkSize>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="ExternalizedMapping">
+                    <Property Name="Name" DisplayName="LogName" Description="The base name of the video log, without extension." />
+                    <Property Name="FrameRate" />
+                  </Expression>
+                  <Expression xsi:type="rx:CreateObservable">
+                    <Name>LogVideo</Name>
+                    <Workflow>
+                      <Nodes>
+                        <Expression xsi:type="WorkflowInput">
+                          <Name>Source1</Name>
+                        </Expression>
+                        <Expression xsi:type="rx:AsyncSubject">
+                          <Name>Data</Name>
+                        </Expression>
+                        <Expression xsi:type="SubscribeSubject">
+                          <Name>Data</Name>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:Merge" />
+                        </Expression>
+                        <Expression xsi:type="SubscribeSubject">
+                          <Name>Data</Name>
+                        </Expression>
+                        <Expression xsi:type="MemberSelector">
+                          <Selector>Key</Selector>
+                        </Expression>
+                        <Expression xsi:type="ExternalizedMapping">
+                          <Property Name="Name" />
+                        </Expression>
+                        <Expression xsi:type="GroupWorkflow">
+                          <Name>FormatFileName</Name>
+                          <Description>Generates a log filename based on the input timestamp.</Description>
+                          <Workflow>
+                            <Nodes>
+                              <Expression xsi:type="SubscribeSubject">
+                                <Name>PathPrefix</Name>
+                              </Expression>
+                              <Expression xsi:type="WorkflowInput">
+                                <Name>Source1</Name>
+                              </Expression>
+                              <Expression xsi:type="ExternalizedMapping">
+                                <Property Name="Value" DisplayName="Name" Description="The base name of the log file." />
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="StringProperty">
+                                  <Value>FrameDump</Value>
+                                </Combinator>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="p5:StripSubstring" />
+                              </Expression>
+                              <Expression xsi:type="ExternalizedMapping">
+                                <Property Name="Value" DisplayName="Extension" Description="The file extension" />
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="StringProperty">
+                                  <Value>csv</Value>
+                                </Combinator>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="rx:Take">
+                                  <rx:Count>1</rx:Count>
+                                </Combinator>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="rx:Zip" />
+                              </Expression>
+                              <Expression xsi:type="Format">
+                                <Format>{0}\{1}\{2}.{3}</Format>
+                                <Selector>Item1,Item2,Item3,Item4</Selector>
+                              </Expression>
+                              <Expression xsi:type="WorkflowOutput" />
+                            </Nodes>
+                            <Edges>
+                              <Edge From="0" To="8" Label="Source1" />
+                              <Edge From="1" To="3" Label="Source1" />
+                              <Edge From="2" To="3" Label="Source2" />
+                              <Edge From="3" To="4" Label="Source1" />
+                              <Edge From="3" To="8" Label="Source3" />
+                              <Edge From="4" To="8" Label="Source2" />
+                              <Edge From="5" To="6" Label="Source1" />
+                              <Edge From="6" To="7" Label="Source1" />
+                              <Edge From="7" To="8" Label="Source4" />
+                              <Edge From="8" To="9" Label="Source1" />
+                              <Edge From="9" To="10" Label="Source1" />
+                            </Edges>
+                          </Workflow>
+                        </Expression>
+                        <Expression xsi:type="PropertyMapping">
+                          <PropertyMappings>
+                            <Property Name="FileName" />
+                          </PropertyMappings>
+                        </Expression>
+                        <Expression xsi:type="io:CsvWriter">
+                          <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-11T13-09-24\FrameDump\FrameDump.csv</io:FileName>
+                          <io:Append>false</io:Append>
+                          <io:Overwrite>false</io:Overwrite>
+                          <io:Suffix>None</io:Suffix>
+                          <io:IncludeHeader>true</io:IncludeHeader>
+                          <io:Selector>Seconds,Value.Index</io:Selector>
+                        </Expression>
+                        <Expression xsi:type="MemberSelector">
+                          <Selector>Value.Value</Selector>
+                        </Expression>
+                        <Expression xsi:type="SubscribeSubject">
+                          <Name>Data</Name>
+                        </Expression>
+                        <Expression xsi:type="MemberSelector">
+                          <Selector>Key</Selector>
+                        </Expression>
+                        <Expression xsi:type="GroupWorkflow">
+                          <Name>FormatFileName</Name>
+                          <Description>Generates a log filename based on the input timestamp.</Description>
+                          <Workflow>
+                            <Nodes>
+                              <Expression xsi:type="SubscribeSubject">
+                                <Name>PathPrefix</Name>
+                              </Expression>
+                              <Expression xsi:type="WorkflowInput">
+                                <Name>Source1</Name>
+                              </Expression>
+                              <Expression xsi:type="ExternalizedMapping">
+                                <Property Name="Value" DisplayName="Name" Description="The base name of the log file." />
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="StringProperty">
+                                  <Value>FrameDump</Value>
+                                </Combinator>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="p5:StripSubstring" />
+                              </Expression>
+                              <Expression xsi:type="ExternalizedMapping">
+                                <Property Name="Value" DisplayName="Extension" Description="The file extension" />
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="StringProperty">
+                                  <Value>avi</Value>
+                                </Combinator>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="rx:Take">
+                                  <rx:Count>1</rx:Count>
+                                </Combinator>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="rx:Zip" />
+                              </Expression>
+                              <Expression xsi:type="Format">
+                                <Format>{0}\{1}\{2}.{3}</Format>
+                                <Selector>Item1,Item2,Item3,Item4</Selector>
+                              </Expression>
+                              <Expression xsi:type="WorkflowOutput" />
+                            </Nodes>
+                            <Edges>
+                              <Edge From="0" To="8" Label="Source1" />
+                              <Edge From="1" To="3" Label="Source1" />
+                              <Edge From="2" To="3" Label="Source2" />
+                              <Edge From="3" To="4" Label="Source1" />
+                              <Edge From="3" To="8" Label="Source3" />
+                              <Edge From="4" To="8" Label="Source2" />
+                              <Edge From="5" To="6" Label="Source1" />
+                              <Edge From="6" To="7" Label="Source1" />
+                              <Edge From="7" To="8" Label="Source4" />
+                              <Edge From="8" To="9" Label="Source1" />
+                              <Edge From="9" To="10" Label="Source1" />
+                            </Edges>
+                          </Workflow>
+                        </Expression>
+                        <Expression xsi:type="PropertyMapping">
+                          <PropertyMappings>
+                            <Property Name="FileName" />
+                          </PropertyMappings>
+                        </Expression>
+                        <Expression xsi:type="ExternalizedMapping">
+                          <Property Name="FrameRate" />
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="cv:VideoWriter">
+                            <cv:FileName>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-11T13-09-24\FrameDump\FrameDump.avi</cv:FileName>
+                            <cv:Suffix>None</cv:Suffix>
+                            <cv:Buffered>true</cv:Buffered>
+                            <cv:Overwrite>false</cv:Overwrite>
+                            <cv:FourCC>FMP4</cv:FourCC>
+                            <cv:FrameRate>60</cv:FrameRate>
+                            <cv:FrameSize>
+                              <cv:Width>0</cv:Width>
+                              <cv:Height>0</cv:Height>
+                            </cv:FrameSize>
+                            <cv:ResizeInterpolation>NearestNeighbor</cv:ResizeInterpolation>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="WorkflowOutput" />
+                      </Nodes>
+                      <Edges>
+                        <Edge From="0" To="1" Label="Source1" />
+                        <Edge From="2" To="3" Label="Source1" />
+                        <Edge From="3" To="9" Label="Source1" />
+                        <Edge From="4" To="5" Label="Source1" />
+                        <Edge From="5" To="7" Label="Source1" />
+                        <Edge From="6" To="7" Label="Source2" />
+                        <Edge From="6" To="13" Label="Source2" />
+                        <Edge From="7" To="8" Label="Source1" />
+                        <Edge From="8" To="9" Label="Source2" />
+                        <Edge From="9" To="10" Label="Source1" />
+                        <Edge From="10" To="16" Label="Source1" />
+                        <Edge From="11" To="12" Label="Source1" />
+                        <Edge From="12" To="13" Label="Source1" />
+                        <Edge From="13" To="14" Label="Source1" />
+                        <Edge From="14" To="16" Label="Source2" />
+                        <Edge From="15" To="16" Label="Source3" />
+                        <Edge From="16" To="17" Label="Source1" />
+                      </Edges>
+                    </Workflow>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:Switch" />
+                  </Expression>
+                  <Expression xsi:type="WorkflowOutput" />
+                </Nodes>
+                <Edges>
+                  <Edge From="0" To="1" Label="Source1" />
+                  <Edge From="1" To="3" Label="Source1" />
+                  <Edge From="2" To="3" Label="Source2" />
+                  <Edge From="3" To="4" Label="Source1" />
+                  <Edge From="4" To="5" Label="Source1" />
+                </Edges>
+              </Workflow>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>RenderFrameCount</Name>
@@ -2105,7 +2084,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>../temp_data\sub-Plimbo\ses-001_date-2026-02-10T15-17-03\RenderFrameCount\RenderFrameCount.csv</io:FileName>
+                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-11T13-10-51\RenderFrameCount\RenderFrameCount.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2224,7 +2203,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>../temp_data\sub-Plimbo\ses-001_date-2026-02-10T15-17-03\QuadState\QuadState.csv</io:FileName>
+                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-11T13-10-51\QuadState\QuadState.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2338,7 +2317,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p6:JsonWriter">
-                      <p6:Path>../temp_data\sub-Plimbo\ses-001_date-2026-02-10T15-17-03\RigSchema\RigSchema.json</p6:Path>
+                      <p6:Path>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-11T13-10-51\RigSchema\RigSchema.json</p6:Path>
                       <p6:Suffix>None</p6:Suffix>
                       <p6:Overwrite>false</p6:Overwrite>
                     </Combinator>
@@ -2449,7 +2428,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p6:JsonWriter">
-                      <p6:Path>../temp_data\sub-Plimbo\ses-001_date-2026-02-10T15-17-03\TaskLogicSchema\TaskLogicSchema.json</p6:Path>
+                      <p6:Path>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-11T13-10-51\TaskLogicSchema\TaskLogicSchema.json</p6:Path>
                       <p6:Suffix>None</p6:Suffix>
                       <p6:Overwrite>false</p6:Overwrite>
                     </Combinator>
@@ -2560,7 +2539,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p6:JsonWriter">
-                      <p6:Path>../temp_data\sub-Plimbo\ses-001_date-2026-02-10T15-17-03\SessionSchema\SessionSchema.json</p6:Path>
+                      <p6:Path>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-11T13-10-51\SessionSchema\SessionSchema.json</p6:Path>
                       <p6:Suffix>None</p6:Suffix>
                       <p6:Overwrite>false</p6:Overwrite>
                     </Combinator>
@@ -2827,7 +2806,7 @@
                         </Expression>
                         <Expression xsi:type="Subtract">
                           <Operand xsi:type="DoubleProperty">
-                            <Value>-29</Value>
+                            <Value>1</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -2846,7 +2825,7 @@
                         </Expression>
                         <Expression xsi:type="Subtract">
                           <Operand xsi:type="DoubleProperty">
-                            <Value>-29</Value>
+                            <Value>1</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -3199,7 +3178,7 @@
                           <Combinator xsi:type="gl:CreateVector3">
                             <gl:X>0</gl:X>
                             <gl:Y>0</gl:Y>
-                            <gl:Z>141</gl:Z>
+                            <gl:Z>163</gl:Z>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="rx:Condition">
@@ -3315,7 +3294,7 @@
                         </Expression>
                         <Expression xsi:type="Index">
                           <Operand xsi:type="StringProperty">
-                            <Value>vertGrat_50perC</Value>
+                            <Value>plaid</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -3449,14 +3428,14 @@
                           </PropertyMappings>
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
-                          <TranslationX>-4</TranslationX>
+                          <TranslationX>-6</TranslationX>
                           <TranslationY>0</TranslationY>
-                          <TranslationZ>110</TranslationZ>
+                          <TranslationZ>160</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>0</RotationX>
-                          <ScaleX>4</ScaleX>
-                          <ScaleY>8</ScaleY>
+                          <ScaleX>8</ScaleX>
+                          <ScaleY>12</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
                             <X>1</X>
@@ -3493,14 +3472,14 @@
                           </PropertyMappings>
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
-                          <TranslationX>4</TranslationX>
+                          <TranslationX>6</TranslationX>
                           <TranslationY>0</TranslationY>
-                          <TranslationZ>110</TranslationZ>
+                          <TranslationZ>160</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>0</RotationX>
-                          <ScaleX>4</ScaleX>
-                          <ScaleY>8</ScaleY>
+                          <ScaleX>8</ScaleX>
+                          <ScaleY>12</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
                             <X>1</X>
@@ -3538,13 +3517,13 @@
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>0</TranslationX>
-                          <TranslationY>4</TranslationY>
-                          <TranslationZ>110</TranslationZ>
+                          <TranslationY>6</TranslationY>
+                          <TranslationZ>160</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>-90</RotationX>
-                          <ScaleX>4</ScaleX>
-                          <ScaleY>8</ScaleY>
+                          <ScaleX>8</ScaleX>
+                          <ScaleY>12</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
                             <X>1</X>
@@ -3587,13 +3566,13 @@
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>0</TranslationX>
-                          <TranslationY>-4</TranslationY>
-                          <TranslationZ>110</TranslationZ>
+                          <TranslationY>-6</TranslationY>
+                          <TranslationZ>160</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>-90</RotationX>
-                          <ScaleX>4</ScaleX>
-                          <ScaleY>8</ScaleY>
+                          <ScaleX>8</ScaleX>
+                          <ScaleY>12</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
                             <X>1</X>
@@ -3722,7 +3701,7 @@
                         </Expression>
                         <Expression xsi:type="Index">
                           <Operand xsi:type="StringProperty">
-                            <Value>smoothed_fwn1_25perC</Value>
+                            <Value>BG1</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -3856,14 +3835,14 @@
                           </PropertyMappings>
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
-                          <TranslationX>-4.001</TranslationX>
+                          <TranslationX>-6.001</TranslationX>
                           <TranslationY>0</TranslationY>
-                          <TranslationZ>70</TranslationZ>
+                          <TranslationZ>100</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>0</RotationX>
-                          <ScaleX>140</ScaleX>
-                          <ScaleY>8.008</ScaleY>
+                          <ScaleX>200</ScaleX>
+                          <ScaleY>12.012</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
                             <X>1</X>
@@ -3966,7 +3945,7 @@
                         </Expression>
                         <Expression xsi:type="Index">
                           <Operand xsi:type="StringProperty">
-                            <Value>smoothed_fwn4_25perC</Value>
+                            <Value>BG2</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -4095,14 +4074,14 @@
                           </PropertyMappings>
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
-                          <TranslationX>4.001</TranslationX>
+                          <TranslationX>6.001</TranslationX>
                           <TranslationY>0</TranslationY>
-                          <TranslationZ>70</TranslationZ>
+                          <TranslationZ>100</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>0</RotationX>
-                          <ScaleX>140</ScaleX>
-                          <ScaleY>8.008</ScaleY>
+                          <ScaleX>200</ScaleX>
+                          <ScaleY>12.012</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
                             <X>1</X>
@@ -4204,7 +4183,7 @@
                         </Expression>
                         <Expression xsi:type="Index">
                           <Operand xsi:type="StringProperty">
-                            <Value>smoothed_fwn2_25perC</Value>
+                            <Value>BG3</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -4334,13 +4313,13 @@
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>0</TranslationX>
-                          <TranslationY>4.001</TranslationY>
-                          <TranslationZ>70</TranslationZ>
+                          <TranslationY>6.001</TranslationY>
+                          <TranslationZ>100</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>-90</RotationX>
-                          <ScaleX>140</ScaleX>
-                          <ScaleY>8.008</ScaleY>
+                          <ScaleX>200</ScaleX>
+                          <ScaleY>12.012</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
                             <X>1</X>
@@ -4442,7 +4421,7 @@
                         </Expression>
                         <Expression xsi:type="Index">
                           <Operand xsi:type="StringProperty">
-                            <Value>smoothed_fwn3_25perC</Value>
+                            <Value>BG4</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -4577,13 +4556,13 @@
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>0</TranslationX>
-                          <TranslationY>-4.001</TranslationY>
-                          <TranslationZ>70</TranslationZ>
+                          <TranslationY>-6.001</TranslationY>
+                          <TranslationZ>100</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>-90</RotationX>
-                          <ScaleX>140</ScaleX>
-                          <ScaleY>8.008</ScaleY>
+                          <ScaleX>200</ScaleX>
+                          <ScaleY>12.012</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
                             <X>1</X>
@@ -4686,7 +4665,7 @@
                         </Expression>
                         <Expression xsi:type="Index">
                           <Operand xsi:type="StringProperty">
-                            <Value>smoothed_fwn3_25perC</Value>
+                            <Value>grey</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -4771,13 +4750,13 @@
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>0</TranslationX>
                           <TranslationY>0</TranslationY>
-                          <TranslationZ>112</TranslationZ>
+                          <TranslationZ>164</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>0</RotationY>
                           <RotationX>0</RotationX>
-                          <ScaleX>8</ScaleX>
+                          <ScaleX>12</ScaleX>
                           <ScaleY>8</ScaleY>
-                          <ScaleZ>8</ScaleZ>
+                          <ScaleZ>12</ScaleZ>
                           <Ambient>
                             <X>1</X>
                             <Y>1</Y>
@@ -5132,7 +5111,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Delay">
-                      <rx:DueTime>PT3.073S</rx:DueTime>
+                      <rx:DueTime>PT3.811S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
