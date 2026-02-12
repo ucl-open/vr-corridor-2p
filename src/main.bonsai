@@ -630,7 +630,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT0.498S</rx:DueTime>
+                                  <rx:DueTime>PT0.413S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -696,7 +696,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT0.44S</rx:DueTime>
+                                  <rx:DueTime>PT0.498S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -786,7 +786,7 @@
                     <Eye>
                       <X>0</X>
                       <Y>0</Y>
-                      <Z>58.35752</Z>
+                      <Z>199.8</Z>
                     </Eye>
                     <NearClip>0.1</NearClip>
                     <FarClip>200</FarClip>
@@ -1467,7 +1467,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-10T16-30-28\MatrixArduino\MatrixArduino.csv</io:FileName>
+                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-12T17-05-18\MatrixArduino\MatrixArduino.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1592,7 +1592,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-10T16-30-28\LandmarkChoice\LandmarkChoice.csv</io:FileName>
+                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-12T17-05-18\LandmarkChoice\LandmarkChoice.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1711,7 +1711,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-10T16-30-28\VrPosition\VrPosition.csv</io:FileName>
+                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-12T17-05-18\VrPosition\VrPosition.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2103,7 +2103,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-10T16-30-28\RenderFrameCount\RenderFrameCount.csv</io:FileName>
+                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-12T17-05-18\RenderFrameCount\RenderFrameCount.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2222,7 +2222,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-10T16-30-28\QuadState\QuadState.csv</io:FileName>
+                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-12T17-05-18\QuadState\QuadState.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2336,7 +2336,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-10T16-30-28\RigSchema\RigSchema.json</p5:Path>
+                      <p5:Path>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-12T17-05-18\RigSchema\RigSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -2447,7 +2447,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-10T16-30-28\TaskLogicSchema\TaskLogicSchema.json</p5:Path>
+                      <p5:Path>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-12T17-05-18\TaskLogicSchema\TaskLogicSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -2558,7 +2558,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-10T16-30-28\SessionSchema\SessionSchema.json</p5:Path>
+                      <p5:Path>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-12T17-05-18\SessionSchema\SessionSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -2837,7 +2837,7 @@
                         </Expression>
                         <Expression xsi:type="Subtract">
                           <Operand xsi:type="DoubleProperty">
-                            <Value>-29</Value>
+                            <Value>-35.8</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -2856,7 +2856,7 @@
                         </Expression>
                         <Expression xsi:type="Subtract">
                           <Operand xsi:type="DoubleProperty">
-                            <Value>-29</Value>
+                            <Value>-35.7</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -3209,7 +3209,7 @@
                           <Combinator xsi:type="gl:CreateVector3">
                             <gl:X>0</gl:X>
                             <gl:Y>0</gl:Y>
-                            <gl:Z>141</gl:Z>
+                            <gl:Z>199.8</gl:Z>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="rx:Condition">
@@ -3325,7 +3325,7 @@
                         </Expression>
                         <Expression xsi:type="Index">
                           <Operand xsi:type="StringProperty">
-                            <Value>vertGrat_50perC</Value>
+                            <Value>grating_vertical</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -3461,11 +3461,11 @@
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>-4</TranslationX>
                           <TranslationY>0</TranslationY>
-                          <TranslationZ>110</TranslationZ>
+                          <TranslationZ>160</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>0</RotationX>
-                          <ScaleX>4</ScaleX>
+                          <ScaleX>8</ScaleX>
                           <ScaleY>8</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
@@ -3505,11 +3505,11 @@
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>4</TranslationX>
                           <TranslationY>0</TranslationY>
-                          <TranslationZ>110</TranslationZ>
+                          <TranslationZ>160</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>0</RotationX>
-                          <ScaleX>4</ScaleX>
+                          <ScaleX>8</ScaleX>
                           <ScaleY>8</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
@@ -3549,11 +3549,11 @@
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>0</TranslationX>
                           <TranslationY>4</TranslationY>
-                          <TranslationZ>110</TranslationZ>
+                          <TranslationZ>160</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>-90</RotationX>
-                          <ScaleX>4</ScaleX>
+                          <ScaleX>8</ScaleX>
                           <ScaleY>8</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
@@ -3598,11 +3598,11 @@
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>0</TranslationX>
                           <TranslationY>-4</TranslationY>
-                          <TranslationZ>110</TranslationZ>
+                          <TranslationZ>160</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>-90</RotationX>
-                          <ScaleX>4</ScaleX>
+                          <ScaleX>8</ScaleX>
                           <ScaleY>8</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
@@ -3732,7 +3732,7 @@
                         </Expression>
                         <Expression xsi:type="Index">
                           <Operand xsi:type="StringProperty">
-                            <Value>smoothed_fwn1_25perC</Value>
+                            <Value>BG1</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -3868,11 +3868,11 @@
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>-4.01</TranslationX>
                           <TranslationY>0</TranslationY>
-                          <TranslationZ>70</TranslationZ>
+                          <TranslationZ>100</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>0</RotationX>
-                          <ScaleX>140</ScaleX>
+                          <ScaleX>200</ScaleX>
                           <ScaleY>8.08</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
@@ -3976,7 +3976,7 @@
                         </Expression>
                         <Expression xsi:type="Index">
                           <Operand xsi:type="StringProperty">
-                            <Value>smoothed_fwn4_25perC</Value>
+                            <Value>BG1</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -4107,11 +4107,11 @@
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>4.01</TranslationX>
                           <TranslationY>0</TranslationY>
-                          <TranslationZ>70</TranslationZ>
+                          <TranslationZ>100</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>0</RotationX>
-                          <ScaleX>140</ScaleX>
+                          <ScaleX>200</ScaleX>
                           <ScaleY>8.08</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
@@ -4214,7 +4214,7 @@
                         </Expression>
                         <Expression xsi:type="Index">
                           <Operand xsi:type="StringProperty">
-                            <Value>smoothed_fwn2_25perC</Value>
+                            <Value>BG1</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -4345,11 +4345,11 @@
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>0</TranslationX>
                           <TranslationY>4.01</TranslationY>
-                          <TranslationZ>70</TranslationZ>
+                          <TranslationZ>100</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>-90</RotationX>
-                          <ScaleX>140</ScaleX>
+                          <ScaleX>200</ScaleX>
                           <ScaleY>8.08</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
@@ -4452,7 +4452,7 @@
                         </Expression>
                         <Expression xsi:type="Index">
                           <Operand xsi:type="StringProperty">
-                            <Value>smoothed_fwn3_25perC</Value>
+                            <Value>BG1</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -4588,11 +4588,11 @@
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>0</TranslationX>
                           <TranslationY>-4.01</TranslationY>
-                          <TranslationZ>70</TranslationZ>
+                          <TranslationZ>100</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>-90</RotationX>
-                          <ScaleX>140</ScaleX>
+                          <ScaleX>200</ScaleX>
                           <ScaleY>8.08</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
@@ -4819,7 +4819,7 @@
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>0</TranslationX>
                           <TranslationY>0</TranslationY>
-                          <TranslationZ>140</TranslationZ>
+                          <TranslationZ>200</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>0</RotationY>
                           <RotationX>0</RotationX>
@@ -5139,9 +5139,6 @@
                     </Workflow>
                   </Expression>
                   <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="rx:TakeUntil" />
-                  </Expression>
-                  <Expression xsi:type="Combinator">
                     <Combinator xsi:type="num:CreateRandom">
                       <num:Seed xsi:nil="true" />
                     </Combinator>
@@ -5187,7 +5184,12 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Delay">
-                      <rx:DueTime>PT4.544S</rx:DueTime>
+                      <rx:DueTime>PT4.372S</rx:DueTime>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:Take">
+                      <rx:Count>1</rx:Count>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -5220,20 +5222,19 @@
                   <Edge From="29" To="30" Label="Source1" />
                   <Edge From="30" To="31" Label="Source1" />
                   <Edge From="31" To="32" Label="Source6" />
-                  <Edge From="32" To="34" Label="Source1" />
-                  <Edge From="33" To="34" Label="Source2" />
-                  <Edge From="34" To="46" Label="Source1" />
-                  <Edge From="35" To="42" Label="Source1" />
+                  <Edge From="33" To="45" Label="Source1" />
+                  <Edge From="34" To="41" Label="Source1" />
+                  <Edge From="35" To="36" Label="Source1" />
                   <Edge From="36" To="37" Label="Source1" />
-                  <Edge From="37" To="38" Label="Source1" />
-                  <Edge From="38" To="42" Label="Source2" />
+                  <Edge From="37" To="41" Label="Source2" />
+                  <Edge From="38" To="39" Label="Source1" />
                   <Edge From="39" To="40" Label="Source1" />
-                  <Edge From="40" To="41" Label="Source1" />
-                  <Edge From="41" To="42" Label="Source3" />
+                  <Edge From="40" To="41" Label="Source3" />
+                  <Edge From="41" To="42" Label="Source1" />
                   <Edge From="42" To="43" Label="Source1" />
                   <Edge From="43" To="44" Label="Source1" />
-                  <Edge From="44" To="45" Label="Source1" />
-                  <Edge From="45" To="46" Label="Source2" />
+                  <Edge From="44" To="45" Label="Source2" />
+                  <Edge From="45" To="46" Label="Source1" />
                   <Edge From="46" To="47" Label="Source1" />
                 </Edges>
               </Workflow>
@@ -5245,6 +5246,80 @@
               <Combinator xsi:type="rx:Repeat" />
             </Expression>
             <Expression xsi:type="WorkflowOutput" />
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="SubscribeSubject">
+                <Name>DrawCall</Name>
+              </Builder>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="IncludeWorkflow" Path="BonVision:Environment.OrthographicView.bonsai">
+                <Left>-180</Left>
+                <Right>180</Right>
+                <Bottom>-90</Bottom>
+                <Top>90</Top>
+              </Builder>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="SubscribeSubject">
+                <Name>TextureBank</Name>
+              </Builder>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="Index">
+                <Operand xsi:type="StringProperty">
+                  <Value>bark</Value>
+                </Operand>
+              </Builder>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="Combinator">
+                <Combinator xsi:type="rx:CombineLatest" />
+              </Builder>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="MemberSelector">
+                <Selector>Item2</Selector>
+              </Builder>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="Combinator">
+                <Combinator xsi:type="gl:BindTexture">
+                  <gl:TextureSlot>Texture0</gl:TextureSlot>
+                  <gl:ShaderName>Image</gl:ShaderName>
+                  <gl:TextureTarget>Texture2D</gl:TextureTarget>
+                </Combinator>
+              </Builder>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="MemberSelector">
+                <Selector>Item1</Selector>
+              </Builder>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="Combinator">
+                <Combinator xsi:type="rx:WithLatestFrom" />
+              </Builder>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="MemberSelector">
+                <Selector>Item2</Selector>
+              </Builder>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawImage.bonsai">
+                <TextureName />
+                <ExtentX>360</ExtentX>
+                <ExtentY>360</ExtentY>
+                <LocationX>0</LocationX>
+                <LocationY>0</LocationY>
+                <Layer>0</Layer>
+                <Angle>0</Angle>
+                <ScaleX>1</ScaleX>
+                <ScaleY>1</ScaleY>
+                <ShiftX>0</ShiftX>
+                <ShiftY>0</ShiftY>
+              </Builder>
+            </Expression>
           </Nodes>
           <Edges>
             <Edge From="0" To="1" Label="Source1" />
@@ -5261,6 +5336,17 @@
             <Edge From="10" To="11" Label="Source1" />
             <Edge From="11" To="12" Label="Source1" />
             <Edge From="12" To="13" Label="Source1" />
+            <Edge From="14" To="15" Label="Source1" />
+            <Edge From="15" To="18" Label="Source1" />
+            <Edge From="16" To="17" Label="Source1" />
+            <Edge From="17" To="18" Label="Source2" />
+            <Edge From="18" To="19" Label="Source1" />
+            <Edge From="18" To="21" Label="Source1" />
+            <Edge From="19" To="20" Label="Source1" />
+            <Edge From="20" To="22" Label="Source1" />
+            <Edge From="21" To="22" Label="Source2" />
+            <Edge From="22" To="23" Label="Source1" />
+            <Edge From="23" To="24" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>

@@ -9,16 +9,18 @@ from ucl_open_vr_corridor_2p.task import (
 )
 
 trial_base = Trial(landmarks=[
-                        [Landmark(size=4, position=50, texture="plaid_50perC", reward_valence=0)],
-                        [Landmark(size=4, position=70, texture="vertGrat_50perC", reward_valence=0)],
-                        [Landmark(size=4, position=90, texture="plaid_50perC", reward_valence=1)],
-                        [Landmark(size=4, position=110, texture="vertGrat_50perC", reward_valence=0)]
+                        [Landmark(size=4, position=50, texture="plaid", reward_valence=0)],
+                        [Landmark(size=4, position=70, texture="grating_vertical", reward_valence=0)],
+                        [Landmark(size=4, position=90, texture="plaid", reward_valence=1)],
+                        [Landmark(size=8, position=160, texture="grating_vertical", reward_valence=0)]
                     ],
-                    background_landmark_left=Landmark(size=140, position=70, texture="smoothed_fwn1_25perC", reward_valence=0, center_offset=0.01),
-                    background_landmark_right=Landmark(size=140, position=70, texture="smoothed_fwn4_25perC", reward_valence=0, center_offset=0.01),
-                    background_landmark_ceil=Landmark(size=140, position=70, texture="smoothed_fwn2_25perC", reward_valence=0, center_offset=0.01),
-                    background_landmark_floor=Landmark(size=140, position=70, texture="smoothed_fwn3_25perC", reward_valence=0, center_offset=0.01),
-                    far_landmark=Landmark(size=8, position=140, texture="grey", reward_valence=0, center_offset=0.01)
+                    background_landmark_left=Landmark(size=200, position=100, texture="BG1", reward_valence=0, center_offset=0.01),
+                    background_landmark_right=Landmark(size=200, position=100, texture="BG1", reward_valence=0, center_offset=0.01),
+                    background_landmark_ceil=Landmark(size=200, position=100, texture="BG1", reward_valence=0, center_offset=0.01),
+                    background_landmark_floor=Landmark(size=200, position=100, texture="BG1", reward_valence=0, center_offset=0.01),
+                    far_landmark=Landmark(size=8, position=200, texture="grey", reward_valence=0, center_offset=0.01),
+                    boundary_threshold=-35.8,
+                    end_trial_threshold=-35.7
                     )
 
 trial_skip2 = Trial(landmarks=[
