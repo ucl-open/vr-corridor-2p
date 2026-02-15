@@ -1536,8 +1536,8 @@ namespace UclOpenHfVisualDataSchema
             _backgroundLandmarkCeil = new Landmark();
             _backgroundLandmarkFloor = new Landmark();
             _farLandmark = new Landmark();
-            _boundaryThreshold = -29D;
-            _endTrialThreshold = -29D;
+            _boundaryThreshold = -35.7D;
+            _endTrialThreshold = -35.8D;
             _maximumTrialTime = 60D;
             _interTrialIntervalLowerBound = 3D;
             _interTrialIntervalUpperBound = 5D;
@@ -2285,7 +2285,7 @@ namespace UclOpenHfVisualDataSchema
     
         public UclOpenVrCorridor2pTaskParameters()
         {
-            _corridorWidth = 2D;
+            _corridorWidth = 12D;
             _farClip = 200D;
             _blocks = new System.Collections.Generic.List<Block>();
         }

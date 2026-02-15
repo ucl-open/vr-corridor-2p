@@ -456,13 +456,13 @@
           "title": "FarLandmark"
         },
         "boundaryThreshold": {
-          "default": -29,
+          "default": -35.7,
           "description": "Buffer applied to far boundary of corridor to determine stopping distance.",
           "title": "BoundaryThreshold",
           "type": "number"
         },
         "endTrialThreshold": {
-          "default": -29,
+          "default": -35.8,
           "description": "Buffer applied to far boundary of corridor to determine trial end distance.",
           "title": "EndTrialThreshold",
           "type": "number"
@@ -629,7 +629,7 @@
     "UclOpenVrCorridor2pTaskParameters": {
       "properties": {
         "corridorWidth": {
-          "default": 2,
+          "default": 12,
           "title": "CorridorWidth",
           "type": "number"
         },

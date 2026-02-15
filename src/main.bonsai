@@ -40,7 +40,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="io:ReadAllText">
-                <io:Path>..\local\UclOpenSession.json</io:Path>
+                <io:Path>C:\CODE\BONSAI\vr-corridor-2p\local\UclOpenSession.json</io:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:AsyncSubject">
@@ -51,7 +51,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="io:ReadAllText">
-                <io:Path>..\local\UclOpenVrCorridor2pRig.json</io:Path>
+                <io:Path>C:\CODE\BONSAI\vr-corridor-2p\local\UclOpenVrCorridor2pRig.json</io:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:AsyncSubject">
@@ -62,7 +62,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="io:ReadAllText">
-                <io:Path>..\local\UclOpenVrCorridor2pTaskLogic.json</io:Path>
+                <io:Path>C:\CODE\BONSAI\vr-corridor-2p\local\UclOpenVrCorridor2pTaskLogic.json</io:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:AsyncSubject">
@@ -200,8 +200,7 @@
                     <PortName>COM3</PortName>
                     <BaudRate>1000000</BaudRate>
                     <Encoding>utf-8</Encoding>
-                    <NewLine>
-</NewLine>
+                    <NewLine />
                     <Parity>None</Parity>
                     <ParityReplace>63</ParityReplace>
                     <DataBits>8</DataBits>
@@ -630,7 +629,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT0.413S</rx:DueTime>
+                                  <rx:DueTime>PT0.448S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -696,7 +695,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT0.498S</rx:DueTime>
+                                  <rx:DueTime>PT0.409S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -786,7 +785,7 @@
                     <Eye>
                       <X>0</X>
                       <Y>0</Y>
-                      <Z>199.8</Z>
+                      <Z>0</Z>
                     </Eye>
                     <NearClip>0.1</NearClip>
                     <FarClip>200</FarClip>
@@ -886,7 +885,7 @@
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="cv:CreatePoint3d">
                             <cv:X>-12</cv:X>
-                            <cv:Y>0</cv:Y>
+                            <cv:Y>3.5</cv:Y>
                             <cv:Z>9</cv:Z>
                           </Combinator>
                         </Expression>
@@ -905,7 +904,7 @@
                           </Rotation>
                           <Translation>
                             <X>-12</X>
-                            <Y>0</Y>
+                            <Y>3.5</Y>
                             <Z>9</Z>
                           </Translation>
                         </Expression>
@@ -922,7 +921,7 @@
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Environment.GammaCorrection.bonsai">
                           <ClearColor>Gray</ClearColor>
-                          <GammaLut>C:/Users/saleem_lab/Desktop/Sonali-2PStim/LUTs/HALFINTENSITY_LUT_NoRed_SALEEM20_20250219.bmp</GammaLut>
+                          <GammaLut>C:/CODE/BONSAI/vr-corridor-2p/luts/NoRed_New_HALFINTENSITY_LUT_SALEEM20_20260213.bmp</GammaLut>
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Environment.DrawViewport.bonsai">
                           <X>0</X>
@@ -1037,7 +1036,7 @@
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="cv:CreatePoint3d">
                             <cv:X>0</cv:X>
-                            <cv:Y>0</cv:Y>
+                            <cv:Y>3.5</cv:Y>
                             <cv:Z>15</cv:Z>
                           </Combinator>
                         </Expression>
@@ -1056,7 +1055,7 @@
                           </Rotation>
                           <Translation>
                             <X>0</X>
-                            <Y>0</Y>
+                            <Y>3.5</Y>
                             <Z>15</Z>
                           </Translation>
                         </Expression>
@@ -1073,7 +1072,7 @@
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Environment.GammaCorrection.bonsai">
                           <ClearColor>Gray</ClearColor>
-                          <GammaLut>C:/Users/saleem_lab/Desktop/Sonali-2PStim/LUTs/HALFINTENSITY_LUT_NoRed_SALEEM20_20250219.bmp</GammaLut>
+                          <GammaLut>C:/CODE/BONSAI/vr-corridor-2p/luts/NoRed_New_HALFINTENSITY_LUT_SALEEM20_20260213.bmp</GammaLut>
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Environment.DrawViewport.bonsai">
                           <X>0.333333343</X>
@@ -1188,7 +1187,7 @@
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="cv:CreatePoint3d">
                             <cv:X>12</cv:X>
-                            <cv:Y>0</cv:Y>
+                            <cv:Y>3.5</cv:Y>
                             <cv:Z>9</cv:Z>
                           </Combinator>
                         </Expression>
@@ -1207,7 +1206,7 @@
                           </Rotation>
                           <Translation>
                             <X>12</X>
-                            <Y>0</Y>
+                            <Y>3.5</Y>
                             <Z>9</Z>
                           </Translation>
                         </Expression>
@@ -1224,7 +1223,7 @@
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Environment.GammaCorrection.bonsai">
                           <ClearColor>Gray</ClearColor>
-                          <GammaLut>C:/Users/saleem_lab/Desktop/Sonali-2PStim/LUTs/HALFINTENSITY_LUT_NoRed_SALEEM20_20250219.bmp</GammaLut>
+                          <GammaLut>C:/CODE/BONSAI/vr-corridor-2p/luts/NoRed_New_HALFINTENSITY_LUT_SALEEM20_20260213.bmp</GammaLut>
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Environment.DrawViewport.bonsai">
                           <X>0.6666667</X>
@@ -1375,8 +1374,8 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="UclOpen.Logging:LogController.bonsai">
-              <SubjectId>M25126/20260124/</SubjectId>
-              <SessionId>M25126_LandManiCorridorTest_20260124_00001</SessionId>
+              <SubjectId>M25126/20260216/</SubjectId>
+              <SessionId>M25126_BaselineCorridorTest_20260216_00001</SessionId>
               <Path>C:/UCLOpenDATA/</Path>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
@@ -1467,7 +1466,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-12T17-05-18\MatrixArduino\MatrixArduino.csv</io:FileName>
+                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260216/\ses-M25126_BaselineCorridorTest_20260216_00001_date-2026-02-15T18-53-11\MatrixArduino\MatrixArduino.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1592,7 +1591,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-12T17-05-18\LandmarkChoice\LandmarkChoice.csv</io:FileName>
+                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260216/\ses-M25126_BaselineCorridorTest_20260216_00001_date-2026-02-15T18-53-11\LandmarkChoice\LandmarkChoice.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1711,7 +1710,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-12T17-05-18\VrPosition\VrPosition.csv</io:FileName>
+                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260216/\ses-M25126_BaselineCorridorTest_20260216_00001_date-2026-02-15T18-53-11\VrPosition\VrPosition.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2103,7 +2102,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-12T17-05-18\RenderFrameCount\RenderFrameCount.csv</io:FileName>
+                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260216/\ses-M25126_BaselineCorridorTest_20260216_00001_date-2026-02-15T18-53-11\RenderFrameCount\RenderFrameCount.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2222,7 +2221,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-12T17-05-18\QuadState\QuadState.csv</io:FileName>
+                    <io:FileName>C:/UCLOpenDATA/\sub-M25126/20260216/\ses-M25126_BaselineCorridorTest_20260216_00001_date-2026-02-15T18-53-11\QuadState\QuadState.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2336,7 +2335,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-12T17-05-18\RigSchema\RigSchema.json</p5:Path>
+                      <p5:Path>C:/UCLOpenDATA/\sub-M25126/20260216/\ses-M25126_BaselineCorridorTest_20260216_00001_date-2026-02-15T18-53-11\RigSchema\RigSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -2447,7 +2446,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-12T17-05-18\TaskLogicSchema\TaskLogicSchema.json</p5:Path>
+                      <p5:Path>C:/UCLOpenDATA/\sub-M25126/20260216/\ses-M25126_BaselineCorridorTest_20260216_00001_date-2026-02-15T18-53-11\TaskLogicSchema\TaskLogicSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -2558,7 +2557,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>C:/UCLOpenDATA/\sub-M25126/20260124/\ses-M25126_LandManiCorridorTest_20260124_00001_date-2026-02-12T17-05-18\SessionSchema\SessionSchema.json</p5:Path>
+                      <p5:Path>C:/UCLOpenDATA/\sub-M25126/20260216/\ses-M25126_BaselineCorridorTest_20260216_00001_date-2026-02-15T18-53-11\SessionSchema\SessionSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -2837,7 +2836,7 @@
                         </Expression>
                         <Expression xsi:type="Subtract">
                           <Operand xsi:type="DoubleProperty">
-                            <Value>-35.8</Value>
+                            <Value>-41</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -2856,7 +2855,7 @@
                         </Expression>
                         <Expression xsi:type="Subtract">
                           <Operand xsi:type="DoubleProperty">
-                            <Value>-35.7</Value>
+                            <Value>-41</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -3209,7 +3208,7 @@
                           <Combinator xsi:type="gl:CreateVector3">
                             <gl:X>0</gl:X>
                             <gl:Y>0</gl:Y>
-                            <gl:Z>199.8</gl:Z>
+                            <gl:Z>205</gl:Z>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="rx:Condition">
@@ -3325,7 +3324,7 @@
                         </Expression>
                         <Expression xsi:type="Index">
                           <Operand xsi:type="StringProperty">
-                            <Value>grating_vertical</Value>
+                            <Value>plaid</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -3459,14 +3458,14 @@
                           </PropertyMappings>
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
-                          <TranslationX>-4</TranslationX>
+                          <TranslationX>-6</TranslationX>
                           <TranslationY>0</TranslationY>
                           <TranslationZ>160</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>0</RotationX>
                           <ScaleX>8</ScaleX>
-                          <ScaleY>8</ScaleY>
+                          <ScaleY>12</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
                             <X>1</X>
@@ -3503,14 +3502,14 @@
                           </PropertyMappings>
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
-                          <TranslationX>4</TranslationX>
+                          <TranslationX>6</TranslationX>
                           <TranslationY>0</TranslationY>
                           <TranslationZ>160</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>0</RotationX>
                           <ScaleX>8</ScaleX>
-                          <ScaleY>8</ScaleY>
+                          <ScaleY>12</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
                             <X>1</X>
@@ -3548,13 +3547,13 @@
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>0</TranslationX>
-                          <TranslationY>4</TranslationY>
+                          <TranslationY>6</TranslationY>
                           <TranslationZ>160</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>-90</RotationX>
                           <ScaleX>8</ScaleX>
-                          <ScaleY>8</ScaleY>
+                          <ScaleY>12</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
                             <X>1</X>
@@ -3597,13 +3596,13 @@
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>0</TranslationX>
-                          <TranslationY>-4</TranslationY>
+                          <TranslationY>-6</TranslationY>
                           <TranslationZ>160</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>-90</RotationX>
                           <ScaleX>8</ScaleX>
-                          <ScaleY>8</ScaleY>
+                          <ScaleY>12</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
                             <X>1</X>
@@ -3866,14 +3865,14 @@
                           </PropertyMappings>
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
-                          <TranslationX>-4.01</TranslationX>
+                          <TranslationX>-6.01</TranslationX>
                           <TranslationY>0</TranslationY>
                           <TranslationZ>100</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>0</RotationX>
                           <ScaleX>200</ScaleX>
-                          <ScaleY>8.08</ScaleY>
+                          <ScaleY>12.12</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
                             <X>1</X>
@@ -3976,7 +3975,7 @@
                         </Expression>
                         <Expression xsi:type="Index">
                           <Operand xsi:type="StringProperty">
-                            <Value>BG1</Value>
+                            <Value>BG2</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -4105,14 +4104,14 @@
                           </PropertyMappings>
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
-                          <TranslationX>4.01</TranslationX>
+                          <TranslationX>6.01</TranslationX>
                           <TranslationY>0</TranslationY>
                           <TranslationZ>100</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>0</RotationX>
                           <ScaleX>200</ScaleX>
-                          <ScaleY>8.08</ScaleY>
+                          <ScaleY>12.12</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
                             <X>1</X>
@@ -4214,7 +4213,7 @@
                         </Expression>
                         <Expression xsi:type="Index">
                           <Operand xsi:type="StringProperty">
-                            <Value>BG1</Value>
+                            <Value>BG3</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -4344,13 +4343,13 @@
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>0</TranslationX>
-                          <TranslationY>4.01</TranslationY>
+                          <TranslationY>6.01</TranslationY>
                           <TranslationZ>100</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>-90</RotationX>
                           <ScaleX>200</ScaleX>
-                          <ScaleY>8.08</ScaleY>
+                          <ScaleY>12.12</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
                             <X>1</X>
@@ -4452,7 +4451,7 @@
                         </Expression>
                         <Expression xsi:type="Index">
                           <Operand xsi:type="StringProperty">
-                            <Value>BG1</Value>
+                            <Value>BG4</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -4587,13 +4586,13 @@
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>0</TranslationX>
-                          <TranslationY>-4.01</TranslationY>
+                          <TranslationY>-6.01</TranslationY>
                           <TranslationZ>100</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>-90</RotationX>
                           <ScaleX>200</ScaleX>
-                          <ScaleY>8.08</ScaleY>
+                          <ScaleY>12.12</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
                             <X>1</X>
@@ -4696,7 +4695,7 @@
                         </Expression>
                         <Expression xsi:type="Index">
                           <Operand xsi:type="StringProperty">
-                            <Value>grey</Value>
+                            <Value>logs</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -4823,8 +4822,8 @@
                           <RotationZ>0</RotationZ>
                           <RotationY>0</RotationY>
                           <RotationX>0</RotationX>
-                          <ScaleX>8</ScaleX>
-                          <ScaleY>8.08</ScaleY>
+                          <ScaleX>100</ScaleX>
+                          <ScaleY>12.12</ScaleY>
                           <ScaleZ>1</ScaleZ>
                           <Ambient>
                             <X>1</X>
@@ -5184,7 +5183,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Delay">
-                      <rx:DueTime>PT4.372S</rx:DueTime>
+                      <rx:DueTime>PT3.818S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
