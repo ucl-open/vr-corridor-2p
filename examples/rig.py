@@ -21,7 +21,7 @@ from ucl_open.rigs.displays import (
 )
 
 rig = UclOpenVrCorridor2pRig(
-    gamma_correction_file="C:/Users/saleem_lab/Desktop/Sonali-2PStim/LUTs/HALFINTENSITY_LUT_NoRed_SALEEM20_20250219.bmp",
+    gamma_correction_file="C:/CODE/BONSAI/vr-corridor-2p/luts/NoRed_New_HALFINTENSITY_LUT_SALEEM20_20260213.bmp",
     #gamma_correction_file="C:/CODE/BONSAI/vr-corridor-2p/src/Extensions/New_HALFINTENSITY_LUT_SALEEM20_20241118.bmp",
     screen=Screen(
         texture_assets_directory="../textures",
@@ -47,7 +47,7 @@ rig = UclOpenVrCorridor2pRig(
                 ),
                 extrinsics=DisplayExtrinsics(
                     rotation=Vector3(x=0, y=-1.0472, z=0),
-                    translation=Vector3(x=-12, y=0, z=9)
+                    translation=Vector3(x=-12, y=3.5, z=9)
                 )
             ),
             "center": DisplayCalibration(
@@ -59,7 +59,7 @@ rig = UclOpenVrCorridor2pRig(
                 ),
                 extrinsics=DisplayExtrinsics(
                     rotation=Vector3(x=0, y=0, z=0),
-                    translation=Vector3(x=0, y=0, z=15)
+                    translation=Vector3(x=0, y=3.5, z=15)
                 )
             ),
             "right": DisplayCalibration(
@@ -71,7 +71,7 @@ rig = UclOpenVrCorridor2pRig(
                 ),
                 extrinsics=DisplayExtrinsics(
                     rotation=Vector3(x=0, y=1.0472, z=0),
-                    translation=Vector3(x=12, y=0, z=9)
+                    translation=Vector3(x=12, y=3.5, z=9)
                 )
             ),
         }
