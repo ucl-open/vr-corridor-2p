@@ -33,7 +33,7 @@ trial_skip2 = Trial(landmarks=[
                     background_landmark_right=Landmark(size=200, position=100, texture="BG2", reward_valence=0, center_offset=0.01),
                     background_landmark_ceil=Landmark(size=200, position=100, texture="BG3", reward_valence=0, center_offset=0.01),
                     background_landmark_floor=Landmark(size=200, position=100, texture="BG4", reward_valence=0, center_offset=0.01),
-                    far_landmark=Landmark(size=12, position=200, texture="grey", reward_valence=0, center_offset=0.01), #TODO: change texture to match luminance(?)
+                    far_landmark=Landmark(size=12, position=200, texture="grey", reward_valence=0, center_offset=0.01), 
                     boundary_threshold=-35.8,
                     end_trial_threshold=-35.7,
                     movement_visual_gain=0.0613
@@ -46,9 +46,9 @@ trial_skip3 = Trial(landmarks=[
                     ],
                     background_landmark_left=Landmark(size=200, position=100, texture="BG1", reward_valence=0, center_offset=0.01),
                     background_landmark_right=Landmark(size=200, position=100, texture="BG2", reward_valence=0, center_offset=0.01),
-                    background_landmark_ceil=Landmark(size=200, position=100, texture="BG3", reward_valence=0, center_offset=0.01),
+                    background_landmark_ceil=Landmark(size=200, position=100, texture="BG3", reward_valence=0, center_offset=0.01)
                     background_landmark_floor=Landmark(size=200, position=100, texture="BG4", reward_valence=0, center_offset=0.01),
-                    far_landmark=Landmark(size=12, position=200, texture="grey", reward_valence=0, center_offset=0.01), #TODO: change texture to match luminance(?)
+                    far_landmark=Landmark(size=12, position=200, texture="grey", reward_valence=0, center_offset=0.01), 
                     boundary_threshold=-35.8,
                     end_trial_threshold=-35.7,
                     movement_visual_gain=0.0613
