@@ -468,7 +468,7 @@
           "type": "number"
         },
         "maximumTrialTime": {
-          "default": 60,
+          "default": 10,
           "description": "Maximum amount of time to spend on this trial.",
           "title": "MaximumTrialTime",
           "type": "number"
