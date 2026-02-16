@@ -57,6 +57,7 @@ trial_skip3 = Trial(landmarks=[
 task_logic = UclOpenVrCorridor2pTaskLogic(
     task_parameters=UclOpenVrCorridor2pTaskParameters(
         corridor_width=12,
+        eye_height_offset=-1,
         far_clip=200,
         blocks = [
             Block(

@@ -2279,6 +2279,8 @@ namespace UclOpenHfVisualDataSchema
     
         private double _corridorWidth;
     
+        private double _eyeHeightOffset;
+    
         private double _farClip;
     
         private System.Collections.Generic.List<Block> _blocks;
@@ -2293,6 +2295,7 @@ namespace UclOpenHfVisualDataSchema
         protected UclOpenVrCorridor2pTaskParameters(UclOpenVrCorridor2pTaskParameters other)
         {
             _corridorWidth = other._corridorWidth;
+            _eyeHeightOffset = other._eyeHeightOffset;
             _farClip = other._farClip;
             _blocks = other._blocks;
         }
@@ -2307,6 +2310,19 @@ namespace UclOpenHfVisualDataSchema
             set
             {
                 _corridorWidth = value;
+            }
+        }
+    
+        [Newtonsoft.Json.JsonPropertyAttribute("eyeHeightOffset", Required=Newtonsoft.Json.Required.Always)]
+        public double EyeHeightOffset
+        {
+            get
+            {
+                return _eyeHeightOffset;
+            }
+            set
+            {
+                _eyeHeightOffset = value;
             }
         }
     
@@ -2350,6 +2366,7 @@ namespace UclOpenHfVisualDataSchema
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
             stringBuilder.Append("CorridorWidth = " + _corridorWidth + ", ");
+            stringBuilder.Append("EyeHeightOffset = " + _eyeHeightOffset + ", ");
             stringBuilder.Append("FarClip = " + _farClip + ", ");
             stringBuilder.Append("Blocks = " + _blocks);
             return true;

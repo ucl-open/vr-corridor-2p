@@ -42,6 +42,7 @@ class Block(BaseSchema):
 # TODO - should inherit from some TaskParameters base class rather than BaseSchema
 class UclOpenVrCorridor2pTaskParameters(BaseSchema):
     corridor_width: float = Field(default=12)
+    eye_height_offset: float
     far_clip: float = Field(default=200)
     blocks: List[Block]
 
