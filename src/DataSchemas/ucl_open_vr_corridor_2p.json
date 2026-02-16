@@ -451,14 +451,18 @@
           "$ref": "#/$defs/Landmark",
           "title": "BackgroundLandmarkFloor"
         },
+        "farLandmark": {
+          "$ref": "#/$defs/Landmark",
+          "title": "FarLandmark"
+        },
         "boundaryThreshold": {
-          "default": 1,
+          "default": -35.7,
           "description": "Buffer applied to far boundary of corridor to determine stopping distance.",
           "title": "BoundaryThreshold",
           "type": "number"
         },
         "endTrialThreshold": {
-          "default": 1.5,
+          "default": -35.8,
           "description": "Buffer applied to far boundary of corridor to determine trial end distance.",
           "title": "EndTrialThreshold",
           "type": "number"
@@ -470,13 +474,13 @@
           "type": "number"
         },
         "interTrialIntervalLowerBound": {
-          "default": 1,
+          "default": 3,
           "description": "After boundary is reached, how long to wait before proceeding to next trial (lower bound).",
           "title": "InterTrialIntervalLowerBound",
           "type": "number"
         },
         "interTrialIntervalUpperBound": {
-          "default": 3,
+          "default": 5,
           "description": "After boundary is reached, how long to wait before proceeding to next trial (upper bound).",
           "title": "InterTrialIntervalUpperBound",
           "type": "number"
@@ -505,7 +509,8 @@
         "backgroundLandmarkLeft",
         "backgroundLandmarkRight",
         "backgroundLandmarkCeil",
-        "backgroundLandmarkFloor"
+        "backgroundLandmarkFloor",
+        "farLandmark"
       ],
       "title": "Trial",
       "type": "object"
@@ -624,12 +629,12 @@
     "UclOpenVrCorridor2pTaskParameters": {
       "properties": {
         "corridorWidth": {
-          "default": 2,
+          "default": 12,
           "title": "CorridorWidth",
           "type": "number"
         },
         "farClip": {
-          "default": 20,
+          "default": 200,
           "title": "FarClip",
           "type": "number"
         },

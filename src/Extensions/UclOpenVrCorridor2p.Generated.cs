@@ -1510,6 +1510,8 @@ namespace UclOpenHfVisualDataSchema
     
         private Landmark _backgroundLandmarkFloor;
     
+        private Landmark _farLandmark;
+    
         private double _boundaryThreshold;
     
         private double _endTrialThreshold;
@@ -1533,11 +1535,12 @@ namespace UclOpenHfVisualDataSchema
             _backgroundLandmarkRight = new Landmark();
             _backgroundLandmarkCeil = new Landmark();
             _backgroundLandmarkFloor = new Landmark();
-            _boundaryThreshold = 1D;
-            _endTrialThreshold = 1.5D;
+            _farLandmark = new Landmark();
+            _boundaryThreshold = -35.7D;
+            _endTrialThreshold = -35.8D;
             _maximumTrialTime = 60D;
-            _interTrialIntervalLowerBound = 1D;
-            _interTrialIntervalUpperBound = 3D;
+            _interTrialIntervalLowerBound = 3D;
+            _interTrialIntervalUpperBound = 5D;
             _detectLickThreshold = -1D;
             _autoRewardThreshold = 10D;
             _movementVisualGain = 0.0613D;
@@ -1550,6 +1553,7 @@ namespace UclOpenHfVisualDataSchema
             _backgroundLandmarkRight = other._backgroundLandmarkRight;
             _backgroundLandmarkCeil = other._backgroundLandmarkCeil;
             _backgroundLandmarkFloor = other._backgroundLandmarkFloor;
+            _farLandmark = other._farLandmark;
             _boundaryThreshold = other._boundaryThreshold;
             _endTrialThreshold = other._endTrialThreshold;
             _maximumTrialTime = other._maximumTrialTime;
@@ -1627,6 +1631,20 @@ namespace UclOpenHfVisualDataSchema
             set
             {
                 _backgroundLandmarkFloor = value;
+            }
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [Newtonsoft.Json.JsonPropertyAttribute("farLandmark", Required=Newtonsoft.Json.Required.Always)]
+        public Landmark FarLandmark
+        {
+            get
+            {
+                return _farLandmark;
+            }
+            set
+            {
+                _farLandmark = value;
             }
         }
     
@@ -1785,6 +1803,7 @@ namespace UclOpenHfVisualDataSchema
             stringBuilder.Append("BackgroundLandmarkRight = " + _backgroundLandmarkRight + ", ");
             stringBuilder.Append("BackgroundLandmarkCeil = " + _backgroundLandmarkCeil + ", ");
             stringBuilder.Append("BackgroundLandmarkFloor = " + _backgroundLandmarkFloor + ", ");
+            stringBuilder.Append("FarLandmark = " + _farLandmark + ", ");
             stringBuilder.Append("BoundaryThreshold = " + _boundaryThreshold + ", ");
             stringBuilder.Append("EndTrialThreshold = " + _endTrialThreshold + ", ");
             stringBuilder.Append("MaximumTrialTime = " + _maximumTrialTime + ", ");
@@ -2266,8 +2285,8 @@ namespace UclOpenHfVisualDataSchema
     
         public UclOpenVrCorridor2pTaskParameters()
         {
-            _corridorWidth = 2D;
-            _farClip = 20D;
+            _corridorWidth = 12D;
+            _farClip = 200D;
             _blocks = new System.Collections.Generic.List<Block>();
         }
     

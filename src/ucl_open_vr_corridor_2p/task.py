@@ -23,11 +23,12 @@ class Trial(BaseSchema):
     background_landmark_right: Landmark
     background_landmark_ceil: Landmark
     background_landmark_floor: Landmark
-    boundary_threshold: float = Field(default=1, description="Buffer applied to far boundary of corridor to determine stopping distance.")
-    end_trial_threshold: float = Field(default=1.5, description="Buffer applied to far boundary of corridor to determine trial end distance.")
+    far_landmark: Landmark
+    boundary_threshold: float = Field(default=-35.7, description="Buffer applied to far boundary of corridor to determine stopping distance.")
+    end_trial_threshold: float = Field(default=-35.8, description="Buffer applied to far boundary of corridor to determine trial end distance.")
     maximum_trial_time: float = Field(default=60, description="Maximum amount of time to spend on this trial.")
-    inter_trial_interval_lower_bound: float = Field(default=1, description="After boundary is reached, how long to wait before proceeding to next trial (lower bound).")
-    inter_trial_interval_upper_bound: float = Field(default=3, description="After boundary is reached, how long to wait before proceeding to next trial (upper bound).")
+    inter_trial_interval_lower_bound: float = Field(default=3, description="After boundary is reached, how long to wait before proceeding to next trial (lower bound).")
+    inter_trial_interval_upper_bound: float = Field(default=5, description="After boundary is reached, how long to wait before proceeding to next trial (upper bound).")
     detect_lick_threshold: float = Field(default=-1, description="Threshold after which licks are detected.")
     auto_reward_threshold: float = Field(default=10, description="Reward is automatically given after this threshold is reached.")
     movement_visual_gain: float = Field(default=0.0613, description="Gain between encoder delta and visual movement.")
@@ -40,8 +41,8 @@ class Block(BaseSchema):
 
 # TODO - should inherit from some TaskParameters base class rather than BaseSchema
 class UclOpenVrCorridor2pTaskParameters(BaseSchema):
-    corridor_width: float = Field(default=2)
-    far_clip: float = Field(default=20)
+    corridor_width: float = Field(default=12)
+    far_clip: float = Field(default=200)
     blocks: List[Block]
 
 
