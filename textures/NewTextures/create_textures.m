@@ -14,7 +14,7 @@ BG_contrast = 0.25;
 BGperiodicity = 0.12; %fraction of the corridor's visible length
 BGchunkWidth = 0.02; %fraction of the corridor's visible length
 BGdensity = 20; %# dots per chunk
-
+BG_endGray = 0.5;
 
 %%------------------------------Landmarks--------------------------------
 texsize = 512;
@@ -23,7 +23,7 @@ sf_H = sf_base / texwidth * (corridorH / corridorL); % no.of horizonal bars visi
 sf_V = sf_base; % no.of vertical bars visible
 
 % Gray
-textures(1).matrix = 0.5*ones(64,64);
+textures(1).matrix = BG_endGray*ones(64,64);
 
 % Unfiltered Whitenoise
 textures(2).matrix = rand(16, 512);
@@ -224,7 +224,7 @@ tex4 = textures(5).matrix;
 
 grating_v = textures(6).matrix;
 plaid = textures(8).matrix;
-
+grey = textures(1).matrix;
 figure;
 imagesc(tex, [0 1]);
 axis equal; axis off; colormap(gray);
@@ -235,4 +235,5 @@ imwrite(tex3, '../BG3.jpg');
 imwrite(tex4, '../BG4.jpg');
 imwrite(grating_v, '../grating_vertical.jpg');
 imwrite(plaid, '../plaid.jpg');
+imwrite(grey, '../grey.jpg')
 close all
