@@ -18,9 +18,9 @@ trial_base = Trial(landmarks=[
                     background_landmark_right=Landmark(size=200, position=100, texture="BG2", reward_valence=0, center_offset=0.01),
                     background_landmark_ceil=Landmark(size=200, position=100, texture="BG3", reward_valence=0, center_offset=0.01),
                     background_landmark_floor=Landmark(size=200, position=100, texture="BG4", reward_valence=0, center_offset=0.01),
-                    far_landmark=Landmark(size=100, position=200, texture="logs", reward_valence=0, center_offset=0.01), #TODO: change texture to match luminance(?)
-                    boundary_threshold=-35.8,
-                    end_trial_threshold=-35.7,
+                    far_landmark=Landmark(size=100, position=200, texture="grey",  reward_valence=0, center_offset=0.0),
+                    boundary_threshold=-35.9,
+                    end_trial_threshold=-35.9,
                     movement_visual_gain=0.0613
                     )
 
