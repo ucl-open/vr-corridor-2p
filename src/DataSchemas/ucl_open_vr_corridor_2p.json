@@ -633,6 +633,10 @@
           "title": "CorridorWidth",
           "type": "number"
         },
+        "eyeHeightOffset": {
+          "title": "EyeHeightOffset",
+          "type": "number"
+        },
         "farClip": {
           "default": 200,
           "title": "FarClip",
@@ -647,6 +651,7 @@
         }
       },
       "required": [
+        "eyeHeightOffset",
         "blocks"
       ],
       "title": "UclOpenVrCorridor2pTaskParameters",

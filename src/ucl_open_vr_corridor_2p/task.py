@@ -24,8 +24,8 @@ class Trial(BaseSchema):
     background_landmark_ceil: Landmark
     background_landmark_floor: Landmark
     far_landmark: Landmark
-    boundary_threshold: float = Field(default=-35.7, description="Buffer applied to far boundary of corridor to determine stopping distance.")
-    end_trial_threshold: float = Field(default=-35.8, description="Buffer applied to far boundary of corridor to determine trial end distance.")
+    boundary_threshold: float = Field(default=-35.9, description="Buffer applied to far boundary of corridor to determine stopping distance.")
+    end_trial_threshold: float = Field(default=-35.9, description="Buffer applied to far boundary of corridor to determine trial end distance.")
     maximum_trial_time: float = Field(default=60, description="Maximum amount of time to spend on this trial.")
     inter_trial_interval_lower_bound: float = Field(default=3, description="After boundary is reached, how long to wait before proceeding to next trial (lower bound).")
     inter_trial_interval_upper_bound: float = Field(default=5, description="After boundary is reached, how long to wait before proceeding to next trial (upper bound).")
@@ -42,6 +42,7 @@ class Block(BaseSchema):
 # TODO - should inherit from some TaskParameters base class rather than BaseSchema
 class UclOpenVrCorridor2pTaskParameters(BaseSchema):
     corridor_width: float = Field(default=12)
+    eye_height_offset: float
     far_clip: float = Field(default=200)
     blocks: List[Block]
 
