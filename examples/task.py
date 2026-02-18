@@ -34,9 +34,11 @@ trial_skip2 = Trial(landmarks=[
                     background_landmark_ceil=Landmark(size=200, position=100, texture="BG3", reward_valence=0, center_offset=0.01),
                     background_landmark_floor=Landmark(size=200, position=100, texture="BG4", reward_valence=0, center_offset=0.01),
                     far_landmark=Landmark(size=12, position=200, texture="grey", reward_valence=0, center_offset=0.01), 
-                    boundary_threshold=-35.9,
-                    end_trial_threshold=-35.9,
+                    boundary_threshold=-36,
+                    end_trial_threshold=-36,
                     movement_visual_gain=0.0613
+                    #movement_visual_gain=0.0306, #change if mouse running too fast; change within 10mins on day 1
+                    #movement_visual_gain=0.1226, #change if mouse is not running; change within 10mins on day 1
                     )
 
 trial_skip3 = Trial(landmarks=[
@@ -49,9 +51,11 @@ trial_skip3 = Trial(landmarks=[
                     background_landmark_ceil=Landmark(size=200, position=100, texture="BG3", reward_valence=0, center_offset=0.01),
                     background_landmark_floor=Landmark(size=200, position=100, texture="BG4", reward_valence=0, center_offset=0.01),
                     far_landmark=Landmark(size=12, position=200, texture="grey", reward_valence=0, center_offset=0.01), 
-                    boundary_threshold=-35.9,
-                    end_trial_threshold=-35.9,
+                    boundary_threshold=-36,
+                    end_trial_threshold=-36,
                     movement_visual_gain=0.0613
+                    #movement_visual_gain=0.0306, #change if mouse running too fast; change within 10mins on day 1
+                    #movement_visual_gain=0.1226, #change if mouse is not running; change within 10mins on day 1
                     )
 
 task_logic = UclOpenVrCorridor2pTaskLogic(
