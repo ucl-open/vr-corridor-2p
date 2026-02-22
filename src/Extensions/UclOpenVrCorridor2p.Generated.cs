@@ -1691,9 +1691,9 @@ namespace UclOpenHfVisualDataSchema
             _backgroundLandmarkCeil = new Landmark();
             _backgroundLandmarkFloor = new Landmark();
             _farLandmark = new Landmark();
-            _boundaryThreshold = -35.9D;
-            _endTrialThreshold = -35.9D;
-            _maximumTrialTime = 60D;
+            _boundaryThreshold = -36D;
+            _endTrialThreshold = -36D;
+            _maximumTrialTime = 180D;
             _interTrialIntervalLowerBound = 3D;
             _interTrialIntervalUpperBound = 5D;
             _detectLickThreshold = -1D;

@@ -513,19 +513,19 @@
           "title": "FarLandmark"
         },
         "boundaryThreshold": {
-          "default": -35.9,
+          "default": -36,
           "description": "Buffer applied to far boundary of corridor to determine stopping distance.",
           "title": "BoundaryThreshold",
           "type": "number"
         },
         "endTrialThreshold": {
-          "default": -35.9,
+          "default": -36,
           "description": "Buffer applied to far boundary of corridor to determine trial end distance.",
           "title": "EndTrialThreshold",
           "type": "number"
         },
         "maximumTrialTime": {
-          "default": 60,
+          "default": 180,
           "description": "Maximum amount of time to spend on this trial.",
           "title": "MaximumTrialTime",
           "type": "number"

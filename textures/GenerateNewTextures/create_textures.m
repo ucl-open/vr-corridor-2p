@@ -10,7 +10,7 @@ sf_base = 4; % no.of vertical bars visible
 tex_contrast = 0.5;
 
 % BG periodocity and chunk parameters
-BG_contrast = 0.25;
+BG_contrast = 0.25; % geneated with 0.35 on 22/02/26 BG1_35C etc
 BGperiodicity = 0.12; %fraction of the corridor's visible length
 BGchunkWidth = 0.02; %fraction of the corridor's visible length
 BGdensity = 20; %# dots per chunk
@@ -229,10 +229,10 @@ figure;
 imagesc(tex, [0 1]);
 axis equal; axis off; colormap(gray);
 
-imwrite(tex1, '../BG1.jpg');
-imwrite(tex2, '../BG2.jpg');
-imwrite(tex3, '../BG3.jpg');
-imwrite(tex4, '../BG4.jpg');
+imwrite(tex1, '../BG1_35C.jpg');
+imwrite(tex2, '../BG2_35C.jpg');
+imwrite(tex3, '../BG3_35C.jpg');
+imwrite(tex4, '../BG4_35C.jpg');
 imwrite(grating_v, '../grating_vertical.jpg');
 imwrite(plaid, '../plaid.jpg');
 imwrite(grey, '../grey.jpg')
