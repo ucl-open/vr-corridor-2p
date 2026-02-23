@@ -16,6 +16,10 @@ BGchunkWidth = 0.02; %fraction of the corridor's visible length
 BGdensity = 20; %# dots per chunk
 BG_endGray = 0.5;
 
+% Seed for random background
+random_seed = 0;
+s = RandStream('mt19937ar','Seed',random_seed);
+
 %%------------------------------Landmarks--------------------------------
 texsize = 512;
 % Making horizontal and vertical axes asymmetric because the texture aspect raio is 1:1.5 (W=8cm, H=12cm)
@@ -26,7 +30,7 @@ sf_V = sf_base; % no.of vertical bars visible
 textures(1).matrix = BG_endGray*ones(64,64);
 
 % Unfiltered Whitenoise
-textures(2).matrix = rand(16, 512);
+textures(2).matrix = rand(s, 16, 512);
 
 % Vertical grating
 textures(6).matrix = 0.5+tex_contrast*0.5*repmat(sin(0:((2*sf_V*pi)/texsize):(2*sf_V)*pi-(((2*sf_V)*pi)/texsize)),texsize,1);
@@ -85,9 +89,9 @@ for texID = 2:5
     for j = rand_idx
         for k = 1:BGdensity
             if mod(k, 2) == 0
-                Im_BG(filtSize+randi(BGheight), j) = 0.5 + 0.5*rand; 
+                Im_BG(filtSize+randi(s, BGheight), j) = 0.5 + 0.5*rand(s); 
             else
-                Im_BG(filtSize+randi(BGheight), j) = 0.5 - 0.5*rand;
+                Im_BG(filtSize+randi(s, BGheight), j) = 0.5 - 0.5*rand(s);
             end
         end
     end
