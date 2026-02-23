@@ -84,7 +84,7 @@
             },
             "boundaryThreshold": -36.0,
             "endTrialThreshold": -36.0,
-            "maximumTrialTime": 60.0,
+            "maximumTrialTime": 180.0,
             "interTrialIntervalLowerBound": 3.0,
             "interTrialIntervalUpperBound": 5.0,
             "detectLickThreshold": -1.0,
