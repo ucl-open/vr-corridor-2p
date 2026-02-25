@@ -33,10 +33,10 @@ textures(1).matrix = BG_endGray*ones(64,64);
 textures(2).matrix = rand(s, 16, 512);
 
 % Vertical grating
-textures(6).matrix = 0.5+tex_contrast*0.5*repmat(sin(0:((2*sf_V*pi)/texsize):(2*sf_V)*pi-(((2*sf_V)*pi)/texsize)),texsize,1);
+textures(6).matrix = 0.5*(1 + tex_contrast*repmat(sin(0:((2*sf_V*pi)/texsize):(2*sf_V)*pi-(((2*sf_V)*pi)/texsize)),texsize,1));
 
 % Horizontal grating
-textures(7).matrix = 0.5+tex_contrast*0.5*repmat(sin(0:(((2*sf_H)*pi)/texsize):(2*sf_H)*pi-(((2*sf_H)*pi)/texsize))',1,texsize);
+textures(7).matrix = 0.5*(1 + tex_contrast*repmat(sin(0:(((2*sf_H)*pi)/texsize):(2*sf_H)*pi-(((2*sf_H)*pi)/texsize))',1,texsize));
 
 % Plaid
 textures(8).matrix = (textures(6).matrix+textures(7).matrix)/2;
@@ -116,10 +116,11 @@ for texID = 2:5
     [uq, vq] = meshgrid(linspace(1,L, finalBGlength), linspace(1,H, finalBGheight));
     Imf = interp2(u, v, Imf, uq, vq);
     
-    %Normalizing and scaling to BG_contrast
-    Imf = Imf - 0.5;
+    %Normalizing to [-1, 1]
+    Imf = (Imf - 0.5);
     Imf = Imf./max(abs(Imf), [], 'all');
-    Im_new = (Imf*BG_contrast) + 0.5;
+    %Scaling by BG_contrast and scaling to [0, 1]
+    Im_new = 0.5*(1 + BG_contrast*Imf);
     
     %Saving to textures
     textures(texID).matrix = Im_new;
