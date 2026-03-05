@@ -62,7 +62,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="io:ReadAllText">
-                <io:Path>C:\CODE\BONSAI\vr-corridor-2p\local\BoutonBaselineCorridor_Gain0.0613_UclOpenVrCorridor2pTaskLogic.json</io:Path>
+                <io:Path>C:\CODE\BONSAI\vr-corridor-2p\local\ManipulationCorridor_Gain0.0613_10Blocks_20TrialsPerBlock_BG50C_UclOpenVrCorridor2pTaskLogic.json</io:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:AsyncSubject">
@@ -200,7 +200,8 @@
                     <PortName>COM3</PortName>
                     <BaudRate>1000000</BaudRate>
                     <Encoding>utf-8</Encoding>
-                    <NewLine />
+                    <NewLine>
+</NewLine>
                     <Parity>None</Parity>
                     <ParityReplace>63</ParityReplace>
                     <DataBits>8</DataBits>
@@ -503,9 +504,9 @@
                           <LocationY>-1</LocationY>
                           <Layer>1</Layer>
                           <Angle>0</Angle>
-                          <ColorR>0</ColorR>
-                          <ColorG>0</ColorG>
-                          <ColorB>0</ColorB>
+                          <ColorR>1</ColorR>
+                          <ColorG>1</ColorG>
+                          <ColorB>1</ColorB>
                           <ColorA>1</ColorA>
                         </Expression>
                         <Expression xsi:type="rx:PublishSubject">
@@ -629,7 +630,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT0.327S</rx:DueTime>
+                                  <rx:DueTime>PT0.269S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -695,7 +696,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT0.474S</rx:DueTime>
+                                  <rx:DueTime>PT0.244S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -785,7 +786,7 @@
                     <Eye>
                       <X>0</X>
                       <Y>-2</Y>
-                      <Z>126.217163</Z>
+                      <Z>73.68267</Z>
                     </Eye>
                     <NearClip>0.1</NearClip>
                     <FarClip>200</FarClip>
@@ -1378,8 +1379,8 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="UclOpen.Logging:LogController.bonsai">
-              <SubjectId>M26004/20260228/</SubjectId>
-              <SessionId>M26004_BaselineCorridor_20260228_00001</SessionId>
+              <SubjectId>M25132/20260303/</SubjectId>
+              <SessionId>M25132_LandManipCorridor_20260303_00001</SessionId>
               <Path>C:/UCLOpenDATA/</Path>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
@@ -1470,7 +1471,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/UCLOpenDATA/\sub-M26004/20260228/\ses-M26004_BaselineCorridor_20260228_00001_date-2026-02-28T15-59-08\MatrixArduino\MatrixArduino.csv</io:FileName>
+                    <io:FileName>C:/UCLOpenDATA/\sub-M25132/20260303/\ses-M25132_LandManipCorridor_20260303_00001_date-2026-03-03T19-38-51\MatrixArduino\MatrixArduino.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1595,7 +1596,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/UCLOpenDATA/\sub-M26004/20260228/\ses-M26004_BaselineCorridor_20260228_00001_date-2026-02-28T15-59-08\LandmarkChoice\LandmarkChoice.csv</io:FileName>
+                    <io:FileName>C:/UCLOpenDATA/\sub-M25132/20260303/\ses-M25132_LandManipCorridor_20260303_00001_date-2026-03-03T19-38-51\LandmarkChoice\LandmarkChoice.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1714,7 +1715,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/UCLOpenDATA/\sub-M26004/20260228/\ses-M26004_BaselineCorridor_20260228_00001_date-2026-02-28T15-59-08\VrPosition\VrPosition.csv</io:FileName>
+                    <io:FileName>C:/UCLOpenDATA/\sub-M25132/20260303/\ses-M25132_LandManipCorridor_20260303_00001_date-2026-03-03T19-38-51\VrPosition\VrPosition.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2106,7 +2107,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/UCLOpenDATA/\sub-M26004/20260228/\ses-M26004_BaselineCorridor_20260228_00001_date-2026-02-28T15-59-08\RenderFrameCount\RenderFrameCount.csv</io:FileName>
+                    <io:FileName>C:/UCLOpenDATA/\sub-M25132/20260303/\ses-M25132_LandManipCorridor_20260303_00001_date-2026-03-03T19-38-51\RenderFrameCount\RenderFrameCount.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2225,7 +2226,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/UCLOpenDATA/\sub-M26004/20260228/\ses-M26004_BaselineCorridor_20260228_00001_date-2026-02-28T15-59-08\QuadState\QuadState.csv</io:FileName>
+                    <io:FileName>C:/UCLOpenDATA/\sub-M25132/20260303/\ses-M25132_LandManipCorridor_20260303_00001_date-2026-03-03T19-38-51\QuadState\QuadState.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2339,7 +2340,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>C:/UCLOpenDATA/\sub-M26004/20260228/\ses-M26004_BaselineCorridor_20260228_00001_date-2026-02-28T15-59-08\RigSchema\RigSchema.json</p5:Path>
+                      <p5:Path>C:/UCLOpenDATA/\sub-M25132/20260303/\ses-M25132_LandManipCorridor_20260303_00001_date-2026-03-03T19-38-51\RigSchema\RigSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -2450,7 +2451,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>C:/UCLOpenDATA/\sub-M26004/20260228/\ses-M26004_BaselineCorridor_20260228_00001_date-2026-02-28T15-59-08\TaskLogicSchema\TaskLogicSchema.json</p5:Path>
+                      <p5:Path>C:/UCLOpenDATA/\sub-M25132/20260303/\ses-M25132_LandManipCorridor_20260303_00001_date-2026-03-03T19-38-51\TaskLogicSchema\TaskLogicSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -2561,7 +2562,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>C:/UCLOpenDATA/\sub-M26004/20260228/\ses-M26004_BaselineCorridor_20260228_00001_date-2026-02-28T15-59-08\SessionSchema\SessionSchema.json</p5:Path>
+                      <p5:Path>C:/UCLOpenDATA/\sub-M25132/20260303/\ses-M25132_LandManipCorridor_20260303_00001_date-2026-03-03T19-38-51\SessionSchema\SessionSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -5246,7 +5247,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Delay">
-                      <rx:DueTime>PT4.403S</rx:DueTime>
+                      <rx:DueTime>PT3.957S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
