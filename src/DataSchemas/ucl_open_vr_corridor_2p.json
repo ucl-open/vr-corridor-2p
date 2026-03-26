@@ -326,6 +326,49 @@
       "title": "MatrixArduinoData",
       "type": "object"
     },
+    "MouseWheelMovementSource": {
+      "properties": {
+        "sourceType": {
+          "const": "mouse_wheel",
+          "title": "SourceType",
+          "type": "string"
+        },
+        "gain": {
+          "title": "Gain",
+          "type": "number"
+        }
+      },
+      "required": [
+        "sourceType",
+        "gain"
+      ],
+      "title": "MouseWheelMovementSource",
+      "type": "object"
+    },
+    "PlaybackMovementSource": {
+      "properties": {
+        "sourceType": {
+          "const": "playback",
+          "title": "SourceType",
+          "type": "string"
+        },
+        "filePath": {
+          "title": "FilePath",
+          "type": "string"
+        },
+        "index": {
+          "title": "Index",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "sourceType",
+        "filePath",
+        "index"
+      ],
+      "title": "PlaybackMovementSource",
+      "type": "object"
+    },
     "Screen": {
       "properties": {
         "deviceType": {
@@ -395,6 +438,20 @@
       "title": "Screen",
       "type": "object"
     },
+    "SensorMovementSource": {
+      "properties": {
+        "sourceType": {
+          "const": "sensor_movement",
+          "title": "SourceType",
+          "type": "string"
+        }
+      },
+      "required": [
+        "sourceType"
+      ],
+      "title": "SensorMovementSource",
+      "type": "object"
+    },
     "SyncQuad": {
       "properties": {
         "extentX": {
@@ -456,13 +513,13 @@
           "title": "FarLandmark"
         },
         "boundaryThreshold": {
-          "default": -35.7,
+          "default": -35.9,
           "description": "Buffer applied to far boundary of corridor to determine stopping distance.",
           "title": "BoundaryThreshold",
           "type": "number"
         },
         "endTrialThreshold": {
-          "default": -35.8,
+          "default": -35.9,
           "description": "Buffer applied to far boundary of corridor to determine trial end distance.",
           "title": "EndTrialThreshold",
           "type": "number"
@@ -588,13 +645,36 @@
           "default": 0.5,
           "title": "QuadTimeUpperBound",
           "type": "number"
+        },
+        "movementSource": {
+          "discriminator": {
+            "mapping": {
+              "mouse_wheel": "#/$defs/MouseWheelMovementSource",
+              "playback": "#/$defs/PlaybackMovementSource",
+              "sensor_movement": "#/$defs/SensorMovementSource"
+            },
+            "propertyName": "sourceType"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/SensorMovementSource"
+            },
+            {
+              "$ref": "#/$defs/MouseWheelMovementSource"
+            },
+            {
+              "$ref": "#/$defs/PlaybackMovementSource"
+            }
+          ],
+          "title": "MovementSource"
         }
       },
       "required": [
         "screen",
         "gammaCorrectionFile",
         "syncQuad",
-        "arduino"
+        "arduino",
+        "movementSource"
       ],
       "title": "UclOpenVrCorridor2pRig",
       "type": "object"
