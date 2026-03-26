@@ -62,7 +62,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="io:ReadAllText">
-                <io:Path>C:\CODE\BONSAI\vr-corridor-2p\local\UclOpenVrCorridor2pTaskLogic.json</io:Path>
+                <io:Path>C:\CODE\BONSAI\vr-corridor-2p\local\BoutonBaselineCorridor_Gain0.0306_UclOpenVrCorridor2pTaskLogic.json</io:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:AsyncSubject">
