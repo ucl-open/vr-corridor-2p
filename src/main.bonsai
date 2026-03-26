@@ -139,6 +139,37 @@
             <Expression xsi:type="rx:AsyncSubject">
               <Name>TaskLogicParameters</Name>
             </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>RigSchema</Name>
+            </Expression>
+            <Expression xsi:type="MemberSelector">
+              <Selector>MovementSource</Selector>
+            </Expression>
+            <Expression xsi:type="p1:MatchMovementSource">
+              <p1:Type xsi:type="TypeMapping" TypeArguments="p1:PlaybackMovementSource" />
+            </Expression>
+            <Expression xsi:type="MemberSelector">
+              <Selector>FilePath</Selector>
+            </Expression>
+            <Expression xsi:type="PropertyMapping">
+              <PropertyMappings>
+                <Property Name="FileName" />
+              </PropertyMappings>
+            </Expression>
+            <Expression xsi:type="io:CsvReader">
+              <io:FileName>C:\Users\neurogears\source\repos\ucl-open\vr-corridor-2p\temp_data\sub-Plimbo\ses-001_date-2026-01-20T09-52-59\MatrixArduino\MatrixArduino.csv</io:FileName>
+              <io:ListSeparator>,</io:ListSeparator>
+              <io:SkipRows>0</io:SkipRows>
+            </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>StartExperiment</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:SubscribeWhen" />
+            </Expression>
+            <Expression xsi:type="rx:PublishSubject">
+              <Name>PlaybackSource</Name>
+            </Expression>
           </Nodes>
           <Edges>
             <Edge From="0" To="1" Label="Source1" />
@@ -152,6 +183,14 @@
             <Edge From="10" To="11" Label="Source1" />
             <Edge From="11" To="12" Label="Source1" />
             <Edge From="12" To="13" Label="Source1" />
+            <Edge From="14" To="15" Label="Source1" />
+            <Edge From="15" To="16" Label="Source1" />
+            <Edge From="16" To="17" Label="Source1" />
+            <Edge From="17" To="18" Label="Source1" />
+            <Edge From="18" To="19" Label="Source1" />
+            <Edge From="19" To="21" Label="Source1" />
+            <Edge From="20" To="21" Label="Source2" />
+            <Edge From="21" To="22" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -2766,20 +2805,7 @@
               <Name>PlaybackMovementSource</Name>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
-              <Name>PlaybackMovementSource</Name>
-            </Expression>
-            <Expression xsi:type="MemberSelector">
-              <Selector>FilePath</Selector>
-            </Expression>
-            <Expression xsi:type="PropertyMapping">
-              <PropertyMappings>
-                <Property Name="FileName" />
-              </PropertyMappings>
-            </Expression>
-            <Expression xsi:type="io:CsvReader">
-              <io:FileName>C:\Users\neurogears\source\repos\ucl-open\vr-corridor-2p\temp_data\sub-Plimbo\ses-001_date-2026-01-20T09-52-59\MatrixArduino\MatrixArduino.csv</io:FileName>
-              <io:ListSeparator>,</io:ListSeparator>
-              <io:SkipRows>0</io:SkipRows>
+              <Name>PlaybackSource</Name>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Skip">
@@ -2820,18 +2846,15 @@
             <Edge From="0" To="1" Label="Source1" />
             <Edge From="1" To="2" Label="Source1" />
             <Edge From="3" To="4" Label="Source1" />
-            <Edge From="4" To="5" Label="Source1" />
-            <Edge From="5" To="6" Label="Source1" />
+            <Edge From="4" To="6" Label="Source1" />
+            <Edge From="5" To="6" Label="Source2" />
             <Edge From="6" To="7" Label="Source1" />
-            <Edge From="7" To="9" Label="Source1" />
-            <Edge From="8" To="9" Label="Source2" />
+            <Edge From="7" To="11" Label="Source1" />
+            <Edge From="8" To="9" Label="Source1" />
             <Edge From="9" To="10" Label="Source1" />
-            <Edge From="10" To="14" Label="Source1" />
+            <Edge From="10" To="11" Label="Source2" />
             <Edge From="11" To="12" Label="Source1" />
             <Edge From="12" To="13" Label="Source1" />
-            <Edge From="13" To="14" Label="Source2" />
-            <Edge From="14" To="15" Label="Source1" />
-            <Edge From="15" To="16" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -2873,6 +2896,40 @@
       </Expression>
       <Expression xsi:type="rx:BehaviorSubject" TypeArguments="p7:Unit">
         <rx:Name>Reward</rx:Name>
+      </Expression>
+      <Expression xsi:type="ExternalizedMapping">
+        <Property Name="Filter" DisplayName="StartExperimentKey" Category="HotKeys" />
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="wie:KeyDown">
+          <wie:Filter>LButton A Shift</wie:Filter>
+          <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:Take">
+          <rx:Count>1</rx:Count>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="rx:AsyncSubject">
+        <Name>StartExperiment</Name>
+      </Expression>
+      <Expression xsi:type="ExternalizedMapping">
+        <Property Name="Filter" DisplayName="StopExperimentKey" Category="HotKeys" />
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="wie:KeyDown">
+          <wie:Filter>MButton D Shift</wie:Filter>
+          <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:Take">
+          <rx:Count>1</rx:Count>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="rx:AsyncSubject">
+        <Name>EndExperiment</Name>
       </Expression>
       <Expression xsi:type="rx:Defer">
         <Name>TaskLogic</Name>
@@ -5578,26 +5635,14 @@
           </Edges>
         </Workflow>
       </Expression>
-      <Expression xsi:type="ExternalizedMapping">
-        <Property Name="Filter" DisplayName="StartExperimentKey" Category="HotKeys" />
-      </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="wie:KeyDown">
-          <wie:Filter>LButton A Shift</wie:Filter>
-          <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
-        </Combinator>
+      <Expression xsi:type="SubscribeSubject">
+        <Name>StartExperiment</Name>
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="rx:SubscribeWhen" />
       </Expression>
-      <Expression xsi:type="ExternalizedMapping">
-        <Property Name="Filter" DisplayName="StopExperimentKey" Category="HotKeys" />
-      </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="wie:KeyDown">
-          <wie:Filter>MButton D Shift</wie:Filter>
-          <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
-        </Combinator>
+      <Expression xsi:type="SubscribeSubject">
+        <Name>EndExperiment</Name>
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="rx:TakeUntil" />
@@ -5629,12 +5674,16 @@
       <Edge From="25" To="26" Label="Source1" />
       <Edge From="27" To="28" Label="Source1" />
       <Edge From="28" To="29" Label="Source1" />
-      <Edge From="32" To="35" Label="Source1" />
+      <Edge From="32" To="33" Label="Source1" />
       <Edge From="33" To="34" Label="Source1" />
-      <Edge From="34" To="35" Label="Source2" />
-      <Edge From="35" To="38" Label="Source1" />
+      <Edge From="34" To="35" Label="Source1" />
       <Edge From="36" To="37" Label="Source1" />
-      <Edge From="37" To="38" Label="Source2" />
+      <Edge From="37" To="38" Label="Source1" />
+      <Edge From="38" To="39" Label="Source1" />
+      <Edge From="40" To="42" Label="Source1" />
+      <Edge From="41" To="42" Label="Source2" />
+      <Edge From="42" To="44" Label="Source1" />
+      <Edge From="43" To="44" Label="Source2" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
