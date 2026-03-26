@@ -1,4 +1,4 @@
-from typing import Literal, Dict
+from typing import Literal, Dict, Annotated, Union
 from pydantic import Field
 
 from ucl_open.rigs.base import BaseSchema
@@ -16,6 +16,21 @@ class SyncQuad(BaseSchema):
 
 class MatrixArduino(SerialDeviceModule):
     device_type: Literal["MatrixArduino"] = "MatrixArduino"
+    
+class MovementSource(BaseSchema):
+    source_type: str
+    
+class SensorMovementSource(MovementSource):
+    source_type: Literal["sensor_movement"]
+    
+class MouseWheelMovementSource(MovementSource):
+    source_type: Literal["mouse_wheel"]
+    gain: float
+    
+class PlaybackMovementSource(MovementSource):
+    source_type: Literal["playback"]
+    file_path: str
+    index: int
 
 class UclOpenVrCorridor2pRig(BaseSchema):
     version: Literal[__semver__] = __semver__
@@ -25,3 +40,4 @@ class UclOpenVrCorridor2pRig(BaseSchema):
     arduino: MatrixArduino
     quad_time_lower_bound: float = Field(default=0.2)
     quad_time_upper_bound: float = Field(default=0.5)
+    movement_source: Annotated[Union[SensorMovementSource, MouseWheelMovementSource, PlaybackMovementSource], Field(discriminator="source_type")]
