@@ -74,7 +74,7 @@ task_logic = UclOpenVrCorridor2pTaskLogic(
                 ],
             ),
         ],
-        rng_seed=0
+        rng_seed=1.1
     ),
 )
 

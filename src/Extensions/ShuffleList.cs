@@ -11,9 +11,8 @@ using UclOpenHfVisualDataSchema;
 [WorkflowElementCategory(ElementCategory.Transform)]
 public class ShuffleList
 {
-    Random random = new Random();
-    public IObservable<List<T>> Process<T>(IObservable<List<T>> source)
+    public IObservable<List<T>> Process<T>(IObservable<Tuple<List<T>, Random>> source)
     {
-        return source.Select(value => value.OrderBy(x => random.Next()).ToList());
+        return source.Select(value => value.Item1.OrderBy(x => value.Item2.Next()).ToList());
     }
 }
