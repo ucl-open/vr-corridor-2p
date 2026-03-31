@@ -45,6 +45,7 @@ class UclOpenVrCorridor2pTaskParameters(BaseSchema):
     eye_height_offset: float
     far_clip: float = Field(default=200)
     blocks: List[Block]
+    rng_seed: Optional[float] = Field(default=None, description="Seed of the random number generator for these task parameters")
 
 
 class UclOpenVrCorridor2pTaskLogic(BaseSchema):

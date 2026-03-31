@@ -4,13 +4,13 @@
                  xmlns:io="clr-namespace:Bonsai.IO;assembly=Bonsai.System"
                  xmlns:rx="clr-namespace:Bonsai.Reactive;assembly=Bonsai.Core"
                  xmlns:p1="clr-namespace:UclOpenHfVisualDataSchema;assembly=Extensions"
-                 xmlns:p2="clr-namespace:;assembly=Extensions"
+                 xmlns:num="clr-namespace:Bonsai.Numerics;assembly=Bonsai.Numerics"
+                 xmlns:p2="clr-namespace:Bonsai.Numerics.Distributions;assembly=Bonsai.Numerics"
+                 xmlns:scr="clr-namespace:Bonsai.Scripting.Expressions;assembly=Bonsai.Scripting.Expressions"
+                 xmlns:p3="clr-namespace:;assembly=Extensions"
                  xmlns:gl="clr-namespace:Bonsai.Shaders;assembly=Bonsai.Shaders"
                  xmlns:res="clr-namespace:Bonsai.Resources;assembly=Bonsai.System"
-                 xmlns:num="clr-namespace:Bonsai.Numerics;assembly=Bonsai.Numerics"
-                 xmlns:p3="clr-namespace:Bonsai.Numerics.Distributions;assembly=Bonsai.Numerics"
                  xmlns:sys="clr-namespace:System;assembly=mscorlib"
-                 xmlns:scr="clr-namespace:Bonsai.Scripting.Expressions;assembly=Bonsai.Scripting.Expressions"
                  xmlns:cv="clr-namespace:Bonsai.Vision;assembly=Bonsai.Vision"
                  xmlns:p4="clr-namespace:UclOpen.Core;assembly=UclOpen.Core"
                  xmlns:harp="clr-namespace:Bonsai.Harp;assembly=Bonsai.Harp"
@@ -170,6 +170,59 @@
             <Expression xsi:type="rx:PublishSubject">
               <Name>PlaybackSource</Name>
             </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>TaskLogicParameters</Name>
+            </Expression>
+            <Expression xsi:type="MemberSelector">
+              <Selector>RngSeed</Selector>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="num:CreateRandom">
+                <num:Seed xsi:nil="true" />
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="p2:CreateContinuousUniform">
+                <p2:Lower>0</p2:Lower>
+                <p2:Upper>10</p2:Upper>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="p2:Sample" />
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Zip" />
+            </Expression>
+            <Expression xsi:type="scr:ExpressionTransform">
+              <scr:Name>CheckNull</scr:Name>
+              <scr:Expression>Item1.HasValue ? Item1.Value : Item2</scr:Expression>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Take">
+                <rx:Count>1</rx:Count>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="rx:AsyncSubject">
+              <Name>RngSeedValue</Name>
+            </Expression>
+            <Expression xsi:type="PropertyMapping">
+              <PropertyMappings>
+                <Property Name="Seed" />
+              </PropertyMappings>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="num:CreateRandom">
+                <num:Seed xsi:nil="true" />
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Take">
+                <rx:Count>1</rx:Count>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="rx:AsyncSubject">
+              <Name>RngSeed</Name>
+            </Expression>
           </Nodes>
           <Edges>
             <Edge From="0" To="1" Label="Source1" />
@@ -191,6 +244,18 @@
             <Edge From="19" To="21" Label="Source1" />
             <Edge From="20" To="21" Label="Source2" />
             <Edge From="21" To="22" Label="Source1" />
+            <Edge From="23" To="24" Label="Source1" />
+            <Edge From="24" To="28" Label="Source1" />
+            <Edge From="25" To="26" Label="Source1" />
+            <Edge From="26" To="27" Label="Source1" />
+            <Edge From="27" To="28" Label="Source2" />
+            <Edge From="28" To="29" Label="Source1" />
+            <Edge From="29" To="30" Label="Source1" />
+            <Edge From="30" To="31" Label="Source1" />
+            <Edge From="31" To="32" Label="Source1" />
+            <Edge From="32" To="33" Label="Source1" />
+            <Edge From="33" To="34" Label="Source1" />
+            <Edge From="34" To="35" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -258,7 +323,7 @@
                     <Name>MatrixSerialDevice</Name>
                   </Expression>
                   <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="p2:ParseMatrixSerialDevice" />
+                    <Combinator xsi:type="p3:ParseMatrixSerialDevice" />
                   </Expression>
                   <Expression xsi:type="rx:PublishSubject">
                     <Name>MatrixArduino</Name>
@@ -599,9 +664,9 @@
                                 </PropertyMappings>
                               </Expression>
                               <Expression xsi:type="Combinator">
-                                <Combinator xsi:type="p3:CreateContinuousUniform">
-                                  <p3:Lower>0.2</p3:Lower>
-                                  <p3:Upper>0.5</p3:Upper>
+                                <Combinator xsi:type="p2:CreateContinuousUniform">
+                                  <p2:Lower>0.2</p2:Lower>
+                                  <p2:Upper>0.5</p2:Upper>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Disable">
@@ -642,7 +707,7 @@
                                 <Name>RandomSource</Name>
                               </Expression>
                               <Expression xsi:type="Combinator">
-                                <Combinator xsi:type="p3:Sample" />
+                                <Combinator xsi:type="p2:Sample" />
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Take">
@@ -708,7 +773,7 @@
                                 <Name>RandomSource</Name>
                               </Expression>
                               <Expression xsi:type="Combinator">
-                                <Combinator xsi:type="p3:Sample" />
+                                <Combinator xsi:type="p2:Sample" />
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Take">
@@ -2870,7 +2935,7 @@
         <Combinator xsi:type="rx:Zip" />
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="p2:OverflowDifference" />
+        <Combinator xsi:type="p3:OverflowDifference" />
       </Expression>
       <Expression xsi:type="scr:ExpressionTransform">
         <scr:Expression>Convert.ToSingle(it)</scr:Expression>
@@ -2968,7 +3033,7 @@
               <Selector>AvailableTrials</Selector>
             </Expression>
             <Expression xsi:type="Combinator">
-              <Combinator xsi:type="p2:ShuffleList" />
+              <Combinator xsi:type="p3:ShuffleList" />
             </Expression>
             <Expression xsi:type="rx:Condition">
               <Name>InOrderTrials</Name>
@@ -3058,7 +3123,7 @@
                           <Name>Trial</Name>
                         </Expression>
                         <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="p2:CollapseTrialLandmarks" />
+                          <Combinator xsi:type="p3:CollapseTrialLandmarks" />
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
                           <Name>Landmarks</Name>
@@ -3067,7 +3132,7 @@
                           <Name>LandmarkSet</Name>
                         </Expression>
                         <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="p2:MaximumBoundary" />
+                          <Combinator xsi:type="p3:MaximumBoundary" />
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
                           <Name>MaximumBoundary</Name>
@@ -3111,7 +3176,7 @@
                           <Name>TrialBoundary</Name>
                         </Expression>
                         <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="p2:MinimumBoundary" />
+                          <Combinator xsi:type="p3:MinimumBoundary" />
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
                           <Name>MinimumBoundary</Name>
@@ -3207,7 +3272,7 @@
                           <Combinator xsi:type="rx:CombineLatest" />
                         </Expression>
                         <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="p2:CurrentLandmark" />
+                          <Combinator xsi:type="p3:CurrentLandmark" />
                         </Expression>
                         <Expression xsi:type="rx:BehaviorSubject">
                           <Name>CurrentLandmark</Name>
@@ -3302,7 +3367,7 @@
                                       <Selector>Item2</Selector>
                                     </Expression>
                                     <Expression xsi:type="Combinator">
-                                      <Combinator xsi:type="p2:LandmarkIsEmpty" />
+                                      <Combinator xsi:type="p3:LandmarkIsEmpty" />
                                     </Expression>
                                     <Expression xsi:type="BitwiseNot" />
                                     <Expression xsi:type="WorkflowOutput" />
@@ -5251,7 +5316,7 @@
                                       <Selector>Item2</Selector>
                                     </Expression>
                                     <Expression xsi:type="Combinator">
-                                      <Combinator xsi:type="p2:LandmarkIsEmpty" />
+                                      <Combinator xsi:type="p3:LandmarkIsEmpty" />
                                     </Expression>
                                     <Expression xsi:type="BitwiseNot" />
                                     <Expression xsi:type="WorkflowOutput" />
@@ -5326,7 +5391,7 @@
                                 <Name>Source1</Name>
                               </Expression>
                               <Expression xsi:type="Combinator">
-                                <Combinator xsi:type="p2:LandmarkIsEmpty" />
+                                <Combinator xsi:type="p3:LandmarkIsEmpty" />
                               </Expression>
                               <Expression xsi:type="BitwiseNot" />
                               <Expression xsi:type="WorkflowOutput" />
@@ -5420,10 +5485,8 @@
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Last" />
                   </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="num:CreateRandom">
-                      <num:Seed xsi:nil="true" />
-                    </Combinator>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>RngSeed</Name>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
                     <Name>Trial</Name>
@@ -5448,13 +5511,13 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="p3:CreateContinuousUniform">
-                      <p3:Lower>3</p3:Lower>
-                      <p3:Upper>5</p3:Upper>
+                    <Combinator xsi:type="p2:CreateContinuousUniform">
+                      <p2:Lower>3</p2:Lower>
+                      <p2:Upper>5</p2:Upper>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="p3:Sample" />
+                    <Combinator xsi:type="p2:Sample" />
                   </Expression>
                   <Expression xsi:type="scr:ExpressionTransform">
                     <scr:Expression>TimeSpan.FromSeconds(it)</scr:Expression>
