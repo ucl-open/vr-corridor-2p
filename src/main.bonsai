@@ -304,7 +304,8 @@
                     <PortName>COM15</PortName>
                     <BaudRate>1000000</BaudRate>
                     <Encoding>utf-8</Encoding>
-                    <NewLine />
+                    <NewLine>
+</NewLine>
                     <Parity>None</Parity>
                     <ParityReplace>63</ParityReplace>
                     <DataBits>8</DataBits>
@@ -733,7 +734,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT0.259S</rx:DueTime>
+                                  <rx:DueTime>PT0.26S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -799,7 +800,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT0.387S</rx:DueTime>
+                                  <rx:DueTime>PT0.46S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -1574,7 +1575,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-03-31T10-24-12\MatrixArduino\MatrixArduino.csv</io:FileName>
+                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-03-31T10-57-29\MatrixArduino\MatrixArduino.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1699,7 +1700,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-03-31T10-24-12\LandmarkChoice\LandmarkChoice.csv</io:FileName>
+                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-03-31T10-57-29\LandmarkChoice\LandmarkChoice.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1818,7 +1819,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-03-31T10-24-12\VrPosition\VrPosition.csv</io:FileName>
+                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-03-31T10-57-29\VrPosition\VrPosition.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2114,6 +2115,20 @@
               <Name>RenderFrameCount</Name>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
+              <Name>CurrentPosition</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:WithLatestFrom" />
+            </Expression>
+            <Expression xsi:type="scr:ExpressionTransform">
+              <scr:Expression>new(
+  it.Item1 as RenderFrameCount,
+  it.Item2.X as PositionX,
+  it.Item2.Y as PositionY,
+  it.Item2.Z as PositionZ
+)</scr:Expression>
+            </Expression>
+            <Expression xsi:type="SubscribeSubject">
               <Name>MatrixArduino</Name>
             </Expression>
             <Expression xsi:type="MemberSelector">
@@ -2210,7 +2225,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-03-31T10-24-12\RenderFrameCount\RenderFrameCount.csv</io:FileName>
+                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-03-31T10-57-29\RenderFrameCount\RenderFrameCount.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2329,7 +2344,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-03-31T10-24-12\QuadState\QuadState.csv</io:FileName>
+                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-03-31T10-57-29\QuadState\QuadState.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2443,7 +2458,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-03-31T10-24-12\RigSchema\RigSchema.json</p5:Path>
+                      <p5:Path>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-03-31T10-57-29\RigSchema\RigSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -2554,7 +2569,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-03-31T10-24-12\TaskLogicSchema\TaskLogicSchema.json</p5:Path>
+                      <p5:Path>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-03-31T10-57-29\TaskLogicSchema\TaskLogicSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -2665,7 +2680,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-03-31T10-24-12\SessionSchema\SessionSchema.json</p5:Path>
+                      <p5:Path>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-03-31T10-57-29\SessionSchema\SessionSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -2711,25 +2726,28 @@
             <Edge From="29" To="30" Label="Source1" />
             <Edge From="30" To="32" Label="Source1" />
             <Edge From="31" To="32" Label="Source2" />
-            <Edge From="33" To="36" Label="Source1" />
-            <Edge From="34" To="35" Label="Source1" />
-            <Edge From="35" To="36" Label="Source2" />
-            <Edge From="36" To="37" Label="Source1" />
+            <Edge From="33" To="35" Label="Source1" />
+            <Edge From="34" To="35" Label="Source2" />
+            <Edge From="35" To="36" Label="Source1" />
+            <Edge From="36" To="39" Label="Source1" />
             <Edge From="37" To="38" Label="Source1" />
-            <Edge From="39" To="42" Label="Source1" />
+            <Edge From="38" To="39" Label="Source2" />
+            <Edge From="39" To="40" Label="Source1" />
             <Edge From="40" To="41" Label="Source1" />
-            <Edge From="41" To="42" Label="Source2" />
-            <Edge From="42" To="43" Label="Source1" />
+            <Edge From="42" To="45" Label="Source1" />
             <Edge From="43" To="44" Label="Source1" />
+            <Edge From="44" To="45" Label="Source2" />
             <Edge From="45" To="46" Label="Source1" />
             <Edge From="46" To="47" Label="Source1" />
-            <Edge From="47" To="48" Label="Source1" />
+            <Edge From="48" To="49" Label="Source1" />
             <Edge From="49" To="50" Label="Source1" />
             <Edge From="50" To="51" Label="Source1" />
-            <Edge From="51" To="52" Label="Source1" />
+            <Edge From="52" To="53" Label="Source1" />
             <Edge From="53" To="54" Label="Source1" />
             <Edge From="54" To="55" Label="Source1" />
-            <Edge From="55" To="56" Label="Source1" />
+            <Edge From="56" To="57" Label="Source1" />
+            <Edge From="57" To="58" Label="Source1" />
+            <Edge From="58" To="59" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -5541,7 +5559,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Delay">
-                      <rx:DueTime>PT4.452S</rx:DueTime>
+                      <rx:DueTime>PT3.497S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
