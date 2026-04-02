@@ -86,15 +86,15 @@ rig = UclOpenVrCorridor2pRig(
         location_y=-1
     ),
     arduino=MatrixArduino(
-        port_name="COM15",
+        port_name="COM10",
         baud_rate=1000000,
         new_line="\n"
     ),
     quad_time_lower_bound=0.2,
     quad_time_upper_bound=0.5,
-    movement_source=MouseWheelMovementSource(source_type="mouse_wheel", gain=0.1)
+    # movement_source=MouseWheelMovementSource(source_type="mouse_wheel", gain=0.1)
     # movement_source=SensorMovementSource(source_type="sensor_movement")
-    # movement_source=PlaybackMovementSource(source_type="playback", file_path="C:/UCLOpenDATA/sub-M26003/20260326_Test/ses-M26003_BaselineCorridor_20260326_00001_date-2026-03-26T13-15-14/MatrixArduino/MatrixArduino.csv", index=1)
+    movement_source=PlaybackMovementSource(source_type="playback", file_path="C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data/sub-PlaybackTest/ses-PlaybackTest_date-2026-03-31T10-57-29/RenderFrameCount/RenderFrameCount.csv", index=4)
 )
 
 def main(path_seed: str = "./local/{schema}.json"):
