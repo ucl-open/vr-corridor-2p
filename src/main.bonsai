@@ -175,7 +175,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvReader">
-                    <io:FileName>C:/CODE/BONSAI/vr-corridor-2p/temp_data/sub-PlaybackTest/ses-PlaybackTest_date-2026-04-02T15-46-23/RenderFrameCount/RenderFrameCount.csv</io:FileName>
+                    <io:FileName>C:/CODE/BONSAI/vr-corridor-2p/temp_data/sub-PlaybackTest/ses-PlaybackTest_date-2026-04-09T14-00-52/RenderFrameCount/RenderFrameCount.csv</io:FileName>
                     <io:ListSeparator>,</io:ListSeparator>
                     <io:SkipRows>1</io:SkipRows>
                   </Expression>
@@ -261,7 +261,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="num:CreateRandom">
-                <num:Seed>9</num:Seed>
+                <num:Seed>1</num:Seed>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -653,9 +653,9 @@
                           <LocationY>-1</LocationY>
                           <Layer>1</Layer>
                           <Angle>0</Angle>
-                          <ColorR>0</ColorR>
-                          <ColorG>0</ColorG>
-                          <ColorB>0</ColorB>
+                          <ColorR>1</ColorR>
+                          <ColorG>1</ColorG>
+                          <ColorB>1</ColorB>
                           <ColorA>1</ColorA>
                         </Expression>
                         <Expression xsi:type="rx:PublishSubject">
@@ -779,7 +779,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT0.261S</rx:DueTime>
+                                  <rx:DueTime>PT0.488S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -845,7 +845,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT0.461S</rx:DueTime>
+                                  <rx:DueTime>PT0.265S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -935,7 +935,7 @@
                     <Eye>
                       <X>0</X>
                       <Y>-2</Y>
-                      <Z>58.2623367</Z>
+                      <Z>152.572174</Z>
                     </Eye>
                     <NearClip>0.1</NearClip>
                     <FarClip>200</FarClip>
@@ -1629,7 +1629,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-02T15-59-40\MatrixArduino\MatrixArduino.csv</io:FileName>
+                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-09T15-19-31\MatrixArduino\MatrixArduino.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1754,7 +1754,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-02T15-59-40\LandmarkChoice\LandmarkChoice.csv</io:FileName>
+                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-09T15-19-31\LandmarkChoice\LandmarkChoice.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1873,7 +1873,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-02T15-59-40\VrPosition\VrPosition.csv</io:FileName>
+                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-09T15-19-31\VrPosition\VrPosition.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2279,7 +2279,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-02T15-59-40\RenderFrameCount\RenderFrameCount.csv</io:FileName>
+                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-09T15-19-31\RenderFrameCount\RenderFrameCount.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2398,7 +2398,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-02T15-59-40\QuadState\QuadState.csv</io:FileName>
+                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-09T15-19-31\QuadState\QuadState.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2512,7 +2512,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-02T15-59-40\RigSchema\RigSchema.json</p5:Path>
+                      <p5:Path>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-09T15-19-31\RigSchema\RigSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -2623,7 +2623,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-02T15-59-40\TaskLogicSchema\TaskLogicSchema.json</p5:Path>
+                      <p5:Path>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-09T15-19-31\TaskLogicSchema\TaskLogicSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -2734,7 +2734,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-02T15-59-40\SessionSchema\SessionSchema.json</p5:Path>
+                      <p5:Path>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-09T15-19-31\SessionSchema\SessionSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -3024,6 +3024,29 @@
           </Workflow>
         </Builder>
       </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>MovementSource</Selector>
+      </Expression>
+      <Expression xsi:type="scr:ExpressionTransform">
+        <scr:Expression>it.ToString()</scr:Expression>
+      </Expression>
+      <Expression xsi:type="Parse">
+        <Separator> </Separator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="IntProperty">
+          <Value>0</Value>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:Zip" />
+      </Expression>
+      <Expression xsi:type="scr:ExpressionTransform">
+        <scr:Expression>Item1[Item2]</scr:Expression>
+      </Expression>
+      <Expression xsi:type="rx:BehaviorSubject">
+        <Name>movement_type</Name>
+      </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="wie:KeyDown">
           <wie:Filter>L</wie:Filter>
@@ -3185,6 +3208,23 @@
                             <gl:Z>0</gl:Z>
                           </Combinator>
                         </Expression>
+                        <Expression xsi:type="rx:Condition">
+                          <Workflow>
+                            <Nodes>
+                              <Expression xsi:type="SubscribeSubject">
+                                <Name>movement_type</Name>
+                              </Expression>
+                              <Expression xsi:type="scr:ExpressionTransform">
+                                <scr:Expression>it!="PlaybackMovementSource"</scr:Expression>
+                              </Expression>
+                              <Expression xsi:type="WorkflowOutput" />
+                            </Nodes>
+                            <Edges>
+                              <Edge From="0" To="1" Label="Source1" />
+                              <Edge From="1" To="2" Label="Source1" />
+                            </Edges>
+                          </Workflow>
+                        </Expression>
                         <Expression xsi:type="MulticastSubject">
                           <Name>CurrentPosition</Name>
                         </Expression>
@@ -3196,6 +3236,7 @@
                         <Edge From="2" To="3" Label="Source1" />
                         <Edge From="3" To="4" Label="Source1" />
                         <Edge From="4" To="5" Label="Source1" />
+                        <Edge From="5" To="6" Label="Source1" />
                       </Edges>
                     </Workflow>
                   </Expression>
@@ -5611,7 +5652,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Delay">
-                      <rx:DueTime>PT3.958S</rx:DueTime>
+                      <rx:DueTime>PT3.221S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -5765,9 +5806,11 @@
       <Edge From="9" To="10" Label="Source1" />
       <Edge From="10" To="11" Label="Source1" />
       <Edge From="12" To="13" Label="Source1" />
+      <Edge From="12" To="27" Label="Source1" />
       <Edge From="13" To="14" Label="Source1" />
       <Edge From="13" To="16" Label="Source1" />
       <Edge From="13" To="25" Label="Source1" />
+      <Edge From="13" To="28" Label="Source1" />
       <Edge From="14" To="15" Label="Source1" />
       <Edge From="15" To="23" Label="Source1" />
       <Edge From="16" To="17" Label="Source1" />
@@ -5780,18 +5823,23 @@
       <Edge From="22" To="23" Label="Source2" />
       <Edge From="23" To="24" Label="Source1" />
       <Edge From="25" To="26" Label="Source1" />
-      <Edge From="27" To="28" Label="Source1" />
       <Edge From="28" To="29" Label="Source1" />
+      <Edge From="29" To="31" Label="Source1" />
+      <Edge From="30" To="31" Label="Source2" />
+      <Edge From="31" To="32" Label="Source1" />
       <Edge From="32" To="33" Label="Source1" />
-      <Edge From="33" To="34" Label="Source1" />
       <Edge From="34" To="35" Label="Source1" />
-      <Edge From="36" To="37" Label="Source1" />
-      <Edge From="37" To="38" Label="Source1" />
-      <Edge From="38" To="39" Label="Source1" />
-      <Edge From="40" To="42" Label="Source1" />
-      <Edge From="41" To="42" Label="Source2" />
-      <Edge From="42" To="44" Label="Source1" />
-      <Edge From="43" To="44" Label="Source2" />
+      <Edge From="35" To="36" Label="Source1" />
+      <Edge From="39" To="40" Label="Source1" />
+      <Edge From="40" To="41" Label="Source1" />
+      <Edge From="41" To="42" Label="Source1" />
+      <Edge From="43" To="44" Label="Source1" />
+      <Edge From="44" To="45" Label="Source1" />
+      <Edge From="45" To="46" Label="Source1" />
+      <Edge From="47" To="49" Label="Source1" />
+      <Edge From="48" To="49" Label="Source2" />
+      <Edge From="49" To="51" Label="Source1" />
+      <Edge From="50" To="51" Label="Source2" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
