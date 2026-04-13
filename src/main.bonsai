@@ -62,7 +62,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="io:ReadAllText">
-                <io:Path>C:\CODE\BONSAI\vr-corridor-2p\local\BoutonBaselineCorridor_Gain0.0306_UclOpenVrCorridor2pTaskLogic.json</io:Path>
+                <io:Path>C:\CODE\BONSAI\vr-corridor-2p\local\UclOpenVrCorridor2pTaskLogic.json</io:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:AsyncSubject">
@@ -175,7 +175,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvReader">
-                    <io:FileName>C:/CODE/BONSAI/vr-corridor-2p/temp_data/sub-PlaybackTest/ses-PlaybackTest_date-2026-04-09T14-00-52/RenderFrameCount/RenderFrameCount.csv</io:FileName>
+                    <io:FileName>C:/CODE/BONSAI/vr-corridor-2p/temp_data/sub-PlaybackTest/ses-PlaybackTest_date-2026-04-13T10-57-27/RenderFrameCount/RenderFrameCount.csv</io:FileName>
                     <io:ListSeparator>,</io:ListSeparator>
                     <io:SkipRows>1</io:SkipRows>
                   </Expression>
@@ -653,9 +653,9 @@
                           <LocationY>-1</LocationY>
                           <Layer>1</Layer>
                           <Angle>0</Angle>
-                          <ColorR>1</ColorR>
-                          <ColorG>1</ColorG>
-                          <ColorB>1</ColorB>
+                          <ColorR>0</ColorR>
+                          <ColorG>0</ColorG>
+                          <ColorB>0</ColorB>
                           <ColorA>1</ColorA>
                         </Expression>
                         <Expression xsi:type="rx:PublishSubject">
@@ -779,7 +779,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT0.488S</rx:DueTime>
+                                  <rx:DueTime>PT0.388S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -845,7 +845,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT0.265S</rx:DueTime>
+                                  <rx:DueTime>PT0.439S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -935,7 +935,7 @@
                     <Eye>
                       <X>0</X>
                       <Y>-2</Y>
-                      <Z>152.572174</Z>
+                      <Z>0</Z>
                     </Eye>
                     <NearClip>0.1</NearClip>
                     <FarClip>200</FarClip>
@@ -1629,7 +1629,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-09T15-19-31\MatrixArduino\MatrixArduino.csv</io:FileName>
+                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-13T11-04-32\MatrixArduino\MatrixArduino.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1754,7 +1754,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-09T15-19-31\LandmarkChoice\LandmarkChoice.csv</io:FileName>
+                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-13T11-04-32\LandmarkChoice\LandmarkChoice.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1873,7 +1873,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-09T15-19-31\VrPosition\VrPosition.csv</io:FileName>
+                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-13T11-04-32\VrPosition\VrPosition.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2279,7 +2279,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-09T15-19-31\RenderFrameCount\RenderFrameCount.csv</io:FileName>
+                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-13T11-04-32\RenderFrameCount\RenderFrameCount.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2398,7 +2398,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-09T15-19-31\QuadState\QuadState.csv</io:FileName>
+                    <io:FileName>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-13T11-04-32\QuadState\QuadState.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2512,7 +2512,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-09T15-19-31\RigSchema\RigSchema.json</p5:Path>
+                      <p5:Path>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-13T11-04-32\RigSchema\RigSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -2623,7 +2623,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-09T15-19-31\TaskLogicSchema\TaskLogicSchema.json</p5:Path>
+                      <p5:Path>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-13T11-04-32\TaskLogicSchema\TaskLogicSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -2734,7 +2734,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-09T15-19-31\SessionSchema\SessionSchema.json</p5:Path>
+                      <p5:Path>../temp_data\sub-PlaybackTest\ses-PlaybackTest_date-2026-04-13T11-04-32\SessionSchema\SessionSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -3031,7 +3031,7 @@
         <scr:Expression>it.ToString()</scr:Expression>
       </Expression>
       <Expression xsi:type="Parse">
-        <Separator> </Separator>
+        <Separator />
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="IntProperty">
@@ -3208,22 +3208,24 @@
                             <gl:Z>0</gl:Z>
                           </Combinator>
                         </Expression>
-                        <Expression xsi:type="rx:Condition">
-                          <Workflow>
-                            <Nodes>
-                              <Expression xsi:type="SubscribeSubject">
-                                <Name>movement_type</Name>
-                              </Expression>
-                              <Expression xsi:type="scr:ExpressionTransform">
-                                <scr:Expression>it!="PlaybackMovementSource"</scr:Expression>
-                              </Expression>
-                              <Expression xsi:type="WorkflowOutput" />
-                            </Nodes>
-                            <Edges>
-                              <Edge From="0" To="1" Label="Source1" />
-                              <Edge From="1" To="2" Label="Source1" />
-                            </Edges>
-                          </Workflow>
+                        <Expression xsi:type="Disable">
+                          <Builder xsi:type="rx:Condition">
+                            <Workflow>
+                              <Nodes>
+                                <Expression xsi:type="SubscribeSubject">
+                                  <Name>movement_type</Name>
+                                </Expression>
+                                <Expression xsi:type="scr:ExpressionTransform">
+                                  <scr:Expression>it!="PlaybackMovementSource"</scr:Expression>
+                                </Expression>
+                                <Expression xsi:type="WorkflowOutput" />
+                              </Nodes>
+                              <Edges>
+                                <Edge From="0" To="1" Label="Source1" />
+                                <Edge From="1" To="2" Label="Source1" />
+                              </Edges>
+                            </Workflow>
+                          </Builder>
                         </Expression>
                         <Expression xsi:type="MulticastSubject">
                           <Name>CurrentPosition</Name>
@@ -3275,7 +3277,7 @@
                         </Expression>
                         <Expression xsi:type="Subtract">
                           <Operand xsi:type="DoubleProperty">
-                            <Value>-36</Value>
+                            <Value>-35.9</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -3294,7 +3296,7 @@
                         </Expression>
                         <Expression xsi:type="Subtract">
                           <Operand xsi:type="DoubleProperty">
-                            <Value>-36</Value>
+                            <Value>-35.89</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
@@ -3583,7 +3585,7 @@
                         </Expression>
                         <Expression xsi:type="Multiply">
                           <Operand xsi:type="FloatProperty">
-                            <Value>0.0306</Value>
+                            <Value>0.0613</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -3658,7 +3660,7 @@
                           <Combinator xsi:type="gl:CreateVector3">
                             <gl:X>0</gl:X>
                             <gl:Y>-2</gl:Y>
-                            <gl:Z>200</gl:Z>
+                            <gl:Z>199.9</gl:Z>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="rx:Condition">
@@ -5376,7 +5378,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Timer">
-                            <rx:DueTime>PT3M</rx:DueTime>
+                            <rx:DueTime>PT1M</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Unit" />
@@ -5652,7 +5654,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Delay">
-                      <rx:DueTime>PT3.221S</rx:DueTime>
+                      <rx:DueTime>PT3.203S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -5749,7 +5751,7 @@
               <Combinator xsi:type="gl:CreateVector3">
                 <gl:X>0</gl:X>
                 <gl:Y>-2</gl:Y>
-                <gl:Z>200</gl:Z>
+                <gl:Z>41.6228523</gl:Z>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">

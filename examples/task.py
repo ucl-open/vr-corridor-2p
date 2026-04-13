@@ -20,7 +20,7 @@ trial_base = Trial(landmarks=[
                     background_landmark_floor=Landmark(size=200, position=100, texture="BG4", reward_valence=0, center_offset=0.01),
                     far_landmark=Landmark(size=100, position=200, texture="grey",  reward_valence=0, center_offset=0.0),
                     boundary_threshold=-35.9,
-                    end_trial_threshold=-35.9,
+                    end_trial_threshold=-35.89,#swap to 35.89 during playback
                     movement_visual_gain=0.0613
                     )
 
