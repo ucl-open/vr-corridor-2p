@@ -280,8 +280,8 @@
           <Y>344</Y>
         </Location>
         <Size>
-          <Width>136</Width>
-          <Height>151</Height>
+          <Width>153</Width>
+          <Height>156</Height>
         </Size>
         <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
         <VisualizerSettings>
@@ -468,8 +468,8 @@
     <VisualizerSettings>
       <TimeSeriesVisualizer>
         <Capacity>640</Capacity>
-        <Min>8300</Min>
-        <Max>9300</Max>
+        <Min>14862</Min>
+        <Max>14864.5</Max>
         <AutoScale>true</AutoScale>
       </TimeSeriesVisualizer>
     </VisualizerSettings>
@@ -507,8 +507,8 @@
     <VisualizerSettings>
       <TimeSeriesVisualizer>
         <Capacity>640</Capacity>
-        <Min>-1</Min>
-        <Max>1</Max>
+        <Min>0</Min>
+        <Max>1.1</Max>
         <AutoScale>true</AutoScale>
       </TimeSeriesVisualizer>
     </VisualizerSettings>
