@@ -2458,6 +2458,8 @@ namespace UclOpenHfVisualDataSchema
     
         private System.Collections.Generic.List<Block> _blocks;
     
+        private double? _rngSeed;
+    
         public UclOpenVrCorridor2pTaskParameters()
         {
             _corridorWidth = 12D;
@@ -2471,6 +2473,7 @@ namespace UclOpenHfVisualDataSchema
             _eyeHeightOffset = other._eyeHeightOffset;
             _farClip = other._farClip;
             _blocks = other._blocks;
+            _rngSeed = other._rngSeed;
         }
     
         [Newtonsoft.Json.JsonPropertyAttribute("corridorWidth")]
@@ -2526,6 +2529,24 @@ namespace UclOpenHfVisualDataSchema
             }
         }
     
+        /// <summary>
+        /// Seed of the random number generator for these task parameters
+        /// </summary>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [Newtonsoft.Json.JsonPropertyAttribute("rngSeed")]
+        [System.ComponentModel.DescriptionAttribute("Seed of the random number generator for these task parameters")]
+        public double? RngSeed
+        {
+            get
+            {
+                return _rngSeed;
+            }
+            set
+            {
+                _rngSeed = value;
+            }
+        }
+    
         public System.IObservable<UclOpenVrCorridor2pTaskParameters> Generate()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new UclOpenVrCorridor2pTaskParameters(this)));
@@ -2541,7 +2562,8 @@ namespace UclOpenHfVisualDataSchema
             stringBuilder.Append("CorridorWidth = " + _corridorWidth + ", ");
             stringBuilder.Append("EyeHeightOffset = " + _eyeHeightOffset + ", ");
             stringBuilder.Append("FarClip = " + _farClip + ", ");
-            stringBuilder.Append("Blocks = " + _blocks);
+            stringBuilder.Append("Blocks = " + _blocks + ", ");
+            stringBuilder.Append("RngSeed = " + _rngSeed);
             return true;
         }
     

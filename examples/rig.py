@@ -24,7 +24,7 @@ from ucl_open.rigs.displays import (
 )
 
 rig = UclOpenVrCorridor2pRig(
-    gamma_correction_file="C:/CODE/BONSAI/vr-corridor-2p/luts/NoRed_New_HALFINTENSITY_LUT_SALEEM20_20260213.bmp",
+    gamma_correction_file="../luts/NoRed_New_HALFINTENSITY_LUT_SALEEM20_20260213.bmp",
     #gamma_correction_file="C:/CODE/BONSAI/vr-corridor-2p/src/Extensions/New_HALFINTENSITY_LUT_SALEEM20_20241118.bmp",
     screen=Screen(
         texture_assets_directory="../textures",
@@ -92,8 +92,9 @@ rig = UclOpenVrCorridor2pRig(
     ),
     quad_time_lower_bound=0.2,
     quad_time_upper_bound=0.5,
-    # movement_source=SensorMovementSource(source_type="sensor_movement")
-    movement_source=PlaybackMovementSource(source_type="playback", file_path="C:/UCLOpenDATA/sub-M26003/20260326_Test/ses-M26003_BaselineCorridor_20260326_00001_date-2026-03-26T13-15-14/MatrixArduino/MatrixArduino.csv", index=1)
+    #movement_source=MouseWheelMovementSource(source_type="mouse_wheel", gain=0.1) # computer mouse wheel
+    #movement_source=SensorMovementSource(source_type="sensor_movement") # encoder 
+    movement_source=PlaybackMovementSource(source_type="playback", file_path="C:/CODE/BONSAI/vr-corridor-2p/temp_data/sub-PlaybackTest/ses-PlaybackTest_date-2026-04-13T10-57-27/RenderFrameCount/RenderFrameCount.csv", index=4)
 )
 
 def main(path_seed: str = "./local/{schema}.json"):

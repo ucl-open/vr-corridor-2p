@@ -728,6 +728,19 @@
           },
           "title": "Blocks",
           "type": "array"
+        },
+        "rngSeed": {
+          "default": null,
+          "description": "Seed of the random number generator for these task parameters",
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "RngSeed"
         }
       },
       "required": [
