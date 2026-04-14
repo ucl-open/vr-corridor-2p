@@ -11,7 +11,7 @@ session = UclOpenSession(
     #logging_root_path="../temp_data",
     logging_root_path="C:/UCLOpenDATA/",
     animal_id="M25131/20260414/",
-    session_id="M25131_BaselineCorridor_20260414_Habituation" 
+    session_id="M25131_BaselineCorridor_OpenLoop_20260414_HabituationT" 
 )   
 
 def main(path_seed: str = "./local/{schema}.json"):
