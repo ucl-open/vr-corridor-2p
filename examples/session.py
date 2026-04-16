@@ -10,8 +10,8 @@ session = UclOpenSession(
     repository_url="https://github.com/ucl-open/vr-corridor-2p",
     #logging_root_path="../temp_data",
     logging_root_path="C:/UCLOpenDATA/",
-    animal_id="M25131/20260414/",
-    session_id="M25131_BaselineCorridor_OpenLoop_20260414_HabituationT" 
+    animal_id="Plimbo/20260415/",
+    session_id="Plimbo_BaselineCorridor_OL_20260415" 
 )   
 
 def main(path_seed: str = "./local/{schema}.json"):
