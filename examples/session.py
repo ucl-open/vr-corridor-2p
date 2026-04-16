@@ -8,10 +8,10 @@ session = UclOpenSession(
     workflow="main.bonsai",
     commit="",
     repository_url="https://github.com/ucl-open/vr-corridor-2p",
-    #logging_root_path="../temp_data",
-    logging_root_path="C:/UCLOpenDATA/",
-    animal_id="Plimbo/20260415/",
-    session_id="Plimbo_BaselineCorridor_OL_20260415" 
+    logging_root_path="../temp_data",
+    # logging_root_path="C:/UCLOpenDATA/",
+    animal_id="Plimbo",
+    session_id="PlaybackTest" 
 )   
 
 def main(path_seed: str = "./local/{schema}.json"):

@@ -92,9 +92,9 @@ rig = UclOpenVrCorridor2pRig(
     ),
     quad_time_lower_bound=0.2,
     quad_time_upper_bound=0.5,
-    #movement_source=MouseWheelMovementSource(source_type="mouse_wheel", gain=0.1) # computer mouse wheel
+    movement_source=MouseWheelMovementSource(source_type="mouse_wheel", gain=0.1) # computer mouse wheel
     #movement_source=SensorMovementSource(source_type="sensor_movement") # encoder 
-    movement_source=PlaybackMovementSource(source_type="playback", file_path="C:/UCLOpenDATA/sub-Plimbo/20260415/ses-Plimbo_BaselineCorridor_CL_20260415_date-2026-04-15T09-47-25/RenderFrameCount/RenderFrameCount.csv", index=4)
+    # movement_source=PlaybackMovementSource(source_type="playback", file_path="C:/UCLOpenDATA/sub-Plimbo/20260415/ses-Plimbo_BaselineCorridor_CL_20260415_date-2026-04-15T09-47-25/RenderFrameCount/RenderFrameCount.csv", index=4)
 )
 
 def main(path_seed: str = "./local/{schema}.json"):
