@@ -178,7 +178,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvReader">
-                    <io:FileName>C:/UCLOpenDATA/sub-Plimbo/20260415/ses-Plimbo_BaselineCorridor_CL_20260415_date-2026-04-15T09-47-25/RenderFrameCount/RenderFrameCount.csv</io:FileName>
+                    <io:FileName>C:/Users/neurogears/source/repos/ucl-open/vr-corridor-2p/temp_data/sub-Plimbo/ses-PlaybackTest_date-2026-04-16T11-49-15/RenderFrameCount/RenderFrameCount.csv</io:FileName>
                     <io:ListSeparator>,</io:ListSeparator>
                     <io:SkipRows>1</io:SkipRows>
                   </Expression>
@@ -186,7 +186,7 @@
                     <Name>PlaybackSource</Name>
                   </Expression>
                   <Expression xsi:type="MemberSelector">
-                    <Selector>Index</Selector>
+                    <Selector>PositionIndex</Selector>
                   </Expression>
                   <Expression xsi:type="PropertyMapping">
                     <PropertyMappings>
@@ -201,6 +201,55 @@
                   <Expression xsi:type="scr:ExpressionTransform">
                     <scr:Expression>Convert.ToSingle(it)</scr:Expression>
                   </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>PlaybackSource</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>TrialIndexIndex</Selector>
+                  </Expression>
+                  <Expression xsi:type="PropertyMapping">
+                    <PropertyMappings>
+                      <Property Name="Value" />
+                    </PropertyMappings>
+                  </Expression>
+                  <Expression xsi:type="Index">
+                    <Operand xsi:type="IntProperty">
+                      <Value>5</Value>
+                    </Operand>
+                  </Expression>
+                  <Expression xsi:type="scr:ExpressionTransform">
+                    <scr:Expression>Convert.ToInt32(it)</scr:Expression>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:Zip" />
+                  </Expression>
+                  <Expression xsi:type="rx:Condition">
+                    <Name>ValidTrial</Name>
+                    <Workflow>
+                      <Nodes>
+                        <Expression xsi:type="WorkflowInput">
+                          <Name>Source1</Name>
+                        </Expression>
+                        <Expression xsi:type="MemberSelector">
+                          <Selector>Item2</Selector>
+                        </Expression>
+                        <Expression xsi:type="GreaterThanOrEqual">
+                          <Operand xsi:type="FloatProperty">
+                            <Value>0</Value>
+                          </Operand>
+                        </Expression>
+                        <Expression xsi:type="WorkflowOutput" />
+                      </Nodes>
+                      <Edges>
+                        <Edge From="0" To="1" Label="Source1" />
+                        <Edge From="1" To="2" Label="Source1" />
+                        <Edge From="2" To="3" Label="Source1" />
+                      </Edges>
+                    </Workflow>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Item1</Selector>
+                  </Expression>
                   <Expression xsi:type="WorkflowOutput" />
                 </Nodes>
                 <Edges>
@@ -210,11 +259,20 @@
                   <Edge From="4" To="5" Label="Source1" />
                   <Edge From="5" To="6" Label="Source1" />
                   <Edge From="6" To="10" Label="Source1" />
+                  <Edge From="6" To="15" Label="Source1" />
                   <Edge From="7" To="8" Label="Source1" />
                   <Edge From="8" To="9" Label="Source1" />
                   <Edge From="9" To="10" Label="Source2" />
                   <Edge From="10" To="11" Label="Source1" />
-                  <Edge From="11" To="12" Label="Source1" />
+                  <Edge From="11" To="17" Label="Source1" />
+                  <Edge From="12" To="13" Label="Source1" />
+                  <Edge From="13" To="14" Label="Source1" />
+                  <Edge From="14" To="15" Label="Source2" />
+                  <Edge From="15" To="16" Label="Source1" />
+                  <Edge From="16" To="17" Label="Source2" />
+                  <Edge From="17" To="18" Label="Source1" />
+                  <Edge From="18" To="19" Label="Source1" />
+                  <Edge From="19" To="20" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
@@ -349,10 +407,11 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="IncludeWorkflow" Path="UclOpen.Devices:SerialDevice.bonsai">
-                    <PortName>COM3</PortName>
+                    <PortName>COM10</PortName>
                     <BaudRate>1000000</BaudRate>
                     <Encoding>utf-8</Encoding>
-                    <NewLine />
+                    <NewLine>
+</NewLine>
                     <Parity>None</Parity>
                     <ParityReplace>63</ParityReplace>
                     <DataBits>8</DataBits>
@@ -781,7 +840,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT0.38S</rx:DueTime>
+                                  <rx:DueTime>PT0.448S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -847,7 +906,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT0.478S</rx:DueTime>
+                                  <rx:DueTime>PT0.251S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -937,7 +996,7 @@
                     <Eye>
                       <X>0</X>
                       <Y>-2</Y>
-                      <Z>41.0649872</Z>
+                      <Z>35.6184235</Z>
                     </Eye>
                     <NearClip>0.1</NearClip>
                     <FarClip>200</FarClip>
@@ -1539,9 +1598,9 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="UclOpen.Logging:LogController.bonsai">
-              <SubjectId>Plimbo/20260415/</SubjectId>
-              <SessionId>Plimbo_BaselineCorridor_OL_20260415</SessionId>
-              <Path>C:/UCLOpenDATA/</Path>
+              <SubjectId>Plimbo</SubjectId>
+              <SessionId>PlaybackTest</SessionId>
+              <Path>../temp_data</Path>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>TrialData</Name>
@@ -1643,7 +1702,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/UCLOpenDATA/\sub-Plimbo/20260415/\ses-Plimbo_BaselineCorridor_OL_20260415_date-2026-04-15T10-26-41\TrialData\TrialData.csv</io:FileName>
+                    <io:FileName>../temp_data\sub-Plimbo\ses-PlaybackTest_date-2026-04-16T11-57-02\TrialData\TrialData.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1750,7 +1809,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/UCLOpenDATA/\sub-Plimbo/20260415/\ses-Plimbo_BaselineCorridor_OL_20260415_date-2026-04-15T10-26-41\MatrixArduino\MatrixArduino.csv</io:FileName>
+                    <io:FileName>../temp_data\sub-Plimbo\ses-PlaybackTest_date-2026-04-16T11-57-02\MatrixArduino\MatrixArduino.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1875,7 +1934,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/UCLOpenDATA/\sub-Plimbo/20260415/\ses-Plimbo_BaselineCorridor_OL_20260415_date-2026-04-15T10-26-41\LandmarkChoice\LandmarkChoice.csv</io:FileName>
+                    <io:FileName>../temp_data\sub-Plimbo\ses-PlaybackTest_date-2026-04-16T11-57-02\LandmarkChoice\LandmarkChoice.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1994,7 +2053,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/UCLOpenDATA/\sub-Plimbo/20260415/\ses-Plimbo_BaselineCorridor_OL_20260415_date-2026-04-15T10-26-41\VrPosition\VrPosition.csv</io:FileName>
+                    <io:FileName>../temp_data\sub-Plimbo\ses-PlaybackTest_date-2026-04-16T11-57-02\VrPosition\VrPosition.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2407,7 +2466,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/UCLOpenDATA/\sub-Plimbo/20260415/\ses-Plimbo_BaselineCorridor_OL_20260415_date-2026-04-15T10-26-41\RenderFrameCount\RenderFrameCount.csv</io:FileName>
+                    <io:FileName>../temp_data\sub-Plimbo\ses-PlaybackTest_date-2026-04-16T11-57-02\RenderFrameCount\RenderFrameCount.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2526,7 +2585,7 @@
                     <Property Name="Selector" />
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:/UCLOpenDATA/\sub-Plimbo/20260415/\ses-Plimbo_BaselineCorridor_OL_20260415_date-2026-04-15T10-26-41\QuadState\QuadState.csv</io:FileName>
+                    <io:FileName>../temp_data\sub-Plimbo\ses-PlaybackTest_date-2026-04-16T11-57-02\QuadState\QuadState.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2640,7 +2699,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>C:/UCLOpenDATA/\sub-Plimbo/20260415/\ses-Plimbo_BaselineCorridor_OL_20260415_date-2026-04-15T10-26-41\RigSchema\RigSchema.json</p5:Path>
+                      <p5:Path>../temp_data\sub-Plimbo\ses-PlaybackTest_date-2026-04-16T11-57-02\RigSchema\RigSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -2751,7 +2810,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>C:/UCLOpenDATA/\sub-Plimbo/20260415/\ses-Plimbo_BaselineCorridor_OL_20260415_date-2026-04-15T10-26-41\TaskLogicSchema\TaskLogicSchema.json</p5:Path>
+                      <p5:Path>../temp_data\sub-Plimbo\ses-PlaybackTest_date-2026-04-16T11-57-02\TaskLogicSchema\TaskLogicSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -2862,7 +2921,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p5:JsonWriter">
-                      <p5:Path>C:/UCLOpenDATA/\sub-Plimbo/20260415/\ses-Plimbo_BaselineCorridor_OL_20260415_date-2026-04-15T10-26-41\SessionSchema\SessionSchema.json</p5:Path>
+                      <p5:Path>../temp_data\sub-Plimbo\ses-PlaybackTest_date-2026-04-16T11-57-02\SessionSchema\SessionSchema.json</p5:Path>
                       <p5:Suffix>None</p5:Suffix>
                       <p5:Overwrite>false</p5:Overwrite>
                     </Combinator>
@@ -5817,7 +5876,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Delay">
-                      <rx:DueTime>PT3.221S</rx:DueTime>
+                      <rx:DueTime>PT3.497S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -5915,7 +5974,7 @@
               <Combinator xsi:type="gl:CreateVector3">
                 <gl:X>0</gl:X>
                 <gl:Y>-2</gl:Y>
-                <gl:Z>41.0649872</gl:Z>
+                <gl:Z>35.6184235</gl:Z>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">

@@ -1223,7 +1223,9 @@ namespace UclOpenHfVisualDataSchema
     
         private string _filePath;
     
-        private int _index;
+        private int _positionIndex;
+    
+        private int _trialIndexIndex;
     
         public PlaybackMovementSource()
         {
@@ -1233,7 +1235,8 @@ namespace UclOpenHfVisualDataSchema
                 base(other)
         {
             _filePath = other._filePath;
-            _index = other._index;
+            _positionIndex = other._positionIndex;
+            _trialIndexIndex = other._trialIndexIndex;
         }
     
         [Newtonsoft.Json.JsonPropertyAttribute("filePath", Required=Newtonsoft.Json.Required.Always)]
@@ -1249,16 +1252,29 @@ namespace UclOpenHfVisualDataSchema
             }
         }
     
-        [Newtonsoft.Json.JsonPropertyAttribute("index", Required=Newtonsoft.Json.Required.Always)]
-        public int Index
+        [Newtonsoft.Json.JsonPropertyAttribute("positionIndex", Required=Newtonsoft.Json.Required.Always)]
+        public int PositionIndex
         {
             get
             {
-                return _index;
+                return _positionIndex;
             }
             set
             {
-                _index = value;
+                _positionIndex = value;
+            }
+        }
+    
+        [Newtonsoft.Json.JsonPropertyAttribute("trialIndexIndex", Required=Newtonsoft.Json.Required.Always)]
+        public int TrialIndexIndex
+        {
+            get
+            {
+                return _trialIndexIndex;
+            }
+            set
+            {
+                _trialIndexIndex = value;
             }
         }
     
@@ -1279,7 +1295,8 @@ namespace UclOpenHfVisualDataSchema
                 stringBuilder.Append(", ");
             }
             stringBuilder.Append("FilePath = " + _filePath + ", ");
-            stringBuilder.Append("Index = " + _index);
+            stringBuilder.Append("PositionIndex = " + _positionIndex + ", ");
+            stringBuilder.Append("TrialIndexIndex = " + _trialIndexIndex);
             return true;
         }
     }

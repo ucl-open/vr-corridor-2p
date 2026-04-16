@@ -356,15 +356,20 @@
           "title": "FilePath",
           "type": "string"
         },
-        "index": {
-          "title": "Index",
+        "positionIndex": {
+          "title": "PositionIndex",
+          "type": "integer"
+        },
+        "trialIndexIndex": {
+          "title": "TrialIndexIndex",
           "type": "integer"
         }
       },
       "required": [
         "sourceType",
         "filePath",
-        "index"
+        "positionIndex",
+        "trialIndexIndex"
       ],
       "title": "PlaybackMovementSource",
       "type": "object"
