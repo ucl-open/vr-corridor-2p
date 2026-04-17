@@ -92,9 +92,9 @@ rig = UclOpenVrCorridor2pRig(
     ),
     quad_time_lower_bound=0.2,
     quad_time_upper_bound=0.5,
-    #movement_source=MouseWheelMovementSource(source_type="mouse_wheel", gain=0.1) # computer mouse wheel
+    # movement_source=MouseWheelMovementSource(source_type="mouse_wheel", gain=0.1) # computer mouse wheel
     #movement_source=SensorMovementSource(source_type="sensor_movement") # encoder 
-    movement_source=PlaybackMovementSource(source_type="playback", file_path="C:/CODE/BONSAI/vr-corridor-2p/temp_data/sub-PlaybackTest/ses-PlaybackTest_date-2026-04-13T10-57-27/RenderFrameCount/RenderFrameCount.csv", index=4)
+    movement_source=PlaybackMovementSource(source_type="playback", file_path="C:/UCLOpenDATA/sub-M26005/20260417/ses-M26005_BaselineCorridor_20260417_00001_date-2026-04-17T08-31-21/RenderFrameCount/RenderFrameCount.csv", position_index=4, trial_index_index=5)
 )
 
 def main(path_seed: str = "./local/{schema}.json"):

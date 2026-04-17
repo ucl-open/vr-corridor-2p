@@ -30,7 +30,8 @@ class MouseWheelMovementSource(MovementSource):
 class PlaybackMovementSource(MovementSource):
     source_type: Literal["playback"]
     file_path: str
-    index: int
+    position_index: int
+    trial_index_index: int
 
 class UclOpenVrCorridor2pRig(BaseSchema):
     version: Literal[__semver__] = __semver__
