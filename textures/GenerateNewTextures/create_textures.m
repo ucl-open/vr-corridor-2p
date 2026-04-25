@@ -217,23 +217,23 @@ end
 
 %% save
 
-tex1 = textures(2).matrix;
-tex2 = textures(3).matrix;
-tex3 = textures(4).matrix;
-tex4 = textures(5).matrix;
-
-grating_v = textures(6).matrix;
-plaid = textures(8).matrix;
-grey = textures(1).matrix;
-figure;
-imagesc(tex, [0 1]);
-axis equal; axis off; colormap(gray);
-
-imwrite(tex1, '../BG1.jpg');
-imwrite(tex2, '../BG2.jpg');
-imwrite(tex3, '../BG3.jpg');
-imwrite(tex4, '../BG4.jpg');
-imwrite(grating_v, '../grating_vertical.jpg');
-imwrite(plaid, '../plaid.jpg');
-imwrite(grey, '../grey.jpg')
-close all
+% tex1 = textures(2).matrix;
+% tex2 = textures(3).matrix;
+% tex3 = textures(4).matrix;
+% tex4 = textures(5).matrix;
+% 
+% grating_v = textures(6).matrix;
+% plaid = textures(8).matrix;
+% grey = textures(1).matrix;
+% figure;
+% imagesc(tex, [0 1]);
+% axis equal; axis off; colormap(gray);
+% 
+% imwrite(tex1, '../BG1.jpg');
+% imwrite(tex2, '../BG2.jpg');
+% imwrite(tex3, '../BG3.jpg');
+% imwrite(tex4, '../BG4.jpg');
+% imwrite(grating_v, '../grating_vertical.jpg');
+% imwrite(plaid, '../plaid.jpg');
+% imwrite(grey, '../grey.jpg')
+% close all

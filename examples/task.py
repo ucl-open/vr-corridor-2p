@@ -14,6 +14,8 @@ fullGain =  0.0613 #1cm on wheel = 1cm in vr
 halfGain = 0.0306 #2cm on wheel = 1cm in vr 
 doubleGain = 0.1226 #1cm on wheel = 2cm in vr 
 
+maxTrialTime = 120 #maximum trial time 
+
 trial_base = Trial(landmarks=[
                         [Landmark(size=8, position=40, texture="grating_vertical", reward_valence=0)],
                         [Landmark(size=8, position=80, texture="plaid", reward_valence=0)],
@@ -25,9 +27,10 @@ trial_base = Trial(landmarks=[
                     background_landmark_ceil=Landmark(size=200, position=100, texture="BG3", reward_valence=0, center_offset=0.01),
                     background_landmark_floor=Landmark(size=200, position=100, texture="BG4", reward_valence=0, center_offset=0.01),
                     far_landmark=Landmark(size=100, position=200, texture="grey",  reward_valence=0, center_offset=0.0),
-                    boundary_threshold=-36,
-                    end_trial_threshold=-35.9,#swap to 35.89 during playback
-                    movement_visual_gain=halfGain
+                    boundary_threshold=-35.9,
+                    end_trial_threshold=-35.89,#swap to 35.89 during playback
+                    movement_visual_gain=halfGain,
+                    maximumTrialTime=maxTrialTime
                     )
 
 # Swaps the 2nd and 3rd landmark: grating grating plaid plaid
@@ -42,9 +45,10 @@ trial_swap2_3 = Trial(landmarks=[
                     background_landmark_ceil=Landmark(size=200, position=100, texture="BG3", reward_valence=0, center_offset=0.01),
                     background_landmark_floor=Landmark(size=200, position=100, texture="BG4", reward_valence=0, center_offset=0.01),
                     far_landmark=Landmark(size=100, position=200, texture="grey",  reward_valence=0, center_offset=0.0),
-                    boundary_threshold=-36,
-                    end_trial_threshold=-36,
-                    movement_visual_gain=halfGain
+                    boundary_threshold=-35.9,
+                    end_trial_threshold=-35.89,#swap to 35.89 during playback
+                    movement_visual_gain=halfGain,
+                    maximumTrialTime=maxTrialTime
                     )
 
 # Swaps the 3rd and 4th landmark: grating plaid plaid grating
@@ -59,9 +63,10 @@ trial_swap3_4 = Trial(landmarks=[
                     background_landmark_ceil=Landmark(size=200, position=100, texture="BG3", reward_valence=0, center_offset=0.01),
                     background_landmark_floor=Landmark(size=200, position=100, texture="BG4", reward_valence=0, center_offset=0.01),
                     far_landmark=Landmark(size=100, position=200, texture="grey",  reward_valence=0, center_offset=0.0),
-                    boundary_threshold=-36,
-                    end_trial_threshold=-36,
-                    movement_visual_gain=halfGain
+                    boundary_threshold=-35.9,
+                    end_trial_threshold=-35.89,#swap to 35.89 during playback
+                    movement_visual_gain=halfGain,
+                    maximumTrialTime=maxTrialTime
                     )
 
 # Omit the 2nd (plaid) landmark 
@@ -75,9 +80,10 @@ trial_omit2 = Trial(landmarks=[
                     background_landmark_ceil=Landmark(size=200, position=100, texture="BG3", reward_valence=0, center_offset=0.01),
                     background_landmark_floor=Landmark(size=200, position=100, texture="BG4", reward_valence=0, center_offset=0.01),
                     far_landmark=Landmark(size=12, position=200, texture="grey", reward_valence=0, center_offset=0.01), 
-                    boundary_threshold=-36,
-                    end_trial_threshold=-36,
-                    movement_visual_gain=halfGain
+                    boundary_threshold=-35.9,
+                    end_trial_threshold=-35.89,#swap to 35.89 during playback
+                    movement_visual_gain=halfGain,
+                    maximumTrialTime=maxTrialTime
                     )
 
 
@@ -92,9 +98,10 @@ trial_omit3 = Trial(landmarks=[
                     background_landmark_ceil=Landmark(size=200, position=100, texture="BG3", reward_valence=0, center_offset=0.01),
                     background_landmark_floor=Landmark(size=200, position=100, texture="BG4", reward_valence=0, center_offset=0.01),
                     far_landmark=Landmark(size=12, position=200, texture="grey", reward_valence=0, center_offset=0.01), 
-                    boundary_threshold=-36,
-                    end_trial_threshold=-36,
-                    movement_visual_gain=halfGain
+                    boundary_threshold=-35.9,
+                    end_trial_threshold=-35.89,#swap to 35.89 during playback
+                    movement_visual_gain=halfGain,
+                    maximumTrialTime=maxTrialTime
                     )
 
 # Omit the 4rd (plaid) landmark
@@ -109,9 +116,10 @@ trial_omit4 = Trial(landmarks=[
                     background_landmark_ceil=Landmark(size=200, position=100, texture="BG3", reward_valence=0, center_offset=0.01),
                     background_landmark_floor=Landmark(size=200, position=100, texture="BG4", reward_valence=0, center_offset=0.01),
                     far_landmark=Landmark(size=100, position=200, texture="grey",  reward_valence=0, center_offset=0.0),
-                    boundary_threshold=-76,
-                    end_trial_threshold=-76,
-                    movement_visual_gain=halfGain
+                    boundary_threshold=-75.9,
+                    end_trial_threshold=-75.89,
+                    movement_visual_gain=halfGain,
+                    maximumTrialTime=maxTrialTime
                     )
 
 # 5 unique test/manipulation trials
